@@ -1,0 +1,103 @@
+{
+  "n_fit": 13636,
+  "n_test": 1882,
+  "n_excluded_training_rows": 0,
+  "rungs": {
+    "disagreement_logreg": 0.6100932055798545,
+    "disagreement_xgb_capped": 0.2544739245619111,
+    "disagreement_xgb_widened": 0.3105941217515614,
+    "uncertainty+MI_logreg": 0.3818161189491539,
+    "uncertainty+MI_xgb_capped": 0.24233223846559676,
+    "uncertainty+MI_xgb_widened": 0.2689653216244887,
+    "quadratic_logreg": 0.2957561111205659,
+    "quadratic_xgb_capped": 0.231076090471247,
+    "quadratic_xgb_widened": 0.29316019673581917,
+    "rank ECDF_logreg": 0.372528463724706,
+    "rank ECDF_xgb_capped": 0.2300770945727463,
+    "rank ECDF_xgb_widened": 0.26242674881011135
+  },
+  "selected": {
+    "disagreement_capped": {
+      "params": {
+        "n_estimators": 200,
+        "max_depth": 4,
+        "learning_rate": 0.1,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8
+      },
+      "in_fold_cv": 0.9857993600636955
+    },
+    "disagreement_widened": {
+      "params": {
+        "n_estimators": 500,
+        "max_depth": 10,
+        "learning_rate": 0.05,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8
+      },
+      "in_fold_cv": 0.9898123670854354
+    },
+    "uncertainty+MI_capped": {
+      "params": {
+        "n_estimators": 200,
+        "max_depth": 4,
+        "learning_rate": 0.1,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8
+      },
+      "in_fold_cv": 0.983264961454467
+    },
+    "uncertainty+MI_widened": {
+      "params": {
+        "n_estimators": 500,
+        "max_depth": 10,
+        "learning_rate": 0.05,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8
+      },
+      "in_fold_cv": 0.9865397140715241
+    },
+    "quadratic_capped": {
+      "params": {
+        "n_estimators": 200,
+        "max_depth": 4,
+        "learning_rate": 0.1,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8
+      },
+      "in_fold_cv": 0.9859860183551636
+    },
+    "quadratic_widened": {
+      "params": {
+        "n_estimators": 500,
+        "max_depth": 10,
+        "learning_rate": 0.05,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8
+      },
+      "in_fold_cv": 0.9897376505797273
+    },
+    "rank ECDF_capped": {
+      "params": {
+        "n_estimators": 200,
+        "max_depth": 4,
+        "learning_rate": 0.1,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8
+      },
+      "in_fold_cv": 0.9823271272336312
+    },
+    "rank ECDF_widened": {
+      "params": {
+        "n_estimators": 500,
+        "max_depth": 10,
+        "learning_rate": 0.05,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8
+      },
+      "in_fold_cv": 0.9859161113406993
+    }
+  },
+  "scores_file": "scores/clip4_rungs_MidJourney.npz",
+  "fold_seconds": 118.0
+}

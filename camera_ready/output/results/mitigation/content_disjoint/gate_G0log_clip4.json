@@ -1,0 +1,114 @@
+{
+  "gate": "g0log",
+  "pool": "clip4",
+  "changed_folds": {
+    "PS_1_prob_avg": {
+      "group": "exact",
+      "max_abs_diff": 2.5814447592087397e-05,
+      "fold": "styleclip",
+      "status": "report"
+    },
+    "PS_2_logreg": {
+      "group": "exact",
+      "max_abs_diff": 6.300000000003525e-05,
+      "fold": "CollabDiff",
+      "status": "report"
+    },
+    "PS_4_xgboost": {
+      "group": "xgboost",
+      "max_abs_diff": 0.001009277620396598,
+      "fold": "styleclip",
+      "status": "report"
+    },
+    "PS_A_calibrated_avg": {
+      "group": "exact",
+      "max_abs_diff": 0.0012055594900850508,
+      "fold": "styleclip",
+      "status": "report"
+    },
+    "PS_B_learned_weights": {
+      "group": "exact",
+      "max_abs_diff": 4.1499999999916604e-05,
+      "fold": "CollabDiff",
+      "status": "report"
+    },
+    "PS_C_logreg_cv": {
+      "group": "exact",
+      "max_abs_diff": 5.2000000000052005e-05,
+      "fold": "CollabDiff",
+      "status": "report"
+    },
+    "fs_mlp_mean": {
+      "group": "stochastic",
+      "max_abs_diff": 6.536827195469108e-05,
+      "fold": "styleclip",
+      "status": "report"
+    },
+    "raw_feat_auc": {
+      "group": "exact",
+      "max_abs_diff": 0.00030637393767707355,
+      "fold": "styleclip",
+      "status": "report"
+    }
+  },
+  "log": "A4_logo_clip4.log",
+  "judged_folds": [
+    "MidJourney",
+    "deepfacelab",
+    "heygen",
+    "stargan",
+    "starganv2",
+    "whichisreal"
+  ],
+  "values": {
+    "PS_1_prob_avg": {
+      "group": "exact",
+      "max_abs_diff": 3.604989106409384e-05,
+      "fold": "stargan",
+      "status": "PASS"
+    },
+    "PS_2_logreg": {
+      "group": "exact",
+      "max_abs_diff": 4.7915547915500234e-05,
+      "fold": "starganv2",
+      "status": "PASS"
+    },
+    "PS_4_xgboost": {
+      "group": "xgboost",
+      "max_abs_diff": 4.7452547452531135e-05,
+      "fold": "whichisreal",
+      "status": "report"
+    },
+    "PS_A_calibrated_avg": {
+      "group": "exact",
+      "max_abs_diff": 4.616334616325268e-05,
+      "fold": "starganv2",
+      "status": "PASS"
+    },
+    "PS_B_learned_weights": {
+      "group": "exact",
+      "max_abs_diff": 4.842083441725098e-05,
+      "fold": "stargan",
+      "status": "PASS"
+    },
+    "PS_C_logreg_cv": {
+      "group": "exact",
+      "max_abs_diff": 4.4875962263879465e-05,
+      "fold": "MidJourney",
+      "status": "PASS"
+    },
+    "fs_mlp_mean": {
+      "group": "stochastic",
+      "max_abs_diff": 0.03337450980392154,
+      "fold": "heygen",
+      "status": "report"
+    },
+    "raw_feat_auc": {
+      "group": "exact",
+      "max_abs_diff": 3.417135470862309e-05,
+      "fold": "stargan",
+      "status": "PASS"
+    }
+  },
+  "status": "PASS"
+}

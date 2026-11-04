@@ -1,0 +1,68 @@
+{
+  "gate": "p0",
+  "pool": "arch6",
+  "folds": [
+    "starganv2"
+  ],
+  "values": {
+    "PS_1_prob_avg": {
+      "group": "exact",
+      "max_abs_diff": 0.0,
+      "fold": "starganv2",
+      "status": "PASS"
+    },
+    "PS_2_logreg": {
+      "group": "exact",
+      "max_abs_diff": 0.0,
+      "fold": "starganv2",
+      "status": "PASS"
+    },
+    "PS_3_mlp_logits": {
+      "group": "stochastic",
+      "max_abs_diff": 0.0,
+      "fold": "starganv2",
+      "status": "report"
+    },
+    "PS_A_calibrated_avg": {
+      "group": "exact",
+      "max_abs_diff": 0.0,
+      "fold": "starganv2",
+      "status": "PASS"
+    },
+    "PS_B_learned_weights": {
+      "group": "exact",
+      "max_abs_diff": 0.0,
+      "fold": "starganv2",
+      "status": "PASS"
+    },
+    "PS_D_mlp_probs": {
+      "group": "stochastic",
+      "max_abs_diff": 0.0,
+      "fold": "starganv2",
+      "status": "report"
+    },
+    "fs_mlp_mean": {
+      "group": "stochastic",
+      "max_abs_diff": 0.0,
+      "fold": "starganv2",
+      "status": "report"
+    },
+    "raw_feat_auc": {
+      "group": "exact",
+      "max_abs_diff": 0.0,
+      "fold": "starganv2",
+      "status": "PASS"
+    }
+  },
+  "devices": {
+    "starganv2": "NVIDIA GeForce RTX 5080"
+  },
+  "expect_gpu": "5080",
+  "mlp_max_abs_diff": {
+    "PS_3_mlp_logits": 0.0,
+    "PS_D_mlp_probs": 0.0,
+    "fs_mlp_mean": 0.0
+  },
+  "mlp_bit_identical": true,
+  "status": "PASS"
+}

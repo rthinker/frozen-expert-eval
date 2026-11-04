@@ -1,0 +1,163 @@
+{
+  "pool": "balanced8",
+  "combiner_type": "mlp",
+  "proj_dim": 256,
+  "train_tag": "FIT",
+  "select_tag": "SELECT",
+  "fit_samples": 26591,
+  "seeds": [
+    7,
+    10,
+    24,
+    42,
+    1024,
+    1973,
+    3392,
+    9721
+  ],
+  "mean_avg8": 0.9741984552493403,
+  "std_avg8": 0.0021953129071897253,
+  "n_trainable_params": 4332802,
+  "feature_dims": [
+    1024,
+    1024,
+    1024,
+    1024,
+    2048,
+    2048,
+    2048,
+    2048
+  ],
+  "per_generator_seed_averaged": {
+    "whichisreal": 0.9437622377622378,
+    "CollabDiff": 1.0,
+    "MidJourney": 1.0,
+    "heygen": 0.8717647058823529,
+    "starganv2": 1.0,
+    "deepfacelab": 0.9789795918367348,
+    "stargan": 0.9990811065133975,
+    "styleclip": 1.0
+  },
+  "per_seed": [
+    {
+      "seed": 7,
+      "val_auc": 0.9999408604484699,
+      "per_generator": {
+        "whichisreal": 0.9518331668331668,
+        "CollabDiff": 1.0,
+        "MidJourney": 1.0,
+        "heygen": 0.8674509803921568,
+        "starganv2": 1.0,
+        "deepfacelab": 0.9816326530612245,
+        "stargan": 0.9987848859423777,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.9749627107786157
+    },
+    {
+      "seed": 10,
+      "val_auc": 0.999910803641104,
+      "per_generator": {
+        "whichisreal": 0.9442347652347651,
+        "CollabDiff": 1.0,
+        "MidJourney": 1.0,
+        "heygen": 0.8752941176470588,
+        "starganv2": 0.9999999999999999,
+        "deepfacelab": 0.9773469387755103,
+        "stargan": 0.9988448413924298,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.9744650828812205
+    },
+    {
+      "seed": 24,
+      "val_auc": 0.9999290325381637,
+      "per_generator": {
+        "whichisreal": 0.9634175824175824,
+        "CollabDiff": 1.0,
+        "MidJourney": 1.0,
+        "heygen": 0.8705882352941177,
+        "starganv2": 1.0,
+        "deepfacelab": 0.979795918367347,
+        "stargan": 0.999087965823361,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.976611212737801
+    },
+    {
+      "seed": 42,
+      "val_auc": 0.9999261103485588,
+      "per_generator": {
+        "whichisreal": 0.9459680319680319,
+        "CollabDiff": 1.0,
+        "MidJourney": 1.0,
+        "heygen": 0.8713725490196078,
+        "starganv2": 1.0,
+        "deepfacelab": 0.9826530612244898,
+        "stargan": 0.9990633231171956,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.9748821206661658
+    },
+    {
+      "seed": 1024,
+      "val_auc": 0.9999111515208189,
+      "per_generator": {
+        "whichisreal": 0.945865134865135,
+        "CollabDiff": 1.0,
+        "MidJourney": 0.9999920579542425,
+        "heygen": 0.851764705882353,
+        "starganv2": 0.9999639999639999,
+        "deepfacelab": 0.9787755102040816,
+        "stargan": 0.9991690073003382,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.9719413020212688
+    },
+    {
+      "seed": 1973,
+      "val_auc": 0.9999158131089982,
+      "per_generator": {
+        "whichisreal": 0.9323666333666334,
+        "CollabDiff": 1.0,
+        "MidJourney": 1.0,
+        "heygen": 0.8933333333333333,
+        "starganv2": 1.0,
+        "deepfacelab": 0.9859183673469388,
+        "stargan": 0.9990719607667794,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.9763362868517106
+    },
+    {
+      "seed": 3392,
+      "val_auc": 0.9999243013740413,
+      "per_generator": {
+        "whichisreal": 0.9321998001998002,
+        "CollabDiff": 1.0,
+        "MidJourney": 0.9999988654220348,
+        "heygen": 0.8615686274509804,
+        "starganv2": 0.9999879999879999,
+        "deepfacelab": 0.9693877551020407,
+        "stargan": 0.9983621492098075,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.970188149671583
+    },
+    {
+      "seed": 9721,
+      "val_auc": 0.999924997133471,
+      "per_generator": {
+        "whichisreal": 0.956891108891109,
+        "CollabDiff": 1.0,
+        "MidJourney": 1.0,
+        "heygen": 0.8803921568627451,
+        "starganv2": 1.0,
+        "deepfacelab": 0.9781632653061225,
+        "stargan": 0.9988478899746358,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.9767868026293265
+    }
+  ]
+}

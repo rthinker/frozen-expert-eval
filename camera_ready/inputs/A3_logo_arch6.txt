@@ -1,0 +1,94 @@
+# Reviewed LOGO numerical evidence
+# Source record SHA-256: 3e3650d8302f3b18dd497cb530618e37ca3600d1068f8873edc7661bcce45662
+# The four-decimal values below are transcribed from the original record.
+
+held-out=whichisreal
+PS_1_prob_avg 0.5532
+PS_A_calibrated_avg 0.5362
+PS_B_learned_weights 0.5873
+PS_2_logreg 0.5346
+PS_C_logreg_cv 0.5332
+PS_4_xgboost 0.5561
+Raw-feat LogReg: 0.8140
+FS MLP seed-avg: 0.8346
+
+held-out=CollabDiff
+PS_1_prob_avg 0.7309
+PS_A_calibrated_avg 0.7950
+PS_B_learned_weights 0.8095
+PS_2_logreg 0.8751
+PS_C_logreg_cv 0.8848
+PS_4_xgboost 0.8220
+Raw-feat LogReg: 0.9986
+FS MLP seed-avg: 0.9989
+
+held-out=MidJourney
+PS_1_prob_avg 0.3914
+PS_A_calibrated_avg 0.4999
+PS_B_learned_weights 0.7058
+PS_2_logreg 0.7008
+PS_C_logreg_cv 0.7128
+PS_4_xgboost 0.5172
+Raw-feat LogReg: 0.8678
+FS MLP seed-avg: 0.8673
+
+held-out=heygen
+PS_1_prob_avg 0.6773
+PS_A_calibrated_avg 0.6875
+PS_B_learned_weights 0.6820
+PS_2_logreg 0.6024
+PS_C_logreg_cv 0.5682
+PS_4_xgboost 0.6565
+Raw-feat LogReg: 0.7706
+FS MLP seed-avg: 0.7384
+
+held-out=starganv2
+PS_1_prob_avg 0.7300
+PS_A_calibrated_avg 0.7991
+PS_B_learned_weights 0.8146
+PS_2_logreg 0.7275
+PS_C_logreg_cv 0.7164
+PS_4_xgboost 0.6825
+Raw-feat LogReg: 0.8529
+FS MLP seed-avg: 0.8747
+
+held-out=deepfacelab
+PS_1_prob_avg 0.9498
+PS_A_calibrated_avg 0.9598
+PS_B_learned_weights 0.9601
+PS_2_logreg 0.8890
+PS_C_logreg_cv 0.8492
+PS_4_xgboost 0.8857
+Raw-feat LogReg: 0.9155
+FS MLP seed-avg: 0.9402
+
+held-out=stargan
+PS_1_prob_avg 0.7786
+PS_A_calibrated_avg 0.9161
+PS_B_learned_weights 0.9509
+PS_2_logreg 0.9344
+PS_C_logreg_cv 0.9176
+PS_4_xgboost 0.8892
+Raw-feat LogReg: 0.9705
+FS MLP seed-avg: 0.9791
+
+held-out=styleclip
+PS_1_prob_avg 0.6471
+PS_A_calibrated_avg 0.7722
+PS_B_learned_weights 0.7840
+PS_2_logreg 0.8521
+PS_C_logreg_cv 0.8611
+PS_4_xgboost 0.7994
+Raw-feat LogReg: 0.9934
+FS MLP seed-avg: 0.9967
+
+| whichisreal 0.5873 PS_B_learned_weights 0.8140 0.8346
+| CollabDiff 0.8848 PS_C_logreg_cv 0.9986 0.9989
+| MidJourney 0.7128 PS_C_logreg_cv 0.8678 0.8673
+| heygen 0.7588 PS_D_mlp_probs 0.7706 0.7384
+| starganv2 0.8146 PS_B_learned_weights 0.8529 0.8747
+| deepfacelab 0.9601 PS_B_learned_weights 0.9155 0.9402
+| stargan 0.9509 PS_B_learned_weights 0.9705 0.9791
+| styleclip 0.8611 PS_C_logreg_cv 0.9934 0.9967
+Avg(8) 0.8163 0.8979 0.9037
+Raw  vs best PS: +0.0816  wins=7/8  sign p=0.0703  wilcoxon p=0.0547  boot 95% CI [+0.0256, +0.1400]

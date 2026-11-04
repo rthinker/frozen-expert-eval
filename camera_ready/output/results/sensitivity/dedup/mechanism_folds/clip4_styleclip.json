@@ -1,0 +1,18 @@
+{
+  "held_out": "styleclip",
+  "n_fit": 9446,
+  "n_test": 3824,
+  "n_excluded_training_rows": 7,
+  "auroc": {
+    "PS_4_xgboost": 0.9914794617563739,
+    "FS_1_raw_feat_logreg": 0.9995127478753542,
+    "FS_D_xgb_features": 0.9989667138810199,
+    "FS_pca1_logreg": 0.9990520538243626,
+    "FS_pca2_logreg": 0.9991827195467422,
+    "FS_pca4_logreg": 0.9973250708215297,
+    "FS_pca8_logreg": 0.9945442634560907,
+    "FS_probe2_logreg": 0.9999026203966005
+  },
+  "scores_file": "scores/clip4_mechanism_styleclip.npz",
+  "fold_seconds": 121.7
+}

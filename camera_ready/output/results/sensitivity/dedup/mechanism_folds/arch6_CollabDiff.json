@@ -1,0 +1,18 @@
+{
+  "held_out": "CollabDiff",
+  "n_fit": 10996,
+  "n_test": 2000,
+  "n_excluded_training_rows": 7,
+  "auroc": {
+    "PS_4_xgboost": 0.837718,
+    "FS_1_raw_feat_logreg": 0.9987980000000001,
+    "FS_D_xgb_features": 0.9920640000000001,
+    "FS_pca1_logreg": 0.8401939999999999,
+    "FS_pca2_logreg": 0.7981929999999999,
+    "FS_pca4_logreg": 0.925269,
+    "FS_pca8_logreg": 0.969809,
+    "FS_probe2_logreg": 0.999645
+  },
+  "scores_file": "scores/arch6_mechanism_CollabDiff.npz",
+  "fold_seconds": 243.0
+}

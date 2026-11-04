@@ -1,0 +1,37 @@
+{
+  "held_out": "starganv2",
+  "n_fit": 11836,
+  "n_select": 2089,
+  "n_test": 4000,
+  "n_excluded_training_rows": 0,
+  "ps_means": {
+    "PS_1_prob_avg": 0.5816378316378317,
+    "PS_A_calibrated_avg": 0.5144195144195144,
+    "PS_B_learned_weights": 0.6156521156521158,
+    "PS_2_logreg": 0.6638464138464139,
+    "PS_3_mlp_logits": 0.6306586306586306,
+    "PS_D_mlp_probs": 0.6372558872558872,
+    "PS_C_logreg_cv": 0.6693794193794194,
+    "PS_F_mlp_logits_es": 0.6640974140974142,
+    "PS_E_mlp_probs_es": 0.6343263843263843,
+    "PS_4_xgboost": 0.6585219085219085
+  },
+  "best_ps_name": "PS_C_logreg_cv",
+  "best_ps_auc": 0.6693794193794194,
+  "raw_feat_auc": 0.645983645983646,
+  "fs_mlp_mean": 0.6690499190499191,
+  "fs_mlp_std": 0.016288552353037163,
+  "fs_mlp_per_seed": [
+    0.6863946863946864,
+    0.650845900845901,
+    0.6707479207479208,
+    0.6792714292714293,
+    0.6590256590256591,
+    0.6333126333126333,
+    0.6787641787641787,
+    0.6658696658696659
+  ],
+  "fold_seconds": 1256.0,
+  "device_name": "NVIDIA GeForce RTX 5080",
+  "scores_file": "scores/weak6_d256_starganv2.npz"
+}

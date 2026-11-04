@@ -1,0 +1,16 @@
+{
+  "name": "fs_1_raw_features_logreg",
+  "pool": "clip4",
+  "train_tag": "FIT",
+  "avg_auc_8": 0.9654246787497999,
+  "per_generator": {
+    "whichisreal": 0.9602687312687314,
+    "CollabDiff": 1.0,
+    "MidJourney": 1.0,
+    "heygen": 0.7772549019607843,
+    "starganv2": 1.0,
+    "deepfacelab": 0.986530612244898,
+    "stargan": 0.9993435386316337,
+    "styleclip": 0.9999996458923512
+  }
+}

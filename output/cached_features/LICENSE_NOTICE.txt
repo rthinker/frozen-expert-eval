@@ -1,0 +1,44 @@
+DERIVED DF40 FROZEN-EXPERT FEATURE CACHE
+=========================================
+
+Current documentation version: 1.0.8 (4 November 2026)
+Our contributions: Creative Commons Attribution-NonCommercial-ShareAlike
+4.0 International (CC BY-NC-SA 4.0)
+https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+This derived numerical cache contains frozen-expert features, logits, labels,
+sample identifiers and split provenance. It contains no raw media or detector
+checkpoint weights. Its data have not changed since the reviewed release.
+
+UPSTREAM TERMS AND ATTRIBUTION
+
+DF40 and DeepfakeBench are CC BY-NC 4.0. Their terms and applicable upstream
+restrictions remain in force; this notice does not relicense their materials.
+The cache transformation consists of extracting numerical representations and
+predictions with frozen DF40 detectors; raw images are not redistributed.
+
+Cite the accompanying paper and the upstream works listed below.
+- Yan et al. (2024), DF40: Toward Next-Generation Deepfake Detection. NeurIPS 37,
+  29387-29434. https://github.com/YZY-stack/DF40
+- Yan et al. (2023), DeepfakeBench: A Comprehensive Benchmark of Deepfake
+  Detection. NeurIPS 36, 4534-4565.
+- Karras, Laine and Aila (2019), A Style-Based Generator Architecture for
+  Generative Adversarial Networks. CVPR. https://arxiv.org/abs/1812.04948
+
+Detector components retain their own terms.
+The companion repository's LICENSES.md lists the components and their terms.
+https://github.com/rthinker/frozen-expert-eval/blob/main/camera_ready/LICENSES.md
+
+INTENDED USE AND LIMITS
+
+Intended uses are non-commercial methodological and educational evaluation of
+frozen-expert composition. The reported evidence does not validate deployment,
+forensic attribution or surveillance. Re-identification of individuals falls
+outside the intended use of this cache. Respect applicable upstream terms and
+privacy rights.
+
+See README.md / DATASET_CARD.md for splits, overlap, integrity limitations,
+intended uses and citation; croissant.json for metadata; and CHECKSUMS.txt for
+the unchanged data-file hashes. CACHE_PROVENANCE.json binds those hashes
+and this current notice separately. The pinned review revision retains
+its own notice. The current download instructions preserve this notice.

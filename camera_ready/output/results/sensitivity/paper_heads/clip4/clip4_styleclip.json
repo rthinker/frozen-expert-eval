@@ -1,0 +1,49 @@
+{
+  "pool": "clip4",
+  "held_out": "styleclip",
+  "n_fit": 11979,
+  "n_select": 2115,
+  "n_test": 3824,
+  "n_excluded_training_rows": 7,
+  "auc": {
+    "G_disagreement_LR": 0.9940074362606233,
+    "G_disagreement_XGB": 0.9878459631728046,
+    "H_uncertainty_mi_LR": 0.995198300283286,
+    "H_uncertainty_mi_XGB": 0.9867577903682719,
+    "I_quadratic_LR": 0.9957181303116147,
+    "I_quadratic_XGB": 0.9876717422096317,
+    "J_rank_ecdf_LR": 0.9964915014164307,
+    "J_rank_ecdf_XGB": 0.9870060198300284,
+    "K_cv_selected_LR": 0.9957181303116147,
+    "K_cv_selected_XGB": 0.9876717422096317
+  },
+  "cv_auc_logistic_head": {
+    "G_disagreement": 0.9216865053467312,
+    "H_uncertainty_mi": 0.9117564467981832,
+    "I_quadratic": 0.9279743662047322,
+    "J_rank_ecdf": 0.9041656123077345
+  },
+  "k_selected": "I_quadratic",
+  "n_features": {
+    "G_disagreement": 14,
+    "H_uncertainty_mi": 13,
+    "I_quadratic": 18,
+    "J_rank_ecdf": 4
+  },
+  "temperatures": [
+    4.581615524945133,
+    8.859950010873689,
+    5.403159525471507,
+    8.395155500286023
+  ],
+  "seconds_per_map": {
+    "G_disagreement": 92.0,
+    "H_uncertainty_mi": 89.1,
+    "I_quadratic": 105.3,
+    "J_rank_ecdf": 61.9
+  },
+  "fold_seconds": 349.2,
+  "omp_threads": 4,
+  "scores_file": "clip4/clip4_styleclip.npz",
+  "implementation": "appB_richer_inputs.py (fit_logreg, fit_xgb mode cv, cv_auc, maps); logo_common folds"
+}

@@ -1,0 +1,18 @@
+{
+  "held_out": "heygen",
+  "n_fit": 12610,
+  "n_test": 101,
+  "n_excluded_training_rows": 0,
+  "auroc": {
+    "PS_4_xgboost": 0.5078431372549019,
+    "FS_1_raw_feat_logreg": 0.35843137254901963,
+    "FS_D_xgb_features": 0.42117647058823526,
+    "FS_pca1_logreg": 0.503921568627451,
+    "FS_pca2_logreg": 0.47058823529411764,
+    "FS_pca4_logreg": 0.45215686274509803,
+    "FS_pca8_logreg": 0.3211764705882353,
+    "FS_probe2_logreg": 0.5509803921568627
+  },
+  "scores_file": "scores/clip4_mechanism_heygen.npz",
+  "fold_seconds": 141.2
+}

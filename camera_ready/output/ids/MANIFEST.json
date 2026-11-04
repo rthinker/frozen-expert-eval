@@ -1,0 +1,65 @@
+{
+  "note": "Plain-text sample ids decoded once, read-only, from the cache's sample_ids.npy object arrays by opcode disassembly (Python standard library pickletools.genops), after each file's SHA-256 matched CHECKSUMS.txt; the stream was never executed. Decoded on 8 October 2026.",
+  "splits": {
+    "FIT": {
+      "rows": 26591,
+      "unique": 26591,
+      "source_sha256": "390ab8c613d08cf59441f948b05542d17edd38f6a149d28f6a0b105c537a2871",
+      "txt_sha256": "9dff55548b3ed0ba78321e16922cffdf89062878f762053db3019d955822884a"
+    },
+    "SELECT": {
+      "rows": 6647,
+      "unique": 6647,
+      "source_sha256": "24600d78ec86b65a71d5e0803799c120adf6a10c96f5f25e32a93ce522e7637d",
+      "txt_sha256": "b777ce38c1f49a39622bf921311a21e74be24d8e5bed5aa914b1eab307392f11"
+    },
+    "whichisreal": {
+      "rows": 2001,
+      "unique": 2001,
+      "source_sha256": "0ad87e00be5a2d175ace1a02988b29ee79a73909bddc1162b6a0504e2868edaf",
+      "txt_sha256": "d855382455b4fb2be737b46fa0a8a562c28f4c024794088a785120b850ddacd8"
+    },
+    "CollabDiff": {
+      "rows": 2000,
+      "unique": 2000,
+      "source_sha256": "ce920648aaf260b37a7ed9ac005b9f34ea497a6b98b5715976950be01700d472",
+      "txt_sha256": "77d58f41dd9705a2c261e0b5268cd41dd4204c81b697bdb879c6b0e81640824b"
+    },
+    "MidJourney": {
+      "rows": 1882,
+      "unique": 1882,
+      "source_sha256": "e656afcd1e1a72318301603b0a0403739850c56257f7cc714732b49b6885cfdf",
+      "txt_sha256": "013e3c8d6172b8c1ce7606e05a5a9baf7bbaff9f4960d289bbb9ede82d9d43d5"
+    },
+    "heygen": {
+      "rows": 101,
+      "unique": 101,
+      "source_sha256": "824184ae3282c2de2c152c95698ababa226ee55d979a0a4c341a7579e49790ee",
+      "txt_sha256": "825d06a781b6a03c82353706ea33bcdff5e4be558be39612defae84e82053d84"
+    },
+    "starganv2": {
+      "rows": 4000,
+      "unique": 4000,
+      "source_sha256": "0279fa33fb63446fe238addfc4ddf94e8e515380f283955d6dcbfe91973ffcd2",
+      "txt_sha256": "d0b53ef3170b2d2ff5117a06f4b2982b6fccd252ecf578f54214592e7ca3aa2e"
+    },
+    "deepfacelab": {
+      "rows": 149,
+      "unique": 149,
+      "source_sha256": "51d62fe033e114a7377b023a8972767512579ea642d7bca92ed0471f896bc215",
+      "txt_sha256": "b89433d34f649f862a123ddec525847e222e804df4243f3179cbb4a214b9e147"
+    },
+    "stargan": {
+      "rows": 3968,
+      "unique": 3968,
+      "source_sha256": "8efe5a6f30b8aac011f0fecfd19a39bba370e801310dd2eb8e2af3510d3f18f7",
+      "txt_sha256": "0846c84ad062a5f73483f2ee66f132494bde821c73b5215db699902859dfef94"
+    },
+    "styleclip": {
+      "rows": 3824,
+      "unique": 3824,
+      "source_sha256": "003c63a639a99c00fd46670954ad54c12ff93fd168a6e21c75baec56e24d08c9",
+      "txt_sha256": "3805c4d052da208cdfb3d7331b87f7383fe702e1b5aad6e62be62a074f0d9e62"
+    }
+  }
+}

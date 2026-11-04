@@ -1,0 +1,126 @@
+{
+  "cause": "score convention: logits[:,1] -> logits[:,1] - logits[:,0]",
+  "experts_changed": 21,
+  "experts_changed_ge_0.002": 5,
+  "mean_abs_delta": 0.0025619896204355204,
+  "max_abs_delta": 0.014898132508935125,
+  "published_range": [
+    0.3611638240998674,
+    0.873473629627816
+  ],
+  "corrected_range": [
+    0.3611281133406547,
+    0.884295686209094
+  ],
+  "cells_ge_0.999_published": 1,
+  "cells_ge_0.999_corrected": 1,
+  "max_abs_cell_delta": 0.06531462464589238,
+  "rank_order_preserved": true,
+  "per_expert": {
+    "fr-clip-base": {
+      "published": 0.5853092017679548,
+      "corrected": 0.5704110692590196,
+      "delta": -0.014898132508935125
+    },
+    "df40-clip-large": {
+      "published": 0.873473629627816,
+      "corrected": 0.884295686209094,
+      "delta": 0.010822056581277995
+    },
+    "efs-clip-large": {
+      "published": 0.8436715806140955,
+      "corrected": 0.8543011170504259,
+      "delta": 0.010629536436330356
+    },
+    "fs-clip-large": {
+      "published": 0.7804118435356397,
+      "corrected": 0.787127331227244,
+      "delta": 0.006715487691604238
+    },
+    "fr-srm": {
+      "published": 0.4139012495860525,
+      "corrected": 0.40943812891756026,
+      "delta": -0.004463120668492249
+    },
+    "df40-clip-base": {
+      "published": 0.7864470434069382,
+      "corrected": 0.7881194822031432,
+      "delta": 0.0016724387962050447
+    },
+    "fs-clip-base": {
+      "published": 0.6898667930104609,
+      "corrected": 0.6886796000897194,
+      "delta": -0.0011871929207415421
+    },
+    "fr-clip-large": {
+      "published": 0.6960989584873521,
+      "corrected": 0.695382207272152,
+      "delta": -0.0007167512152000954
+    },
+    "efs-clip-base": {
+      "published": 0.794595361408484,
+      "corrected": 0.7952842137670024,
+      "delta": 0.0006888523585184547
+    },
+    "efs-srm": {
+      "published": 0.6872928974658924,
+      "corrected": 0.6867980590085606,
+      "delta": -0.000494838457331781
+    },
+    "efs-recce": {
+      "published": 0.7143626304685158,
+      "corrected": 0.7147321482388052,
+      "delta": 0.0003695177702893737
+    },
+    "df40-xception": {
+      "published": 0.6148111759396673,
+      "corrected": 0.6151381630196785,
+      "delta": 0.0003269870800112207
+    },
+    "fs-rfm": {
+      "published": 0.6420496581629971,
+      "corrected": 0.6417234154614192,
+      "delta": -0.0003262427015778835
+    },
+    "efs-xception": {
+      "published": 0.6859839804764852,
+      "corrected": 0.6861878973638633,
+      "delta": 0.0002039168873780861
+    },
+    "fs-recce": {
+      "published": 0.5392475355859129,
+      "corrected": 0.53915778193916,
+      "delta": -8.975364675289921e-05
+    },
+    "fs-srm": {
+      "published": 0.5863057519978344,
+      "corrected": 0.5863549328478672,
+      "delta": 4.9180850032803924e-05
+    },
+    "fr-xception": {
+      "published": 0.36981369887575727,
+      "corrected": 0.3698532777607815,
+      "delta": 3.9578885024205146e-05
+    },
+    "fr-rfm": {
+      "published": 0.38364818883673546,
+      "corrected": 0.383610884938505,
+      "delta": -3.730389823047853e-05
+    },
+    "fr-recce": {
+      "published": 0.3611638240998674,
+      "corrected": 0.3611281133406547,
+      "delta": -3.5710759212714827e-05
+    },
+    "efs-rfm": {
+      "published": 0.6743044951664343,
+      "corrected": 0.6742810905835901,
+      "delta": -2.3404582844221977e-05
+    },
+    "fs-xception": {
+      "published": 0.5418501925094694,
+      "corrected": 0.5418384151763143,
+      "delta": -1.1777333155160719e-05
+    }
+  }
+}

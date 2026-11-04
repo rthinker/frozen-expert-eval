@@ -1,0 +1,55 @@
+# Direct-dependency pin file from a successful reproduction run on
+# Windows / Python 3.11. This is NOT a fully hermetic lockfile: only the
+# direct project dependencies are pinned here, and pip resolves transitive
+# dependencies at install time, so minor environment drift is possible on
+# different platforms / pip versions. For reproduction within a small
+# numerical tolerance, install into a clean virtual environment:
+#
+#     python -m venv .venv
+#     .venv\Scripts\activate          (Windows)
+#     source .venv/bin/activate       (Linux / macOS)
+#     pip install -r requirements-lock.txt
+#
+# The pinned versions below are exactly the ones used to produce the
+# numbers in output/results/*.json and output/results/reference_results.json.
+# Reviewers who need byte-identical reproduction should regenerate a
+# fully-pinned environment by running `pip freeze > requirements-full.txt`
+# inside a clean venv after installing from this file.
+#
+# CUDA NOTE: torch is pinned to a CUDA 12.8 build (cu128) via the
+# --extra-index-url directive immediately below. Without that line,
+# `pip install -r requirements-lock.txt` would resolve `torch==2.10.0`
+# from the default PyPI index and silently install the CPU-only build,
+# breaking the GPU-runtime claim in the paper. Reviewers without a
+# matching CUDA toolchain can override to a CPU build via
+#     pip install torch==2.10.0+cpu torchvision==0.25.0+cpu \
+#       --index-url https://download.pytorch.org/whl/cpu
+# All scripts are CPU-feasible after the feature cache is populated.
+
+--extra-index-url https://download.pytorch.org/whl/cu128
+
+# Core
+torch==2.10.0+cu128
+torchvision==0.25.0+cu128
+numpy==1.26.4
+scipy==1.11.4
+scikit-learn==1.6.0
+
+# Pretrained models
+transformers==4.56.1
+
+# Decision-space baselines
+xgboost==3.2.0
+
+# Visualisation
+matplotlib==3.7.1
+
+# DF40 dependencies
+albumentations==1.1.0
+opencv-python==4.11.0.86
+lmdb==1.7.3
+
+# Data / config
+Pillow==10.2.0
+PyYAML==6.0.1
+tqdm==4.67.1

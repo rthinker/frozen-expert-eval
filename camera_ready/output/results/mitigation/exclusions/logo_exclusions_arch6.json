@@ -1,0 +1,103 @@
+{
+  "pool": "arch6",
+  "experts": [
+    "fs-clip-base",
+    "fs-clip-large",
+    "fs-xception",
+    "fs-srm",
+    "fs-recce",
+    "fs-rfm"
+  ],
+  "rule": "remove from a fold's training generators every row whose cached feature vector (all experts of the pool, float32 as loaded) is identical to a row of the held-out generator's test set",
+  "shared_images": 7,
+  "shared_pairs": {
+    "CollabDiff|styleclip": 7
+  },
+  "rows_excluded_total": 14,
+  "expected": {
+    "images": 7,
+    "rows": 14
+  },
+  "folds": [
+    {
+      "held_out": "whichisreal",
+      "excluded_rows": {},
+      "n_excluded": 0,
+      "labels": {}
+    },
+    {
+      "held_out": "CollabDiff",
+      "excluded_rows": {
+        "styleclip": [
+          297,
+          1224,
+          1310,
+          2485,
+          2822,
+          2894,
+          3327
+        ]
+      },
+      "n_excluded": 7,
+      "labels": {
+        "styleclip": {
+          "real": 7,
+          "fake": 0
+        }
+      }
+    },
+    {
+      "held_out": "MidJourney",
+      "excluded_rows": {},
+      "n_excluded": 0,
+      "labels": {}
+    },
+    {
+      "held_out": "heygen",
+      "excluded_rows": {},
+      "n_excluded": 0,
+      "labels": {}
+    },
+    {
+      "held_out": "starganv2",
+      "excluded_rows": {},
+      "n_excluded": 0,
+      "labels": {}
+    },
+    {
+      "held_out": "deepfacelab",
+      "excluded_rows": {},
+      "n_excluded": 0,
+      "labels": {}
+    },
+    {
+      "held_out": "stargan",
+      "excluded_rows": {},
+      "n_excluded": 0,
+      "labels": {}
+    },
+    {
+      "held_out": "styleclip",
+      "excluded_rows": {
+        "CollabDiff": [
+          81,
+          600,
+          1286,
+          1341,
+          1499,
+          1674,
+          1895
+        ]
+      },
+      "n_excluded": 7,
+      "labels": {
+        "CollabDiff": {
+          "real": 7,
+          "fake": 0
+        }
+      }
+    }
+  ],
+  "_written_utc": "2026-10-09T21:59:07.411951+00:00",
+  "gate_G1": "PASS"
+}

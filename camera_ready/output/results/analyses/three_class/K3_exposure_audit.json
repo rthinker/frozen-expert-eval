@@ -1,0 +1,57 @@
+{
+  "views": {
+    "A_df40": {
+      "per_class": {
+        "face-swap": {
+          "rows": 6512,
+          "exposed": 6512,
+          "frac": 1.0
+        },
+        "reenactment": {
+          "rows": 8481,
+          "exposed": 8481,
+          "frac": 1.0
+        },
+        "entire-face-synthesis": {
+          "rows": 5640,
+          "exposed": 5640,
+          "frac": 1.0
+        }
+      },
+      "spread": 0.0,
+      "uniform": true,
+      "per_expert_vector_constant": true,
+      "experts": [
+        "df40-clip-large",
+        "df40-clip-base",
+        "df40-xception"
+      ]
+    },
+    "B_arch6": {
+      "per_class": {
+        "reenactment": {
+          "rows": 8481,
+          "exposed": 0,
+          "frac": 0.0
+        },
+        "entire-face-synthesis": {
+          "rows": 5640,
+          "exposed": 0,
+          "frac": 0.0
+        }
+      },
+      "spread": 0.0,
+      "uniform": true,
+      "per_expert_vector_constant": true,
+      "experts": [
+        "fs-clip-base",
+        "fs-clip-large",
+        "fs-xception",
+        "fs-srm",
+        "fs-recce",
+        "fs-rfm"
+      ]
+    }
+  },
+  "limit": "path-level membership; held-out exclusion is content-level"
+}

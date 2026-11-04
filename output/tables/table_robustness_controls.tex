@@ -1,0 +1,20 @@
+% Robustness controls: FS_D (same-family) and FS_1 standardization
+% (a) FS_D (XGBoost on features) vs PS_4 (XGBoost on logits)
+\begin{tabular}{lrrr}
+\toprule
+Pool & FS\_D: XGB on features & PS\_4: XGB on logits & Delta \\
+\midrule
+clip4 & 0.9590 & 0.9390 & +0.0201 \\
+arch6 & 0.9545 & 0.8426 & +0.1119 \\
+\bottomrule
+\end{tabular}
+
+% (b) FS_1 raw features vs standardized features
+\begin{tabular}{lrrr}
+\toprule
+Pool & FS\_1 raw & FS\_1 standardized & Delta (std$-$raw) \\
+\midrule
+clip4 & 0.9654 & 0.9659 & +0.0004 \\
+arch6 & 0.9657 & 0.9654 & -0.0003 \\
+\bottomrule
+\end{tabular}

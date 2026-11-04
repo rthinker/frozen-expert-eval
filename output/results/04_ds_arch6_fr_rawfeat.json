@@ -1,0 +1,16 @@
+{
+  "name": "fs_1_raw_features_logreg",
+  "pool": "arch6_fr",
+  "train_tag": "FIT",
+  "avg_auc_8": 0.9547856640845165,
+  "per_generator": {
+    "whichisreal": 0.8023166833166833,
+    "CollabDiff": 0.999789,
+    "MidJourney": 0.9992250832496581,
+    "heygen": 0.8831372549019607,
+    "starganv2": 0.9996389996389996,
+    "deepfacelab": 0.9683673469387755,
+    "stargan": 0.9858251089360041,
+    "styleclip": 0.999985835694051
+  }
+}

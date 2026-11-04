@@ -1,0 +1,37 @@
+{
+  "held_out": "CollabDiff",
+  "n_fit": 10996,
+  "n_select": 1941,
+  "n_test": 2000,
+  "n_excluded_training_rows": 7,
+  "ps_means": {
+    "PS_1_prob_avg": 0.914489,
+    "PS_A_calibrated_avg": 0.981941,
+    "PS_B_learned_weights": 0.9988655,
+    "PS_2_logreg": 0.99599,
+    "PS_3_mlp_logits": 0.9969779999999999,
+    "PS_D_mlp_probs": 0.9697610000000001,
+    "PS_C_logreg_cv": 0.995984,
+    "PS_F_mlp_logits_es": 0.997716,
+    "PS_E_mlp_probs_es": 0.993495,
+    "PS_4_xgboost": 0.997074
+  },
+  "best_ps_name": "PS_B_learned_weights",
+  "best_ps_auc": 0.9988655,
+  "raw_feat_auc": 0.999992,
+  "fs_mlp_mean": 0.99999,
+  "fs_mlp_std": 7.880950133083865e-06,
+  "fs_mlp_per_seed": [
+    0.999977,
+    0.99999,
+    0.999994,
+    0.999984,
+    0.9999830000000001,
+    0.999994,
+    0.999989,
+    0.99997
+  ],
+  "fold_seconds": 1014.1,
+  "device_name": "NVIDIA GeForce RTX 5080",
+  "scores_file": "scores/clip4_d32_CollabDiff.npz"
+}

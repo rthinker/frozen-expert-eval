@@ -1,0 +1,31 @@
+# Local settings: copy configs/paths.yaml.example to configs/paths.yaml and edit the copy
+configs/paths.yaml
+# The downloaded feature cache (the documentation files next to it are tracked)
+output/cached_features/*/
+# Written by runs of the reviewed pipeline
+output/checkpoints/
+output/figures/
+output/logs/
+output/reproducibility_backup/
+output/results/*.npz
+output/results/reproducibility_log.json
+# Written by runs of the camera-ready harness
+camera_ready/output/df40_lists_cacheform/
+camera_ready/output/figures/
+camera_ready/output/logs/
+camera_ready/output/reproducibility_backup/
+camera_ready/output/tables/
+camera_ready/run_inputs/
+camera_ready/output/results/sensitivity_rerun/
+# Reports of the review tools run by hand (refit_fs1_v3.py, check_fs1_score_precision_v2.py)
+camera_ready/output/checks/
+requirements-cpu.txt
+# DF40's code, copied here only to re-extract features (camera_ready/INSTALL.md)
+third_party/
+# Python and tools
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/

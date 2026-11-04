@@ -1,0 +1,95 @@
+{
+  "run": "B_diagnose",
+  "pool": "arch6",
+  "by_level": {
+    "exact": {
+      "fit_total": 26591,
+      "fit_dropped": 9521,
+      "fit_dropped_pct": 35.80534767402504,
+      "fit_kept": 17070,
+      "fit_kept_real": 586,
+      "fit_kept_fake": 16484,
+      "select_total": 6647,
+      "select_dropped": 2365,
+      "select_dropped_pct": 35.5799608846096,
+      "select_kept": 4282,
+      "select_kept_real": 133,
+      "select_kept_fake": 4149
+    },
+    "family": {
+      "fit_total": 26591,
+      "fit_dropped": 9521,
+      "fit_dropped_pct": 35.80534767402504,
+      "fit_kept": 17070,
+      "fit_kept_real": 586,
+      "fit_kept_fake": 16484,
+      "select_total": 6647,
+      "select_dropped": 2365,
+      "select_dropped_pct": 35.5799608846096,
+      "select_kept": 4282,
+      "select_kept_real": 133,
+      "select_kept_fake": 4149
+    }
+  },
+  "test_side": {
+    "whichisreal": {
+      "n": 2001,
+      "in_combiner_train": 988,
+      "pct": 49.375312343828085,
+      "real_overlapping": 988,
+      "fake_overlapping": 0
+    },
+    "CollabDiff": {
+      "n": 2000,
+      "in_combiner_train": 1993,
+      "pct": 99.65,
+      "real_overlapping": 993,
+      "fake_overlapping": 1000
+    },
+    "MidJourney": {
+      "n": 1882,
+      "in_combiner_train": 1882,
+      "pct": 100.0,
+      "real_overlapping": 1005,
+      "fake_overlapping": 877
+    },
+    "heygen": {
+      "n": 101,
+      "in_combiner_train": 50,
+      "pct": 49.504950495049506,
+      "real_overlapping": 50,
+      "fake_overlapping": 0
+    },
+    "starganv2": {
+      "n": 4000,
+      "in_combiner_train": 3000,
+      "pct": 75.0,
+      "real_overlapping": 2001,
+      "fake_overlapping": 999
+    },
+    "deepfacelab": {
+      "n": 149,
+      "in_combiner_train": 149,
+      "pct": 100.0,
+      "real_overlapping": 49,
+      "fake_overlapping": 100
+    },
+    "stargan": {
+      "n": 3968,
+      "in_combiner_train": 0,
+      "pct": 0.0,
+      "real_overlapping": 0,
+      "fake_overlapping": 0
+    },
+    "styleclip": {
+      "n": 3824,
+      "in_combiner_train": 3824,
+      "pct": 100.0,
+      "real_overlapping": 1000,
+      "fake_overlapping": 2824
+    }
+  },
+  "total_test_in_train": 11886,
+  "_written_utc": "2026-07-25T04:19:36.939766+00:00",
+  "_protocol_note": "macro AUROC over held-out generators; paired generator-level bootstrap (10k, percentile); exact two-sided sign-flip permutation; BCa on mean per-generator delta"
+}

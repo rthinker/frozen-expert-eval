@@ -1,0 +1,76 @@
+{
+  "run": "verify_bit_identity",
+  "pool": "arch6",
+  "experts": [
+    "fs-clip-base",
+    "fs-clip-large",
+    "fs-xception",
+    "fs-srm",
+    "fs-recce",
+    "fs-rfm"
+  ],
+  "n_overlap_total": 11886,
+  "features_bit_identical_total": 11817,
+  "logits_bit_identical_total": 11785,
+  "label_mismatches_total": 8,
+  "claim_supported": false,
+  "per_generator": {
+    "whichisreal": {
+      "n_overlap": 988,
+      "features_bit_identical": 988,
+      "logits_bit_identical": 988,
+      "features_pct": 100.0,
+      "label_mismatches": 0
+    },
+    "CollabDiff": {
+      "n_overlap": 1993,
+      "features_bit_identical": 1990,
+      "logits_bit_identical": 1974,
+      "features_pct": 99.84947315604616,
+      "label_mismatches": 0
+    },
+    "MidJourney": {
+      "n_overlap": 1882,
+      "features_bit_identical": 1846,
+      "logits_bit_identical": 1846,
+      "features_pct": 98.08714133900106,
+      "label_mismatches": 5
+    },
+    "heygen": {
+      "n_overlap": 50,
+      "features_bit_identical": 47,
+      "logits_bit_identical": 47,
+      "features_pct": 94.0,
+      "label_mismatches": 0
+    },
+    "starganv2": {
+      "n_overlap": 3000,
+      "features_bit_identical": 2994,
+      "logits_bit_identical": 2994,
+      "features_pct": 99.8,
+      "label_mismatches": 3
+    },
+    "deepfacelab": {
+      "n_overlap": 149,
+      "features_bit_identical": 128,
+      "logits_bit_identical": 128,
+      "features_pct": 85.90604026845638,
+      "label_mismatches": 0
+    },
+    "stargan": {
+      "n_overlap": 0,
+      "note": "no overlapping ids"
+    },
+    "styleclip": {
+      "n_overlap": 3824,
+      "features_bit_identical": 3824,
+      "logits_bit_identical": 3808,
+      "features_pct": 100.0,
+      "label_mismatches": 0
+    }
+  },
+  "definition": "exact equality (==) on the raw stored arrays for every arch6 expert; a row counts as bit-identical only if it matches on all six experts",
+  "why": "checks for bit-identical cached feature vectors, which distinguishes genuine reuse from a filename collision",
+  "_written_utc": "2026-07-26T00:51:42.446544+00:00",
+  "_protocol_note": "macro AUROC over held-out generators; paired generator-level bootstrap (10k, percentile); exact two-sided sign-flip permutation; BCa on mean per-generator delta"
+}

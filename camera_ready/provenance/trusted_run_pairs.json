@@ -1,0 +1,110 @@
+{
+  "note": "Groups of stored LOGO runs produced together from the same folds; content digests are SHA-256 with CRLF line endings (camera_ready/scripts/runs/ladder_checks.py). Written by camera_ready/scripts/review/trusted_run_pairs_v1.py.",
+  "groups": [
+    {
+      "group": "primary arch6: LOGO with the content exclusion, its richer inputs, combined ceiling, mechanism and paper-heads runs",
+      "files": {
+        "camera_ready/output/results/mitigation/content_disjoint/11_disjoint_arch6_d256.json": "2a3419f08d4cadf6d22af27e4ac49b7e48f60f0d243e981c3b70204d00550be7",
+        "camera_ready/output/results/mitigation/content_disjoint/A3c_logo_extended_rungs_arch6.json": "60d2dd7366529c46e9eed628c7273ddfc8e767b833a8e49e66f6a519e0819404",
+        "camera_ready/output/results/mitigation/content_disjoint/A3c_logo_combined_ceiling_arch6.json": "520a65e38a23edc141fb59902274e70ffc460d7c69c682bcb763a6794130589a",
+        "camera_ready/output/results/mitigation/mechanism/run_c_v2_logo_arch6.json": "8b56121417787768823aa2543ad65ae3fc745d9ecdad645f4a60cbb07157f474",
+        "camera_ready/output/results/sensitivity/paper_heads/arch6/arch6_whichisreal.json": "067f7ee035845e6695177f67964675ea1a04023bfc6866284dbc387a9e6d5a78",
+        "camera_ready/output/results/sensitivity/paper_heads/arch6/arch6_CollabDiff.json": "0bed27d9d17f4370da88357b443cea5368f207c7db8aa0ddc11ac8f55beed5e1",
+        "camera_ready/output/results/sensitivity/paper_heads/arch6/arch6_MidJourney.json": "6f41fddaed05330f4b20f84430a6b392a601df7137e099c63b4c8dd651fb44a9",
+        "camera_ready/output/results/sensitivity/paper_heads/arch6/arch6_heygen.json": "e50ab4feb87ba9984e4e0159ec713e99a195e36b9b34f1779a0c6513c8092525",
+        "camera_ready/output/results/sensitivity/paper_heads/arch6/arch6_starganv2.json": "475f09c2106452a517a817cac552e35064faf4cc185fc07671144b59cc8db45d",
+        "camera_ready/output/results/sensitivity/paper_heads/arch6/arch6_deepfacelab.json": "2ad1ca880558b7427e6ce0c9db565311883f2a37a77b291e7a6d6080c3393a9c",
+        "camera_ready/output/results/sensitivity/paper_heads/arch6/arch6_stargan.json": "aea37766f6d20a6ee283f6f21f2bc4558a7c71bde62f56e6f9f522cc4e9dd076",
+        "camera_ready/output/results/sensitivity/paper_heads/arch6/arch6_styleclip.json": "691fdff9255a3512be5cb86803584792c1f94060b2d2783f47b5b01b8ba3a3d4"
+      }
+    },
+    {
+      "group": "primary clip4: LOGO with the content exclusion, its richer inputs, combined ceiling, mechanism and paper-heads runs",
+      "files": {
+        "camera_ready/output/results/mitigation/content_disjoint/11_disjoint_clip4_d32.json": "11de77960e20f15b2b54e5f74d4e8a82fc96a57ae6f8eb4de8afbd7449264a98",
+        "camera_ready/output/results/mitigation/content_disjoint/A3c_logo_extended_rungs_clip4.json": "f1f316035a896b925efe68ce6ecc8d3a552b0d131e9fea0a5b38af2b1f577696",
+        "camera_ready/output/results/mitigation/content_disjoint/A3c_logo_combined_ceiling_clip4.json": "f7f580ee9d765f5c8c8f2f8862907910337bf7c0f5bcf8f178871db9ff861070",
+        "camera_ready/output/results/mitigation/mechanism/run_c_v2_logo_clip4.json": "a92460ad9f142578866a99f8aa054ddcd0c8f45527fb6affec25eb494fc101a3",
+        "camera_ready/output/results/sensitivity/paper_heads/clip4/clip4_whichisreal.json": "2dc1b6474d4813dac247c2873ac127f4807f3b5d41bc04622e76c6c68faa7d9e",
+        "camera_ready/output/results/sensitivity/paper_heads/clip4/clip4_CollabDiff.json": "22e254e2a282c0fc6d240d5100dfb711d1eefcf98ffc464c5a054310b550eb57",
+        "camera_ready/output/results/sensitivity/paper_heads/clip4/clip4_MidJourney.json": "a974f93ecc2002806efdb5d7503fb1d721ec41055ef75493c8671562c0dce21f",
+        "camera_ready/output/results/sensitivity/paper_heads/clip4/clip4_heygen.json": "75951051f25f1aef266e1e01151e518fdc49c1658d8b5dff8474f143a60e00ef",
+        "camera_ready/output/results/sensitivity/paper_heads/clip4/clip4_starganv2.json": "1c438d6bf6d55f9e77d9c3390e08501214fc203ece08a83ef49efea2eefd9bf2",
+        "camera_ready/output/results/sensitivity/paper_heads/clip4/clip4_deepfacelab.json": "a3f8b3c4accb02be79b972b637d764249008f2608fc9ab1d1fc682a4b7e26cba",
+        "camera_ready/output/results/sensitivity/paper_heads/clip4/clip4_stargan.json": "ca0178ccee14c50f9ac07b5ca14446befa19114ff022aa17dfb213f6e308ab46",
+        "camera_ready/output/results/sensitivity/paper_heads/clip4/clip4_styleclip.json": "c1fcd5228068042d872c52e6f0d1f51b657d4a184296d9582f9a8020a5fc2b2c"
+      }
+    },
+    {
+      "group": "primary strong4: LOGO with the content exclusion, its richer inputs, combined ceiling, mechanism and paper-heads runs",
+      "files": {
+        "camera_ready/output/results/mitigation/content_disjoint/11_disjoint_strong4_d256.json": "85c44856aacd821541259c8dea6cc277d42707cc0398c27f5cd4a110f37814a9",
+        "camera_ready/output/results/mitigation/content_disjoint/A3c_logo_extended_rungs_strong4.json": "887632f78a8bcd7e25893f21833b86bf299d191b158bbeebef465192cec488da",
+        "camera_ready/output/results/mitigation/content_disjoint/A3c_logo_combined_ceiling_strong4.json": "078194053ebcd33cde913a9bf17522adf1ba2262953c887ea0e2c28fd7493aba",
+        "camera_ready/output/results/sensitivity/paper_heads/strong4/strong4_whichisreal.json": "a2b02301e0297998164329defb033dfd3bc770cdd243ea2baf5295672847aa13",
+        "camera_ready/output/results/sensitivity/paper_heads/strong4/strong4_CollabDiff.json": "6e376effed487a058ecf9cb628e5ad59b8aabe9763e381798152c17b92baf6be",
+        "camera_ready/output/results/sensitivity/paper_heads/strong4/strong4_MidJourney.json": "86669f198c289599872786e1b5f748bd7b56f47c2cfc853af804139c226241ce",
+        "camera_ready/output/results/sensitivity/paper_heads/strong4/strong4_heygen.json": "f1553493b52de859be7ee0730e80b56a10d0b6d72712120cf9862b781b2a9c98",
+        "camera_ready/output/results/sensitivity/paper_heads/strong4/strong4_starganv2.json": "2f7b0ec90498c64754565303addcddcd3bef5de876c36fe30090974e383c6235",
+        "camera_ready/output/results/sensitivity/paper_heads/strong4/strong4_deepfacelab.json": "1b57d1858b73d246964e0f6dc3a575c976d3f3c44d6482130a693d47d94c7299",
+        "camera_ready/output/results/sensitivity/paper_heads/strong4/strong4_stargan.json": "35df103c53f95850509251df4ecbd66b3dbd9038174f9ee0529ca261423ada43",
+        "camera_ready/output/results/sensitivity/paper_heads/strong4/strong4_styleclip.json": "d702889cd38695ea9078634a9b077e15d231a77727c4fe047b5d39884e8fa7b8"
+      }
+    },
+    {
+      "group": "primary weak6: LOGO with the content exclusion, its richer inputs, combined ceiling, mechanism and paper-heads runs",
+      "files": {
+        "camera_ready/output/results/mitigation/content_disjoint/11_disjoint_weak6_d256.json": "9526325f5b1acb8d606a3664cedcce1c67c8928202e41a288da17edb0c02eb31",
+        "camera_ready/output/results/mitigation/content_disjoint/A3c_logo_extended_rungs_weak6.json": "83f8f6cf1cfa4e320fb4bbe927774680d2a996b8b25ee4bc2db5951f7266074b",
+        "camera_ready/output/results/mitigation/content_disjoint/A3c_logo_combined_ceiling_weak6.json": "c3225b7683593d221bb27c01b5b840ebf833efcbe494532f42d4948b96eb1c63",
+        "camera_ready/output/results/sensitivity/paper_heads/weak6/weak6_whichisreal.json": "880b5e08f909ad75aca8c5ae3233e53d75a8153348fbd76c5ccc057943bffd34",
+        "camera_ready/output/results/sensitivity/paper_heads/weak6/weak6_CollabDiff.json": "5c29901805812c72a78e099ab184a9391eee08084e66f8ae2ca1cb105c38457d",
+        "camera_ready/output/results/sensitivity/paper_heads/weak6/weak6_MidJourney.json": "0bc60e5b63e59dcd2caa232600ba13e598164f90e94a082393bd4eaeeb3265d0",
+        "camera_ready/output/results/sensitivity/paper_heads/weak6/weak6_heygen.json": "c1de779f3f9bc4a29ad0f3adef44ef255a7a0ccbb06814c590c332eb4b608f15",
+        "camera_ready/output/results/sensitivity/paper_heads/weak6/weak6_starganv2.json": "182b71162c60f27e8adc95270b7e3095e8e394c5c15ccdc13b6ccd1058535ee3",
+        "camera_ready/output/results/sensitivity/paper_heads/weak6/weak6_deepfacelab.json": "85381901e258ba848e6753ba249bddace577d5af3c8fb986b56ad771a5a82775",
+        "camera_ready/output/results/sensitivity/paper_heads/weak6/weak6_stargan.json": "9f72bf16c99d2e9eab6adb0828ef677ad0b8eaa3a802bfde03c2bd04b41f0289",
+        "camera_ready/output/results/sensitivity/paper_heads/weak6/weak6_styleclip.json": "bd34e40489d4c9c9bd3cc4c8f4b2bf9e41039a9600a6f18dd9157677947a3b63"
+      }
+    },
+    {
+      "group": "deduplicated arch6: the sensitivity check without duplicated training rows",
+      "files": {
+        "camera_ready/output/results/sensitivity/dedup/11_disjoint_arch6_d256.json": "a6fa669b05eca655466f54322b9dd6e4c9d0a16c6a23bff153ded3e896925560",
+        "camera_ready/output/results/sensitivity/dedup/A3c_logo_extended_rungs_arch6.json": "b3a04d988f65c7f73400766b0253aa0e1907788808f280517f083430049d0da9",
+        "camera_ready/output/results/sensitivity/dedup/run_c_v2_logo_arch6.json": "9e516f0909aa86983e7cd65a3472171e41379f32b978f8d652be6651cda7f003"
+      }
+    },
+    {
+      "group": "deduplicated clip4: the sensitivity check without duplicated training rows",
+      "files": {
+        "camera_ready/output/results/sensitivity/dedup/11_disjoint_clip4_d32.json": "8280242683de33e1ab52016b6d6136fa3a449ac2c7783e56b9fa4b843cbaf38f",
+        "camera_ready/output/results/sensitivity/dedup/A3c_logo_extended_rungs_clip4.json": "7cfffa79981e794a0201f20ff93a22fe94606a02defc1f01ced3c7c419b05977",
+        "camera_ready/output/results/sensitivity/dedup/run_c_v2_logo_clip4.json": "c864d2b85de5c4a02d69b9fe59c243aaefb33d273ffa1e868d75ead103450cad"
+      }
+    },
+    {
+      "group": "deduplicated strong4: the sensitivity check without duplicated training rows",
+      "files": {
+        "camera_ready/output/results/sensitivity/dedup/11_disjoint_strong4_d256.json": "141339bb8df3ace0443234d84a445caa5225eaba48d6965e378f2face78aa383",
+        "camera_ready/output/results/sensitivity/dedup/A3c_logo_extended_rungs_strong4.json": "e53c0dce071fce067b2b0529f97283542e1d050dee98fe264109dadea4929011"
+      }
+    },
+    {
+      "group": "deduplicated weak6: the sensitivity check without duplicated training rows",
+      "files": {
+        "camera_ready/output/results/sensitivity/dedup/11_disjoint_weak6_d256.json": "b1e9cdecf34934687b560d52649a6fe179bc715b9bb260b2a1f7a0301a5fb651",
+        "camera_ready/output/results/sensitivity/dedup/A3c_logo_extended_rungs_weak6.json": "c5a80ebb2d95dad8d035611ccff3f3eae1fcb071e1af5c3abf592bd0c106b780"
+      }
+    },
+    {
+      "group": "submitted arch6: the reviewed LOGO run with the rebuttal's richer inputs (the statistics' self-test)",
+      "files": {
+        "output/results/11_disjoint_arch6_d256.json": "c0de884e1a8a9fc0d933d3c573e19a9a56562c18813ba7420ed0f70e5efc21e6",
+        "camera_ready/inputs/11_disjoint_arch6_d256.json": "c0de884e1a8a9fc0d933d3c573e19a9a56562c18813ba7420ed0f70e5efc21e6",
+        "camera_ready/inputs/A3c_logo_extended_rungs_arch6.json": "1c0976a730c9bf6fb13995148814c828dcdb40737bd0382c408e4b5ff6630f01",
+        "camera_ready/inputs/A3c_logo_combined_ceiling_arch6.json": "9ea1a43af93f1b41ffb3ec96edcbba99965eb625878e472de6e754d2c15af8de"
+      }
+    }
+  ]
+}

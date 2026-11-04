@@ -1,0 +1,179 @@
+{
+  "_note": "Independent reference counts for check_split_reuse_v3.py --expect. Any difference is reported.",
+  "route_a": {
+    "source": "Historical expected counts from the DF40 split lists, including 247 MidJourney GIF paths; current report: camera_ready/output/results/split_reuse_check.json",
+    "per_generator": {
+      "whichisreal": {
+        "test_paths": 2001,
+        "in_DF40_all": 988
+      },
+      "CollabDiff": {
+        "test_paths": 2000,
+        "in_DF40_all": 1993
+      },
+      "MidJourney": {
+        "test_paths": 1882,
+        "in_DF40_all": 1882
+      },
+      "heygen": {
+        "test_paths": 9141,
+        "in_DF40_all": 7536
+      },
+      "starganv2": {
+        "test_paths": 4000,
+        "in_DF40_all": 3000
+      },
+      "deepfacelab": {
+        "test_paths": 4669,
+        "in_DF40_all": 4669
+      },
+      "stargan": {
+        "test_paths": 3968,
+        "in_DF40_all": 0
+      },
+      "styleclip": {
+        "test_paths": 3824,
+        "in_DF40_all": 3824
+      }
+    },
+    "total_test_paths": 31485,
+    "in_DF40_all": 23892,
+    "pct": 75.9
+  },
+  "route_b": {
+    "content_reuse": {
+      "source": "camera_ready/inputs/A4_content_only_rows.json (content expert df40-clip-large)",
+      "per_generator": {
+        "whichisreal": {
+          "n": 2001,
+          "content_reuse": 988
+        },
+        "CollabDiff": {
+          "n": 2000,
+          "content_reuse": 2000
+        },
+        "MidJourney": {
+          "n": 1882,
+          "content_reuse": 1882
+        },
+        "heygen": {
+          "n": 101,
+          "content_reuse": 50
+        },
+        "starganv2": {
+          "n": 4000,
+          "content_reuse": 4000
+        },
+        "deepfacelab": {
+          "n": 149,
+          "content_reuse": 149
+        },
+        "stargan": {
+          "n": 3968,
+          "content_reuse": 0
+        },
+        "styleclip": {
+          "n": 3824,
+          "content_reuse": 3824
+        }
+      },
+      "totals": {
+        "n": 17925,
+        "content_reuse": 12893,
+        "content_pct": 71.9
+      }
+    },
+    "select_fit_content_twins": {
+      "source": "Historical expected count; output/cached_features/DATASET_CARD.md distinguishes 794 df40-clip-large feature twins from 793 arch6 feature twins.",
+      "df40-clip-large": 794
+    },
+    "distinct_test_images": {
+      "source": "Historical expected distinct-image counts, also reported in output/cached_features/DATASET_CARD.md.",
+      "per_generator": {
+        "MidJourney": 1877,
+        "starganv2": 1024
+      },
+      "total": 14944
+    },
+    "first_row_signature_test_splits": {
+      "source": "Historical expected count: five MidJourney rows share the first-row signature. Repeated images confound the same diagnostic for StarGAN-v2; FIT and SELECT were re-split after extraction.",
+      "per_generator": {
+        "MidJourney": 5
+      }
+    },
+    "path_reuse": {
+      "source": "camera_ready/inputs/run_b_diagnose_arch6.json, test_side (in_combiner_train, fake_overlapping)",
+      "per_generator": {
+        "whichisreal": {
+          "path_reuse": 988,
+          "path_reuse_fake": 0
+        },
+        "CollabDiff": {
+          "path_reuse": 1993,
+          "path_reuse_fake": 1000
+        },
+        "MidJourney": {
+          "path_reuse": 1882,
+          "path_reuse_fake": 877
+        },
+        "heygen": {
+          "path_reuse": 50,
+          "path_reuse_fake": 0
+        },
+        "starganv2": {
+          "path_reuse": 3000,
+          "path_reuse_fake": 999
+        },
+        "deepfacelab": {
+          "path_reuse": 149,
+          "path_reuse_fake": 100
+        },
+        "stargan": {
+          "path_reuse": 0,
+          "path_reuse_fake": 0
+        },
+        "styleclip": {
+          "path_reuse": 3824,
+          "path_reuse_fake": 2824
+        }
+      },
+      "total": 11886,
+      "generators_with_fake_path_reuse": 5
+    },
+    "fit_real_source_families": {
+      "source": "camera_ready/inputs/run_b_path_disjoint_arch6_family.json; the strict filter retains 586 real rows from FaceForensics++, against 5,438 rows from eight source families before filtering (paper Appendix A).",
+      "real_rows": 5438,
+      "families": 8,
+      "real_rows_after_strict_filter": 586,
+      "families_after_strict_filter": 1
+    },
+    "label_path_disagreements": {
+      "source": "Historical expected count: nine cached/source label disagreements (FIT 2, MidJourney 5, StarGAN-v2 2); output/cached_features/DATASET_CARD.md describes these integrity properties.",
+      "per_split": {
+        "FIT": 2,
+        "MidJourney": 5,
+        "starganv2": 2
+      },
+      "total": 9
+    },
+    "raw_files": {
+      "source": "Historical expected zero-byte source-file counts (FIT 7, SELECT 1, MidJourney 5, StarGAN-v2 4); current integrity disclosure: output/cached_features/DATASET_CARD.md.",
+      "zero_byte": {
+        "FIT": 7,
+        "SELECT": 1,
+        "MidJourney": 5,
+        "starganv2": 4
+      },
+      "zero_byte_total": 17
+    },
+    "cross_generator_matches": {
+      "source": "Seven shared real images across CollabDiff and StyleCLIP, contributing 14 rows, based on bit-identical arch6 logit fingerprints.",
+      "shared_images": 7,
+      "pairs": {
+        "CollabDiff|styleclip": 7
+      },
+      "rows_total": 14,
+      "rows_fake": 0
+    }
+  }
+}

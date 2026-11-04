@@ -1,0 +1,18 @@
+{
+  "held_out": "CollabDiff",
+  "n_fit": 13530,
+  "n_test": 2000,
+  "n_excluded_training_rows": 7,
+  "auroc": {
+    "PS_4_xgboost": 0.997058,
+    "FS_1_raw_feat_logreg": 0.999952,
+    "FS_D_xgb_features": 0.9999,
+    "FS_pca1_logreg": 0.9996109999999999,
+    "FS_pca2_logreg": 0.99856,
+    "FS_pca4_logreg": 0.997796,
+    "FS_pca8_logreg": 0.999541,
+    "FS_probe2_logreg": 0.999998
+  },
+  "scores_file": "scores/clip4_mechanism_CollabDiff.npz",
+  "fold_seconds": 149.3
+}

@@ -1,0 +1,49 @@
+{
+  "run": "C_v2_standard",
+  "pool": "clip4",
+  "experts": [
+    "fs-clip-large",
+    "fr-clip-large",
+    "efs-clip-large",
+    "df40-clip-large"
+  ],
+  "macro": {
+    "PS_4_xgboost": 0.938963187169051,
+    "FS_1_raw_feat_logreg": 0.9654246787497998,
+    "FS_D_xgb_features": 0.9590309226283973,
+    "FS_pca1_logreg": 0.8773292954956076,
+    "FS_pca2_logreg": 0.844125267291455,
+    "FS_pca4_logreg": 0.8941507606775528,
+    "FS_pca8_logreg": 0.9006782310946573,
+    "FS_probe2_logreg": 0.9713379537766775
+  },
+  "gate_G4": {
+    "FS_D_xgb_features": {
+      "new": 0.9590309226283973,
+      "stored": 0.9590309226283973,
+      "abs_diff": 0.0,
+      "status": "PASS"
+    },
+    "FS_1_raw_feat_logreg": {
+      "new": 0.9654246787497998,
+      "stored": 0.9654246787497999,
+      "abs_diff": 1.1102230246251565e-16,
+      "status": "PASS"
+    }
+  },
+  "gate_G4_status": "PASS",
+  "tolerance": 0.001,
+  "environment": {
+    "python": "3.11.3",
+    "numpy": "1.26.4",
+    "scipy": "1.11.4",
+    "sklearn": "1.6.0",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "xgboost": "3.2.0",
+    "torch": "2.10.0+cu128",
+    "cuda": "NVIDIA GeForce RTX 5080",
+    "torch_cuda_build": "12.8",
+    "cuda_visible_devices": null
+  },
+  "elapsed_sec": 265.2
+}

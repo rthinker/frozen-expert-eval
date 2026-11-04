@@ -1,0 +1,34 @@
+% Block A PCA effective dimensionality
+\begin{tabular}{llrrrr}
+\toprule
+Pool & Interface & Dim & PR & $k_{95}$ & $k_{99}$ \\
+\midrule
+arch6 & features & 9984 & 47.5 & 877 & 1458 \\
+arch6 & logits & 12 & 2.5 & 5 & 6 \\
+arch6 & gap & -- & 18.6x & -- & -- \\
+balanced8 & features & 12288 & 43.9 & 1307 & 2368 \\
+balanced8 & logits & 16 & 3.5 & 6 & 8 \\
+balanced8 & gap & -- & 12.7x & -- & -- \\
+clip4 & features & 4096 & 44.8 & 1324 & 2377 \\
+clip4 & logits & 8 & 1.9 & 3 & 5 \\
+clip4 & gap & -- & 24.0x & -- & -- \\
+full21 & features & 33792 & 48.5 & 1539 & 2550 \\
+full21 & logits & 42 & 4.2 & 12 & 18 \\
+full21 & gap & -- & 11.7x & -- & -- \\
+low\_het4 & features & 8192 & 2.9 & 15 & 50 \\
+low\_het4 & logits & 8 & 1.7 & 3 & 3 \\
+low\_het4 & gap & -- & 1.7x & -- & -- \\
+merged9 & features & 13056 & 47.3 & 1427 & 2464 \\
+merged9 & logits & 18 & 3.1 & 7 & 9 \\
+merged9 & gap & -- & 15.1x & -- & -- \\
+mixed6 & features & 9984 & 34.3 & 809 & 1422 \\
+mixed6 & logits & 12 & 3.2 & 4 & 5 \\
+mixed6 & gap & -- & 10.6x & -- & -- \\
+strong4 & features & 3840 & 41.4 & 1297 & 2339 \\
+strong4 & logits & 8 & 1.7 & 3 & 5 \\
+strong4 & gap & -- & 23.7x & -- & -- \\
+weak6 & features & 12288 & 2.3 & 10 & 32 \\
+weak6 & logits & 12 & 1.8 & 4 & 5 \\
+weak6 & gap & -- & 1.3x & -- & -- \\
+\bottomrule
+\end{tabular}

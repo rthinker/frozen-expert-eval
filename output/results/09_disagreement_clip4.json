@@ -1,0 +1,24 @@
+{
+  "pool": "clip4",
+  "terciles": {
+    "Low": {
+      "n": 5977,
+      "mean_disagreement": 0.08657951653003693,
+      "prob_avg_auc": 0.9182687619019733
+    },
+    "Mid": {
+      "n": 5973,
+      "mean_disagreement": 0.34861159324645996,
+      "prob_avg_auc": 0.7513604258065281
+    },
+    "High": {
+      "n": 5975,
+      "mean_disagreement": 0.4320075809955597,
+      "prob_avg_auc": 0.7753802839927852
+    }
+  },
+  "tercile_bounds": [
+    0.2530612647533417,
+    0.40228966755867007
+  ]
+}

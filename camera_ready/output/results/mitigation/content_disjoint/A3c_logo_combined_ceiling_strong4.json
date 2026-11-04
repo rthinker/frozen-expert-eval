@@ -1,0 +1,107 @@
+{
+  "pool": "strong4",
+  "version": "09_logo_combined_ceiling_v2",
+  "exclusion": "content",
+  "published_ceiling": 0.9091928164261892,
+  "extended_only_ceiling": 0.8445458736162345,
+  "combined_ceiling": 0.9095783059366787,
+  "fs1": 0.8500566994795644,
+  "fs2": 0.8814095726185718,
+  "delta_published_ladder": -0.059136116946624795,
+  "delta_ladder_plus_rungs": -0.05952160645711424,
+  "folds_where_extended_wins": 1,
+  "per_fold": [
+    {
+      "fold": "whichisreal",
+      "published": 0.9193476523476525,
+      "extended": 0.9224315684315685,
+      "best_extended_rung": "rank ECDF_logreg",
+      "combined": 0.9224315684315685,
+      "ceiling_method": "rank ECDF_logreg",
+      "fs1": 0.9475414585414585,
+      "fs2": 0.949921078921079,
+      "n_test": 2001
+    },
+    {
+      "fold": "CollabDiff",
+      "published": 0.9990399999999999,
+      "extended": 0.998842,
+      "best_extended_rung": "rank ECDF_logreg",
+      "combined": 0.9990399999999999,
+      "ceiling_method": "PS_B_learned_weights",
+      "fs1": 0.999979,
+      "fs2": 0.999993,
+      "n_test": 2000
+    },
+    {
+      "fold": "MidJourney",
+      "published": 0.7248500938863266,
+      "extended": 0.6877289720156345,
+      "best_extended_rung": "disagreement_logreg",
+      "combined": 0.7248500938863266,
+      "ceiling_method": "PS_2_logreg",
+      "fs1": 0.676323059729857,
+      "fs2": 0.6933042881374201,
+      "n_test": 1882
+    },
+    {
+      "fold": "heygen",
+      "published": 0.7341176470588235,
+      "extended": 0.6529411764705882,
+      "best_extended_rung": "rank ECDF_logreg",
+      "combined": 0.7341176470588235,
+      "ceiling_method": "PS_1_prob_avg",
+      "fs1": 0.3854901960784314,
+      "fs2": 0.5580392156862746,
+      "n_test": 101
+    },
+    {
+      "fold": "starganv2",
+      "published": 0.9453924453924454,
+      "extended": 0.9431649431649433,
+      "best_extended_rung": "rank ECDF_logreg",
+      "combined": 0.9453924453924454,
+      "ceiling_method": "PS_B_learned_weights",
+      "fs1": 0.9706244706244705,
+      "fs2": 0.9721642221642222,
+      "n_test": 4000
+    },
+    {
+      "fold": "deepfacelab",
+      "published": 0.9585714285714286,
+      "extended": 0.560204081632653,
+      "best_extended_rung": "disagreement_logreg",
+      "combined": 0.9585714285714286,
+      "ceiling_method": "PS_A_calibrated_avg",
+      "fs1": 0.8230612244897959,
+      "fs2": 0.88,
+      "n_test": 149
+    },
+    {
+      "fold": "stargan",
+      "published": 0.9956179171273414,
+      "extended": 0.994826555996358,
+      "best_extended_rung": "uncertainty+MI_logreg",
+      "combined": 0.9956179171273414,
+      "ceiling_method": "PS_3_mlp_logits",
+      "fs1": 0.998350971075052,
+      "fs2": 0.9983880621585589,
+      "n_test": 3968
+    },
+    {
+      "fold": "styleclip",
+      "published": 0.9966053470254957,
+      "extended": 0.9962276912181303,
+      "best_extended_rung": "quadratic_logreg",
+      "combined": 0.9966053470254957,
+      "ceiling_method": "PS_B_learned_weights",
+      "fs1": 0.9990832152974505,
+      "fs2": 0.9994667138810198,
+      "n_test": 3824
+    }
+  ],
+  "inputs": {
+    "logo_json": "code/output/results/mitigation/content_disjoint/11_disjoint_strong4_d256.json",
+    "rungs_json": "code/output/results/mitigation/content_disjoint/A3c_logo_extended_rungs_strong4.json"
+  }
+}

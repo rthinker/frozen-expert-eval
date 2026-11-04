@@ -1,0 +1,96 @@
+{
+  "figure": "A1",
+  "pool": "clip4",
+  "experts": [
+    "fs-clip-large",
+    "fr-clip-large",
+    "efs-clip-large",
+    "df40-clip-large"
+  ],
+  "generators": [
+    "whichisreal",
+    "CollabDiff",
+    "MidJourney",
+    "heygen",
+    "starganv2",
+    "deepfacelab",
+    "stargan",
+    "styleclip"
+  ],
+  "sample_counts": {
+    "whichisreal": 625,
+    "CollabDiff": 625,
+    "MidJourney": 625,
+    "heygen": 101,
+    "starganv2": 625,
+    "deepfacelab": 149,
+    "stargan": 625,
+    "styleclip": 625
+  },
+  "sampling": {
+    "seed": 42,
+    "maximum_rows_per_generator": 625,
+    "replace": false,
+    "total_rows": 4000
+  },
+  "inputs": {
+    "features_shape": [
+      4000,
+      4096
+    ],
+    "logits_shape": [
+      4000,
+      8
+    ],
+    "dtype": "float32",
+    "standardization": null,
+    "features_sha256": "57e51d2c653d71292ad47821e37cad96ff49df66cecc77a43e991dbd48fb3118",
+    "logits_sha256": "ecd61cb953b8f3213c268b2445aa0e12c829d193e3396a3e8ac62e224e7f57b1",
+    "groups_sha256": "d610b1a27813d784269369eb85ed24968cec561c1c7e0fb18faf8cecc6af852c",
+    "row_indices_sha256": "e2f61ee3da20b1f5ee235511a4d1ff1a36e0a31d61938bbd3246f3760eb3bd5b"
+  },
+  "tsne": {
+    "n_components": 2,
+    "perplexity": 30.0,
+    "early_exaggeration": 12.0,
+    "learning_rate": "auto",
+    "max_iter": 1000,
+    "n_iter_without_progress": 300,
+    "min_grad_norm": 1e-07,
+    "metric": "euclidean",
+    "init": "pca",
+    "verbose": 0,
+    "random_state": 42,
+    "method": "barnes_hut",
+    "angle": 0.5,
+    "n_jobs": null
+  },
+  "environment": {
+    "python": "3.11.3",
+    "numpy": "1.26.4",
+    "scikit_learn": "1.6.0",
+    "threads": 1,
+    "scipy": "1.11.4",
+    "matplotlib": "3.7.1"
+  },
+  "fits": {
+    "features": {
+      "kl_divergence": 1.4643397331237793,
+      "iterations": 999
+    },
+    "logits": {
+      "kl_divergence": 1.2186285257339478,
+      "iterations": 999
+    }
+  },
+  "outputs": {
+    "figureA1_tsne.png": "97831f4884806b42a340e52e0951b8cf9c9d6b116a66532199577d2218f159b3"
+  },
+  "verification": {
+    "sampled_inputs_match_original_plotting_implementation": true,
+    "effective_tsne_settings_match_original_in_pinned_environment": true,
+    "current_paper_figure_sha256": "3ee300862403fb69b1906bfad94a552c2bdf91068b2c3024780badf78a81ec26",
+    "visual_comparison": "Point patterns, panel layout, generator colours and legend agree with the paper figure.",
+    "scope": "The plotting command is separate from the main harness. No model is fitted for the paper's performance results."
+  }
+}

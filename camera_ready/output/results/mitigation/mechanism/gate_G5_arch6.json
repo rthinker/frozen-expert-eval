@@ -1,0 +1,19 @@
+{
+  "gate": "g5",
+  "pool": "arch6",
+  "g5": {
+    "FS_1": {
+      "group": "exact",
+      "max_abs_diff": 7.492507492656841e-06,
+      "fold": "whichisreal",
+      "status": "FAIL"
+    },
+    "PS_4": {
+      "group": "exact",
+      "max_abs_diff": 0.0,
+      "fold": "CollabDiff",
+      "status": "PASS"
+    }
+  },
+  "status": "FAIL"
+}

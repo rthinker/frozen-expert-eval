@@ -1,0 +1,135 @@
+{
+  "gate": {
+    "fs": {
+      "whichisreal": 0,
+      "CollabDiff": 0,
+      "MidJourney": 0,
+      "heygen": 0,
+      "starganv2": 0,
+      "deepfacelab": 0,
+      "stargan": 0,
+      "styleclip": 0
+    },
+    "fr": {
+      "whichisreal": 0,
+      "CollabDiff": 0,
+      "MidJourney": 0,
+      "heygen": 0,
+      "starganv2": 0,
+      "deepfacelab": 0,
+      "stargan": 0,
+      "styleclip": 0
+    },
+    "efs": {
+      "whichisreal": 0,
+      "CollabDiff": 0,
+      "MidJourney": 0,
+      "heygen": 0,
+      "starganv2": 0,
+      "deepfacelab": 0,
+      "stargan": 0,
+      "styleclip": 0
+    },
+    "df40": {
+      "whichisreal": 988,
+      "CollabDiff": 1993,
+      "MidJourney": 1882,
+      "heygen": 7536,
+      "starganv2": 3000,
+      "deepfacelab": 4669,
+      "stargan": 0,
+      "styleclip": 3824
+    }
+  },
+  "gate_passed": false,
+  "max_overlap": 7536,
+  "per_regime_overlap_totals": {
+    "fs": 0,
+    "fr": 0,
+    "efs": 0,
+    "df40": 23892
+  },
+  "clean_regimes": [
+    "efs",
+    "fr",
+    "fs"
+  ],
+  "dirty_regimes": [
+    "df40"
+  ],
+  "test_unique_paths": {
+    "whichisreal": 2001,
+    "CollabDiff": 2000,
+    "MidJourney": 1882,
+    "heygen": 9141,
+    "starganv2": 4000,
+    "deepfacelab": 4669,
+    "stargan": 3968,
+    "styleclip": 3824
+  },
+  "test_split_counts": {
+    "whichisreal": {
+      "test": 2001
+    },
+    "CollabDiff": {
+      "test": 2000
+    },
+    "MidJourney": {
+      "test": 1882
+    },
+    "heygen": {
+      "test": 9141
+    },
+    "starganv2": {
+      "test": 4000
+    },
+    "deepfacelab": {
+      "test": 4669
+    },
+    "stargan": {
+      "test": 3968
+    },
+    "styleclip": {
+      "test": 3824
+    }
+  },
+  "expert_train_unique_paths": {
+    "fs": 229655,
+    "fr": 292599,
+    "efs": 203063,
+    "df40": 703223
+  },
+  "rebuild_feasibility": {
+    "fs": {
+      "real_from_clean_families": 206937,
+      "real_from_test_families": 0,
+      "top_clean_families": {
+        "FaceForensics++": 206937
+      }
+    },
+    "fr": {
+      "real_from_clean_families": 275916,
+      "real_from_test_families": 0,
+      "top_clean_families": {
+        "FaceForensics++": 275916
+      }
+    },
+    "efs": {
+      "real_from_clean_families": 229930,
+      "real_from_test_families": 0,
+      "top_clean_families": {
+        "FaceForensics++": 229930
+      }
+    },
+    "df40": {
+      "real_from_clean_families": 712783,
+      "real_from_test_families": 15064,
+      "top_clean_families": {
+        "FaceForensics++": 712783
+      }
+    }
+  },
+  "json_dir": "DF40 split lists (supplied separately)",
+  "_written_utc": "2026-10-23T01:11:53.453980+00:00",
+  "_caveat": "Path-level intersection after canonicalisation (strip up to last '/DF40/'). A zero here does not prove the DF40 authors' upstream pretraining was clean, only that these release JSONs do not share frame paths."
+}

@@ -1,0 +1,70 @@
+[project]
+name = "composition_eval"
+version = "0.1.0"
+description = "Evaluation protocol for composition of frozen heterogeneous experts (NeurIPS 2026)."
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+license = { text = "CC-BY-NC-SA-4.0" }
+authors = [
+    { name = "Alessandro Pereira" },
+    { name = "Keith J Ransom" },
+    { name = "Lewis Mitchell" },
+]
+keywords = [
+    "evaluation",
+    "benchmark",
+    "frozen experts",
+    "feature-space composition",
+    "prediction-space composition",
+    "reproducibility",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    # Floors are intentionally permissive so a fresh `pip install -e .`
+    # in an environment that already pinned older versions via
+    # `requirements-lock.txt` does not silently upgrade past the
+    # paper-tested versions. The lock file is the source of truth for
+    # reproducibility; this list only declares the abstract minimums
+    # the codebase requires to import.
+    "torch>=2.1.0",
+    "torchvision>=0.16.0",
+    "numpy>=1.26.0",
+    "scipy>=1.11.0",
+    "scikit-learn>=1.5.0",
+    "xgboost>=2.0.0",
+    "PyYAML>=6.0.0",
+    "tqdm>=4.66.0",
+]
+
+[project.optional-dependencies]
+df40 = [
+    "transformers>=4.40.0",
+    "Pillow>=10.0.0",
+    "albumentations>=1.4.0",
+    "opencv-python>=4.10.0",
+    "lmdb>=1.5.0",
+]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "ruff>=0.5.0",
+]
+authoring = [
+    "pathspec>=0.11.0",
+    "mlcroissant>=1.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["composition_eval*", "src*"]
+exclude = ["tests*", "scripts*", "archive*", "output*"]

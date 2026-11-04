@@ -1,0 +1,46 @@
+{
+  "runner": "05_run_c_width_matched_v2.py",
+  "pool": "arch6",
+  "folds": {
+    "whichisreal": {
+      "training_rows_before": 15924,
+      "duplicates_removed": 2988,
+      "training_rows_after": 12936
+    },
+    "CollabDiff": {
+      "training_rows_before": 15918,
+      "duplicates_removed": 2981,
+      "training_rows_after": 12937
+    },
+    "MidJourney": {
+      "training_rows_before": 16043,
+      "duplicates_removed": 2983,
+      "training_rows_after": 13060
+    },
+    "heygen": {
+      "training_rows_before": 17824,
+      "duplicates_removed": 2988,
+      "training_rows_after": 14836
+    },
+    "starganv2": {
+      "training_rows_before": 13925,
+      "duplicates_removed": 12,
+      "training_rows_after": 13913
+    },
+    "deepfacelab": {
+      "training_rows_before": 17776,
+      "duplicates_removed": 2988,
+      "training_rows_after": 14788
+    },
+    "stargan": {
+      "training_rows_before": 13957,
+      "duplicates_removed": 2988,
+      "training_rows_after": 10969
+    },
+    "styleclip": {
+      "training_rows_before": 14094,
+      "duplicates_removed": 2981,
+      "training_rows_after": 11113
+    }
+  }
+}

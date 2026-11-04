@@ -1,0 +1,176 @@
+{
+  "pool": "full21",
+  "combiner_type": "mlp",
+  "proj_dim": 256,
+  "train_tag": "FIT",
+  "select_tag": "SELECT",
+  "fit_samples": 26591,
+  "seeds": [
+    7,
+    10,
+    24,
+    42,
+    1024,
+    1973,
+    3392,
+    9721
+  ],
+  "mean_avg8": 0.9824135367084126,
+  "std_avg8": 0.0027854176790295393,
+  "n_trainable_params": 11551746,
+  "feature_dims": [
+    1024,
+    768,
+    2048,
+    2048,
+    2048,
+    2048,
+    1024,
+    768,
+    2048,
+    2048,
+    2048,
+    2048,
+    1024,
+    768,
+    2048,
+    2048,
+    2048,
+    2048,
+    1024,
+    768,
+    2048
+  ],
+  "per_generator_seed_averaged": {
+    "whichisreal": 0.9395384615384614,
+    "CollabDiff": 1.0,
+    "MidJourney": 1.0,
+    "heygen": 0.9364705882352942,
+    "starganv2": 1.0,
+    "deepfacelab": 0.9842857142857143,
+    "stargan": 0.9990135296078304,
+    "styleclip": 1.0
+  },
+  "per_seed": [
+    {
+      "seed": 7,
+      "val_auc": 0.9999287542343919,
+      "per_generator": {
+        "whichisreal": 0.9514145854145853,
+        "CollabDiff": 1.0,
+        "MidJourney": 1.0,
+        "heygen": 0.9149019607843136,
+        "starganv2": 1.0,
+        "deepfacelab": 0.9830612244897959,
+        "stargan": 0.9987937776404787,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.9810214435411466
+    },
+    {
+      "seed": 10,
+      "val_auc": 0.999847767836767,
+      "per_generator": {
+        "whichisreal": 0.9311018981018981,
+        "CollabDiff": 1.0,
+        "MidJourney": 0.9999943271101732,
+        "heygen": 0.8811764705882352,
+        "starganv2": 1.0,
+        "deepfacelab": 0.9728571428571429,
+        "stargan": 0.9989022563573101,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.9730040118768449
+    },
+    {
+      "seed": 24,
+      "val_auc": 0.9998945228704474,
+      "per_generator": {
+        "whichisreal": 0.938963036963037,
+        "CollabDiff": 1.0,
+        "MidJourney": 1.0,
+        "heygen": 0.9423529411764706,
+        "starganv2": 1.0,
+        "deepfacelab": 0.9734693877551021,
+        "stargan": 0.9977948588709677,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.9815725280956971
+    },
+    {
+      "seed": 42,
+      "val_auc": 0.9999268061079885,
+      "per_generator": {
+        "whichisreal": 0.9441428571428572,
+        "CollabDiff": 1.0,
+        "MidJourney": 1.0,
+        "heygen": 0.9109803921568627,
+        "starganv2": 1.0,
+        "deepfacelab": 0.9861224489795919,
+        "stargan": 0.9986198814304761,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.9799831974637234
+    },
+    {
+      "seed": 1024,
+      "val_auc": 0.9999385644423516,
+      "per_generator": {
+        "whichisreal": 0.9169840159840159,
+        "CollabDiff": 1.0,
+        "MidJourney": 1.0,
+        "heygen": 0.936078431372549,
+        "starganv2": 0.999991999992,
+        "deepfacelab": 0.9789795918367348,
+        "stargan": 0.9989853302224245,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.9788774211759654
+    },
+    {
+      "seed": 1973,
+      "val_auc": 0.9999362684362334,
+      "per_generator": {
+        "whichisreal": 0.9197832167832168,
+        "CollabDiff": 1.0,
+        "MidJourney": 1.0,
+        "heygen": 0.9023529411764706,
+        "starganv2": 1.0,
+        "deepfacelab": 0.9873469387755102,
+        "stargan": 0.9989614496618106,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.976055568299626
+    },
+    {
+      "seed": 3392,
+      "val_auc": 0.9999337637022861,
+      "per_generator": {
+        "whichisreal": 0.9223296703296704,
+        "CollabDiff": 1.0,
+        "MidJourney": 0.9999988654220346,
+        "heygen": 0.9309803921568627,
+        "starganv2": 1.0,
+        "deepfacelab": 0.9887755102040816,
+        "stargan": 0.9983730732960457,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.980057188926087
+    },
+    {
+      "seed": 9721,
+      "val_auc": 0.9999213096084933,
+      "per_generator": {
+        "whichisreal": 0.9316933066933066,
+        "CollabDiff": 1.0,
+        "MidJourney": 0.9999988654220346,
+        "heygen": 0.8901960784313725,
+        "starganv2": 1.0,
+        "deepfacelab": 0.9883673469387756,
+        "stargan": 0.9989373150526796,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.9761491140672711
+    }
+  ]
+}

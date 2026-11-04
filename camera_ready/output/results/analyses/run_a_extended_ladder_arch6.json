@@ -1,0 +1,252 @@
+{
+  "run": "A_extended_prediction_space_ladder",
+  "pool": "arch6",
+  "experts": [
+    "fs-clip-base",
+    "fs-clip-large",
+    "fs-xception",
+    "fs-srm",
+    "fs-recce",
+    "fs-rfm"
+  ],
+  "generators": [
+    "whichisreal",
+    "CollabDiff",
+    "MidJourney",
+    "heygen",
+    "starganv2",
+    "deepfacelab",
+    "stargan",
+    "styleclip"
+  ],
+  "xgb_mode": "cv",
+  "seeds": [
+    7,
+    10,
+    24,
+    42,
+    1024,
+    1973,
+    3392,
+    9721
+  ],
+  "calibration_temperatures_from_select": [
+    4.948433286178954,
+    3.7078142955412097,
+    20.462056577692344,
+    9.977102431819716,
+    91.00476756627823,
+    15.921491463377363
+  ],
+  "cv_auc_inside_fit": {
+    "PS_11_disagreement": 0.8975655937169282,
+    "PS_12_uncertainty_mi": 0.8907422103185247,
+    "PS_13_quadratic": 0.9025815166196679,
+    "PS_14_rank_ecdf": 0.8968861937496712
+  },
+  "ps_15_selected_rung": "PS_13_quadratic",
+  "published_ladder": {
+    "best_name": "PS_4_xgboost",
+    "best_macro": 0.8425909912831497,
+    "all_macro": {
+      "PS_1_prob_avg": 0.682286993167392,
+      "PS_A_calibrated_avg": 0.7483246091020803,
+      "PS_B_learned_weights": 0.7871142053543903,
+      "PS_2_logreg": 0.7857158881792043,
+      "PS_3_mlp_logits": 0.7864893740756971,
+      "PS_D_mlp_probs": 0.759082489372871,
+      "PS_C_logreg_cv": 0.7846784678245413,
+      "PS_F_mlp_logits_es": 0.773012453936708,
+      "PS_E_mlp_probs_es": 0.763496367400208,
+      "PS_4_xgboost": 0.8425909912831497
+    }
+  },
+  "extended_rungs_macro": {
+    "PS_11_disagreement_logreg": 0.7896985487197166,
+    "PS_11_disagreement_xgb": 0.8595239915816317,
+    "PS_12_uncertainty_mi_logreg": 0.7789616987034266,
+    "PS_12_uncertainty_mi_xgb": 0.8437730982819338,
+    "PS_13_quadratic_logreg": 0.778057427513857,
+    "PS_13_quadratic_xgb": 0.8603446933212494,
+    "PS_14_rank_ecdf_logreg": 0.7714475178003009,
+    "PS_14_rank_ecdf_xgb": 0.8324392881545741,
+    "PS_15_cv_best_logreg": 0.778057427513857,
+    "PS_15_cv_best_xgb": 0.8603446933212494,
+    "PS_16_oracle_domain": 0.8681532987027571
+  },
+  "deployable_ceiling": {
+    "name": "PS_13_quadratic_xgb",
+    "macro": 0.8603446933212494
+  },
+  "oracle_inclusive_ceiling": {
+    "name": "PS_16_oracle_domain",
+    "macro": 0.8681532987027571
+  },
+  "ps_17_per_generator_oracle_selection": {
+    "macro": 0.8745217390310547,
+    "per_generator": {
+      "whichisreal": 0.6367422577422578,
+      "CollabDiff": 0.9131210000000001,
+      "MidJourney": 0.8965332970268385,
+      "heygen": 0.7454901960784314,
+      "starganv2": 0.9750602250602252,
+      "deepfacelab": 0.9604081632653061,
+      "stargan": 0.9497348495626299,
+      "styleclip": 0.9190839235127479
+    },
+    "note": "NON-DEPLOYABLE: retrospective per-generator maximum"
+  },
+  "fs1_macro": 0.965388554153414,
+  "comparison_vs_deployable_ceiling": {
+    "method_a": "FS_1_raw_feat_logreg",
+    "method_b": "PS_13_quadratic_xgb",
+    "macro_a": 0.965388554153414,
+    "macro_b": 0.8603446933212494,
+    "delta": 0.10504386083216455,
+    "per_generator_a": {
+      "whichisreal": 0.8667732267732268,
+      "CollabDiff": 0.999989,
+      "MidJourney": 0.9997764881408238,
+      "heygen": 0.9023529411764706,
+      "starganv2": 0.9999969999970001,
+      "deepfacelab": 0.9762244897959184,
+      "stargan": 0.9780597349359392,
+      "styleclip": 0.999935552407932
+    },
+    "per_generator_b": {
+      "whichisreal": 0.6367422577422578,
+      "CollabDiff": 0.9131210000000001,
+      "MidJourney": 0.8965332970268385,
+      "heygen": 0.6803921568627451,
+      "starganv2": 0.9750602250602252,
+      "deepfacelab": 0.9406122448979591,
+      "stargan": 0.9212124414672216,
+      "styleclip": 0.9190839235127479
+    },
+    "per_generator_delta": {
+      "whichisreal": 0.23003096903096898,
+      "CollabDiff": 0.08686799999999995,
+      "MidJourney": 0.10324319111398528,
+      "heygen": 0.22196078431372546,
+      "starganv2": 0.02493677493677493,
+      "deepfacelab": 0.03561224489795922,
+      "stargan": 0.05684729346871764,
+      "styleclip": 0.08085162889518405
+    },
+    "wins": 8,
+    "n_generators": 8,
+    "generator_bootstrap": {
+      "ci_95": [
+        0.05794919171653929,
+        0.15803948031497342
+      ],
+      "delta_mean": 0.10504386083216444,
+      "boot_mean": 0.10484354632109075,
+      "p_gt_zero": 1.0,
+      "n_boot": 10000,
+      "seed": 42,
+      "method": "paired generator-level percentile bootstrap"
+    },
+    "sign_flip_permutation": {
+      "p_value": 0.0078125,
+      "exact": true,
+      "n_permutations": 256,
+      "alternative": "two-sided",
+      "statistic": 0.10504386083216444
+    },
+    "bca": {
+      "bca_95": [
+        0.06251595796025161,
+        0.16716829368918762
+      ],
+      "z0": 0.044381886374065455,
+      "acceleration": 0.046770586353214114
+    }
+  },
+  "comparison_vs_oracle_ceiling": {
+    "method_a": "FS_1_raw_feat_logreg",
+    "method_b": "PS_16_oracle_domain",
+    "macro_a": 0.965388554153414,
+    "macro_b": 0.8681532987027571,
+    "delta": 0.09723525545065681,
+    "per_generator_a": {
+      "whichisreal": 0.8667732267732268,
+      "CollabDiff": 0.999989,
+      "MidJourney": 0.9997764881408238,
+      "heygen": 0.9023529411764706,
+      "starganv2": 0.9999969999970001,
+      "deepfacelab": 0.9762244897959184,
+      "stargan": 0.9780597349359392,
+      "styleclip": 0.999935552407932
+    },
+    "per_generator_b": {
+      "whichisreal": 0.7195764235764236,
+      "CollabDiff": 0.929949,
+      "MidJourney": 0.8539332981614164,
+      "heygen": 0.8176470588235294,
+      "starganv2": 0.8231700731700731,
+      "deepfacelab": 0.9546938775510205,
+      "stargan": 0.9589439812857701,
+      "styleclip": 0.8873126770538243
+    },
+    "per_generator_delta": {
+      "whichisreal": 0.14719680319680317,
+      "CollabDiff": 0.07003999999999999,
+      "MidJourney": 0.14584318997940737,
+      "heygen": 0.08470588235294119,
+      "starganv2": 0.17682692682692702,
+      "deepfacelab": 0.02153061224489783,
+      "stargan": 0.019115753650169154,
+      "styleclip": 0.11262287535410764
+    },
+    "wins": 8,
+    "n_generators": 8,
+    "generator_bootstrap": {
+      "ci_95": [
+        0.0591063799181652,
+        0.13427651993223755
+      ],
+      "delta_mean": 0.09723525545065667,
+      "boot_mean": 0.09721031439739747,
+      "p_gt_zero": 1.0,
+      "n_boot": 10000,
+      "seed": 42,
+      "method": "paired generator-level percentile bootstrap"
+    },
+    "sign_flip_permutation": {
+      "p_value": 0.0078125,
+      "exact": true,
+      "n_permutations": 256,
+      "alternative": "two-sided",
+      "statistic": 0.09723525545065667
+    },
+    "bca": {
+      "bca_95": [
+        0.05832529008769591,
+        0.13393565649160663
+      ],
+      "z0": -0.008773311508328191,
+      "acceleration": -0.008223078639311623
+    }
+  },
+  "non_deployable_rungs": [
+    "PS_16_oracle_domain",
+    "PS_17_per_generator_oracle_selection"
+  ],
+  "disclosed_deviations": [
+    "engineered rungs use a StandardScaler fitted on FIT; the submitted ladder does not standardise. This can only help the prediction side, the conservative direction for the claim.",
+    "xgb_mode='fixed' uses the paper's family-matched XGBoost configuration rather than the full PS_4 CV grid; rerun with --xgb_mode cv before quoting numbers."
+  ],
+  "published_reference": {
+    "arch6_delta": 0.123,
+    "arch6_ci": [
+      0.078,
+      0.174
+    ],
+    "arch6_best_ps": 0.843,
+    "clip4_best_ps": 0.939
+  },
+  "elapsed_sec": 5646.476252317429,
+  "_written_utc": "2026-07-25T07:39:49.911714+00:00",
+  "_protocol_note": "macro AUROC over held-out generators; paired generator-level bootstrap (10k, percentile); exact two-sided sign-flip permutation; BCa on mean per-generator delta"
+}

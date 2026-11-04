@@ -1,0 +1,67 @@
+{
+  "published_ceiling": 0.8163133094164334,
+  "extended_only_ceiling": 0.7883818714890269,
+  "combined_ceiling": 0.817636838828198,
+  "fs1": 0.8979109724758133,
+  "delta_published_ladder": 0.08159766305937988,
+  "delta_ladder_plus_rungs": 0.08027413364761526,
+  "folds_where_extended_wins": 1,
+  "per_fold": [
+    {
+      "fold": "whichisreal",
+      "published": 0.5872597402597403,
+      "extended": 0.576056943056943,
+      "best_extended_rung": "rank ECDF_xgb_capped",
+      "combined": 0.5872597402597403
+    },
+    {
+      "fold": "CollabDiff",
+      "published": 0.8847959999999999,
+      "extended": 0.864512,
+      "best_extended_rung": "quadratic_logreg",
+      "combined": 0.8847959999999999
+    },
+    {
+      "fold": "MidJourney",
+      "published": 0.7128093852289294,
+      "extended": 0.6561967812023123,
+      "best_extended_rung": "rank ECDF_logreg",
+      "combined": 0.7128093852289294
+    },
+    {
+      "fold": "heygen",
+      "published": 0.7588235294117647,
+      "extended": 0.7694117647058825,
+      "best_extended_rung": "uncertainty+MI_logreg",
+      "combined": 0.7694117647058825
+    },
+    {
+      "fold": "starganv2",
+      "published": 0.8146330646330646,
+      "extended": 0.7243859743859744,
+      "best_extended_rung": "rank ECDF_logreg",
+      "combined": 0.8146330646330646
+    },
+    {
+      "fold": "deepfacelab",
+      "published": 0.9601020408163266,
+      "extended": 0.940204081632653,
+      "best_extended_rung": "rank ECDF_logreg",
+      "combined": 0.9601020408163266
+    },
+    {
+      "fold": "stargan",
+      "published": 0.9509410719221515,
+      "extended": 0.9459623561069199,
+      "best_extended_rung": "disagreement_logreg",
+      "combined": 0.9509410719221515
+    },
+    {
+      "fold": "styleclip",
+      "published": 0.86114164305949,
+      "extended": 0.8303250708215297,
+      "best_extended_rung": "rank ECDF_logreg",
+      "combined": 0.86114164305949
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "pool": "balanced8",
+  "proj_dim": 256,
+  "train_tag": "FIT",
+  "comparison": "fs_mlp_avg_seeds_vs_PS_4_xgboost",
+  "best_ps_name": "PS_4_xgboost",
+  "n_seeds": 8,
+  "n_test_samples": 17925,
+  "macro_avg_mlp": 0.9741984552493403,
+  "macro_avg_best_ps": 0.9532616016406266,
+  "macro_delta": 0.02093685360871378,
+  "sample_level_bootstrap": {
+    "n_boot": 10000,
+    "seed": 42,
+    "ci_95": [
+      0.009179196770168416,
+      0.012223558182410712
+    ],
+    "p_mlp_gt_ps": 1.0
+  },
+  "generator_level_bootstrap": {
+    "ci_95": [
+      0.0018921560723575927,
+      0.05012162884983085
+    ]
+  },
+  "xgboost_continuity": {
+    "macro_avg_xgboost": 0.9532616016406266,
+    "macro_delta": 0.02093685360871378,
+    "sample_level_ci_95": [
+      0.009179196770168416,
+      0.012223558182410712
+    ]
+  },
+  "per_generator": {
+    "whichisreal": {
+      "fs_mlp": 0.9437622377622378,
+      "best_ps": 0.9103696303696303
+    },
+    "CollabDiff": {
+      "fs_mlp": 1.0,
+      "best_ps": 0.9994879999999999
+    },
+    "MidJourney": {
+      "fs_mlp": 1.0,
+      "best_ps": 0.9901269025454257
+    },
+    "heygen": {
+      "fs_mlp": 0.8717647058823529,
+      "best_ps": 0.7545098039215685
+    },
+    "starganv2": {
+      "fs_mlp": 1.0,
+      "best_ps": 0.9985879985879986
+    },
+    "deepfacelab": {
+      "fs_mlp": 0.9789795918367348,
+      "best_ps": 0.9818367346938776
+    },
+    "stargan": {
+      "fs_mlp": 0.9990811065133975,
+      "best_ps": 0.9916461226099115
+    },
+    "styleclip": {
+      "fs_mlp": 1.0,
+      "best_ps": 0.9995276203966006
+    }
+  }
+}

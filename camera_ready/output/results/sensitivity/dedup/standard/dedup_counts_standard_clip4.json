@@ -1,0 +1,16 @@
+{
+  "script": "appB_richer_inputs.py",
+  "pool": "clip4",
+  "splits": {
+    "FIT": {
+      "rows_before": 26591,
+      "rows_removed": 1882,
+      "rows_after": 24709
+    },
+    "SELECT": {
+      "rows_before": 6647,
+      "rows_removed": 849,
+      "rows_after": 5798
+    }
+  }
+}

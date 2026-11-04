@@ -1,0 +1,424 @@
+{
+  "run": "C_width_matched_fs_control",
+  "pool": "arch6",
+  "experts": [
+    "fs-clip-base",
+    "fs-clip-large",
+    "fs-xception",
+    "fs-srm",
+    "fs-recce",
+    "fs-rfm"
+  ],
+  "generators": [
+    "whichisreal",
+    "CollabDiff",
+    "MidJourney",
+    "heygen",
+    "starganv2",
+    "deepfacelab",
+    "stargan",
+    "styleclip"
+  ],
+  "prediction_interface_width_floats": 12,
+  "projection": "per-expert PCA fitted on FIT only (randomized SVD, random_state=42), concatenated; combiner is the frozen FS_1 anchor (L2 logistic, C=1.0, unstandardised)",
+  "comparator": {
+    "name": "PS_4_xgboost (frozen implementation, full FIT)",
+    "macro": 0.8425909912831497,
+    "published_reference": 0.843,
+    "parity_ok": true
+  },
+  "pca_sweep": {
+    "d1": {
+      "coords_total": 6,
+      "width_matched": false,
+      "explained_variance_ratio_sum_per_expert": [
+        0.19255661964416504,
+        0.17535127699375153,
+        0.6875543594360352,
+        0.692370593547821,
+        0.794791579246521,
+        0.727748692035675
+      ],
+      "fs_macro": 0.7830472894176581,
+      "comparison_vs_ps4": {
+        "method_a": "FS_pca1_logreg",
+        "method_b": "PS_4_xgboost",
+        "macro_a": 0.7830472894176581,
+        "macro_b": 0.8425909912831497,
+        "delta": -0.05954370186549163,
+        "per_generator_a": {
+          "whichisreal": 0.5441328671328671,
+          "CollabDiff": 0.801375,
+          "MidJourney": 0.7127123788128911,
+          "heygen": 0.7337254901960785,
+          "starganv2": 0.7512097512097513,
+          "deepfacelab": 0.92,
+          "stargan": 0.9490528563182883,
+          "styleclip": 0.8521699716713882
+        },
+        "per_generator_b": {
+          "whichisreal": 0.6085174825174825,
+          "CollabDiff": 0.8837470000000001,
+          "MidJourney": 0.865722697799486,
+          "heygen": 0.6976470588235294,
+          "starganv2": 0.9251876751876752,
+          "deepfacelab": 0.9375510204081633,
+          "stargan": 0.9226481966620056,
+          "styleclip": 0.8997067988668557
+        },
+        "per_generator_delta": {
+          "whichisreal": -0.06438461538461537,
+          "CollabDiff": -0.08237200000000011,
+          "MidJourney": -0.1530103189865949,
+          "heygen": 0.03607843137254907,
+          "starganv2": -0.1739779239779239,
+          "deepfacelab": -0.017551020408163254,
+          "stargan": 0.026404659656282692,
+          "styleclip": -0.04753682719546748
+        },
+        "wins": 2,
+        "n_generators": 8,
+        "generator_bootstrap": {
+          "ci_95": [
+            -0.10972144719838146,
+            -0.010859785116322837
+          ],
+          "delta_mean": -0.059543701865491655,
+          "boot_mean": -0.05967028740189572,
+          "p_gt_zero": 0.0054,
+          "n_boot": 10000,
+          "seed": 42,
+          "method": "paired generator-level percentile bootstrap"
+        },
+        "sign_flip_permutation": {
+          "p_value": 0.0625,
+          "exact": true,
+          "n_permutations": 256,
+          "alternative": "two-sided",
+          "statistic": -0.059543701865491655
+        },
+        "bca": {
+          "bca_95": [
+            -0.11260215009231887,
+            -0.013871009864422999
+          ],
+          "z0": -0.02983330127899372,
+          "acceleration": -0.014999230865249149
+        }
+      }
+    },
+    "d2": {
+      "coords_total": 12,
+      "width_matched": true,
+      "explained_variance_ratio_sum_per_expert": [
+        0.23275060951709747,
+        0.20906397700309753,
+        0.8773863911628723,
+        0.8988452553749084,
+        0.956078290939331,
+        0.8238126039505005
+      ],
+      "fs_macro": 0.7395330103309739,
+      "comparison_vs_ps4": {
+        "method_a": "FS_pca2_logreg",
+        "method_b": "PS_4_xgboost",
+        "macro_a": 0.7395330103309739,
+        "macro_b": 0.8425909912831497,
+        "delta": -0.10305798095217589,
+        "per_generator_a": {
+          "whichisreal": 0.438006993006993,
+          "CollabDiff": 0.75664,
+          "MidJourney": 0.49672617528094987,
+          "heygen": 0.7509803921568627,
+          "starganv2": 0.7078737078737078,
+          "deepfacelab": 0.9389795918367346,
+          "stargan": 0.9631131715010406,
+          "styleclip": 0.8639440509915014
+        },
+        "per_generator_b": {
+          "whichisreal": 0.6085174825174825,
+          "CollabDiff": 0.8837470000000001,
+          "MidJourney": 0.865722697799486,
+          "heygen": 0.6976470588235294,
+          "starganv2": 0.9251876751876752,
+          "deepfacelab": 0.9375510204081633,
+          "stargan": 0.9226481966620056,
+          "styleclip": 0.8997067988668557
+        },
+        "per_generator_delta": {
+          "whichisreal": -0.17051048951048953,
+          "CollabDiff": -0.12710700000000008,
+          "MidJourney": -0.3689965225185361,
+          "heygen": 0.053333333333333344,
+          "starganv2": -0.21731396731396735,
+          "deepfacelab": 0.0014285714285713347,
+          "stargan": 0.040464974839034995,
+          "styleclip": -0.03576274787535427
+        },
+        "wins": 3,
+        "n_generators": 8,
+        "generator_bootstrap": {
+          "ci_95": [
+            -0.20174532467770478,
+            -0.014328178651192677
+          ],
+          "delta_mean": -0.10305798095217596,
+          "boot_mean": -0.10317717809047326,
+          "p_gt_zero": 0.0102,
+          "n_boot": 10000,
+          "seed": 42,
+          "method": "paired generator-level percentile bootstrap"
+        },
+        "sign_flip_permutation": {
+          "p_value": 0.109375,
+          "exact": true,
+          "n_permutations": 256,
+          "alternative": "two-sided",
+          "statistic": -0.10305798095217596
+        },
+        "bca": {
+          "bca_95": [
+            -0.2138290608643221,
+            -0.021018029948695935
+          ],
+          "z0": -0.02983330127899372,
+          "acceleration": -0.035766446936902375
+        }
+      }
+    },
+    "d4": {
+      "coords_total": 24,
+      "width_matched": false,
+      "explained_variance_ratio_sum_per_expert": [
+        0.29970988631248474,
+        0.25563153624534607,
+        0.951030969619751,
+        0.9784597158432007,
+        0.9863978028297424,
+        0.9054481983184814
+      ],
+      "fs_macro": 0.7656907593347013,
+      "comparison_vs_ps4": {
+        "method_a": "FS_pca4_logreg",
+        "method_b": "PS_4_xgboost",
+        "macro_a": 0.7656907593347013,
+        "macro_b": 0.8425909912831497,
+        "delta": -0.07690023194844842,
+        "per_generator_a": {
+          "whichisreal": 0.4471248751248751,
+          "CollabDiff": 0.8495760000000001,
+          "MidJourney": 0.602547127532236,
+          "heygen": 0.7725490196078432,
+          "starganv2": 0.6974754474754474,
+          "deepfacelab": 0.8973469387755102,
+          "stargan": 0.9451219636121228,
+          "styleclip": 0.9137847025495751
+        },
+        "per_generator_b": {
+          "whichisreal": 0.6085174825174825,
+          "CollabDiff": 0.8837470000000001,
+          "MidJourney": 0.865722697799486,
+          "heygen": 0.6976470588235294,
+          "starganv2": 0.9251876751876752,
+          "deepfacelab": 0.9375510204081633,
+          "stargan": 0.9226481966620056,
+          "styleclip": 0.8997067988668557
+        },
+        "per_generator_delta": {
+          "whichisreal": -0.1613926073926074,
+          "CollabDiff": -0.03417099999999995,
+          "MidJourney": -0.2631755702672499,
+          "heygen": 0.07490196078431377,
+          "starganv2": -0.22771222771222777,
+          "deepfacelab": -0.0402040816326531,
+          "stargan": 0.022473766950117158,
+          "styleclip": 0.01407790368271944
+        },
+        "wins": 3,
+        "n_generators": 8,
+        "generator_bootstrap": {
+          "ci_95": [
+            -0.15873891334592558,
+            0.001614338817705313
+          ],
+          "delta_mean": -0.07690023194844847,
+          "boot_mean": -0.0770699557479579,
+          "p_gt_zero": 0.0259,
+          "n_boot": 10000,
+          "seed": 42,
+          "method": "paired generator-level percentile bootstrap"
+        },
+        "sign_flip_permutation": {
+          "p_value": 0.1640625,
+          "exact": true,
+          "n_permutations": 256,
+          "alternative": "two-sided",
+          "statistic": -0.07690023194844847
+        },
+        "bca": {
+          "bca_95": [
+            -0.16573408999440548,
+            -0.003623745610026533
+          ],
+          "z0": -0.02030508422389927,
+          "acceleration": -0.023806972972407445
+        }
+      }
+    },
+    "d8": {
+      "coords_total": 48,
+      "width_matched": false,
+      "explained_variance_ratio_sum_per_expert": [
+        0.3816041350364685,
+        0.31285345554351807,
+        0.986598014831543,
+        0.9923519492149353,
+        0.9938310980796814,
+        0.9508291482925415
+      ],
+      "fs_macro": 0.8182718388104104,
+      "comparison_vs_ps4": {
+        "method_a": "FS_pca8_logreg",
+        "method_b": "PS_4_xgboost",
+        "macro_a": 0.8182718388104104,
+        "macro_b": 0.8425909912831497,
+        "delta": -0.024319152472739303,
+        "per_generator_a": {
+          "whichisreal": 0.5022657342657342,
+          "CollabDiff": 0.8918250000000001,
+          "MidJourney": 0.9251507570471474,
+          "heygen": 0.7768627450980392,
+          "starganv2": 0.7034434534434535,
+          "deepfacelab": 0.8914285714285713,
+          "stargan": 0.945490588010536,
+          "styleclip": 0.9097078611898016
+        },
+        "per_generator_b": {
+          "whichisreal": 0.6085174825174825,
+          "CollabDiff": 0.8837470000000001,
+          "MidJourney": 0.865722697799486,
+          "heygen": 0.6976470588235294,
+          "starganv2": 0.9251876751876752,
+          "deepfacelab": 0.9375510204081633,
+          "stargan": 0.9226481966620056,
+          "styleclip": 0.8997067988668557
+        },
+        "per_generator_delta": {
+          "whichisreal": -0.10625174825174832,
+          "CollabDiff": 0.00807800000000003,
+          "MidJourney": 0.05942805924766148,
+          "heygen": 0.07921568627450981,
+          "starganv2": -0.2217442217442217,
+          "deepfacelab": -0.046122448979591946,
+          "stargan": 0.02284239134853039,
+          "styleclip": 0.010001062322945953
+        },
+        "wins": 5,
+        "n_generators": 8,
+        "generator_bootstrap": {
+          "ci_95": [
+            -0.09548050997086807,
+            0.03341413046016882
+          ],
+          "delta_mean": -0.02431915247273929,
+          "boot_mean": -0.024553400375616194,
+          "p_gt_zero": 0.2402,
+          "n_boot": 10000,
+          "seed": 42,
+          "method": "paired generator-level percentile bootstrap"
+        },
+        "sign_flip_permutation": {
+          "p_value": 0.5625,
+          "exact": true,
+          "n_permutations": 256,
+          "alternative": "two-sided",
+          "statistic": -0.02431915247273929
+        },
+        "bca": {
+          "bca_95": [
+            -0.11013850979550743,
+            0.026406088774998802
+          ],
+          "z0": -0.051659510595032654,
+          "acceleration": -0.0594954091115885
+        }
+      }
+    }
+  },
+  "probe_mirror": {
+    "d2": {
+      "coords_total": 12,
+      "fs_macro": 0.9577553668968837,
+      "comparison_vs_ps4": {
+        "method_a": "FS_probe2_logreg",
+        "method_b": "PS_4_xgboost",
+        "macro_a": 0.9577553668968837,
+        "macro_b": 0.8425909912831497,
+        "delta": 0.11516437561373394,
+        "per_generator_a": {
+          "whichisreal": 0.8595784215784215,
+          "CollabDiff": 0.999981,
+          "MidJourney": 0.999943271101732,
+          "heygen": 0.8474509803921569,
+          "starganv2": 0.9996192496192498,
+          "deepfacelab": 0.9755102040816326,
+          "stargan": 0.9799987602432362,
+          "styleclip": 0.9999610481586402
+        },
+        "per_generator_b": {
+          "whichisreal": 0.6085174825174825,
+          "CollabDiff": 0.8837470000000001,
+          "MidJourney": 0.865722697799486,
+          "heygen": 0.6976470588235294,
+          "starganv2": 0.9251876751876752,
+          "deepfacelab": 0.9375510204081633,
+          "stargan": 0.9226481966620056,
+          "styleclip": 0.8997067988668557
+        },
+        "per_generator_delta": {
+          "whichisreal": 0.25106093906093896,
+          "CollabDiff": 0.11623399999999995,
+          "MidJourney": 0.13422057330224602,
+          "heygen": 0.14980392156862754,
+          "starganv2": 0.07443157443157455,
+          "deepfacelab": 0.03795918367346929,
+          "stargan": 0.057350563581230585,
+          "styleclip": 0.1002542492917845
+        },
+        "wins": 8,
+        "n_generators": 8,
+        "generator_bootstrap": {
+          "ci_95": [
+            0.07613872953897745,
+            0.1614612331480102
+          ],
+          "delta_mean": 0.11516437561373392,
+          "boot_mean": 0.11506037619233002,
+          "p_gt_zero": 1.0,
+          "n_boot": 10000,
+          "seed": 42,
+          "method": "paired generator-level percentile bootstrap"
+        },
+        "sign_flip_permutation": {
+          "p_value": 0.0078125,
+          "exact": true,
+          "n_permutations": 256,
+          "alternative": "two-sided",
+          "statistic": 0.11516437561373392
+        },
+        "bca": {
+          "bca_95": [
+            0.08072853873785306,
+            0.17023446900946965
+          ],
+          "z0": 0.05040456332913907,
+          "acceleration": 0.05541668209565816
+        }
+      }
+    }
+  },
+  "note": "The paper's PCA-64 control (FS_B) is a compression check at high d, not a width-matched comparison; this run is the width-matched control. TEST never modified.",
+  "elapsed_sec": 393.94110083580017,
+  "_written_utc": "2026-07-25T07:47:32.184201+00:00",
+  "_protocol_note": "macro AUROC over held-out generators; paired generator-level bootstrap (10k, percentile); exact two-sided sign-flip permutation; BCa on mean per-generator delta"
+}

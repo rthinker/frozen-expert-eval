@@ -1,0 +1,26 @@
+{
+  "pool": "arch6",
+  "method": "xgboost_on_features",
+  "avg_auc_8": 0.9544601068026117,
+  "per_generator": {
+    "whichisreal": 0.7600639360639361,
+    "CollabDiff": 0.998407,
+    "MidJourney": 0.9995847444646777,
+    "heygen": 0.9290196078431372,
+    "starganv2": 0.9921102421102421,
+    "deepfacelab": 0.9846938775510203,
+    "stargan": 0.9731318288241415,
+    "styleclip": 0.9986696175637394
+  },
+  "params": {
+    "n_estimators": 200,
+    "max_depth": 3,
+    "learning_rate": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.5
+  },
+  "seed": 1024,
+  "fit_samples": 26591,
+  "feature_dim": 9984,
+  "elapsed_s": 221.0
+}

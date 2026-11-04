@@ -1,0 +1,18 @@
+{
+  "held_out": "whichisreal",
+  "n_fit": 13535,
+  "n_test": 2001,
+  "n_excluded_training_rows": 0,
+  "auroc": {
+    "PS_4_xgboost": 0.5306803196803197,
+    "FS_1_raw_feat_logreg": 0.8139895104895104,
+    "FS_D_xgb_features": 0.6706713286713286,
+    "FS_pca1_logreg": 0.5192677322677323,
+    "FS_pca2_logreg": 0.4989200799200799,
+    "FS_pca4_logreg": 0.6292377622377622,
+    "FS_pca8_logreg": 0.6822977022977023,
+    "FS_probe2_logreg": 0.8096133866133867
+  },
+  "scores_file": "scores/arch6_mechanism_whichisreal.npz",
+  "fold_seconds": 292.8
+}

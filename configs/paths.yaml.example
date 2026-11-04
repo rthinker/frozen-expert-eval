@@ -1,0 +1,53 @@
+# ==============================================================================
+# Copy this file to configs/paths.yaml and edit the EXTERNAL PATHS section.
+# configs/paths.yaml is excluded from git (see .gitignore) because it contains
+# user-specific absolute paths.
+# ==============================================================================
+
+# ==============================================================================
+# EXTERNAL PATHS (user must configure -- these are the only absolute paths)
+# ==============================================================================
+# Root of the DF40 image dataset (Yan et al., 2024). Download from:
+#   https://github.com/YZY-stack/DF40
+dataset_root: "/path/to/DF40/deepfakes_detection_datasets/DF40"
+
+# Root of the DF40 pretrained expert weights (one subdirectory per training regime).
+weights_root: "/path/to/DF40/df40_weights"
+
+# DF40 dataset JSONs with absolute frame paths (shipped with DF40 release).
+dataset_json_folder: "/path/to/DF40/dataset_json_update"
+
+# ==============================================================================
+# INTERNAL PATHS (relative to codebase root -- do not change)
+# ==============================================================================
+output_dir: "./output"                          # All generated artifacts (gitignored)
+hf_cache_dir: "./third_party/hf_cache"          # Local HuggingFace cache (populated by 00_setup.py)
+
+# ==============================================================================
+# DEFAULT CACHE TAGS (single source of truth for all scripts)
+#
+# Cold-start pipeline:
+#   1. 01_extract.py produces the raw, un-deduped DF40_all train cache at
+#      `raw_train_tag` (intermediate).
+#   2. 02_resplit_fit_select.py reads `raw_train_tag`, deduplicates by
+#      sample_id, stratified-splits 80/20 into `default_train_tag` (FIT)
+#      and `default_select_tag` (SELECT).
+#   3. 03_verify_cache.py asserts FIT + SELECT are deduped and disjoint.
+#   4. All downstream scripts consume FIT / SELECT only, via the
+#      `FIT_TAG` / `SELECT_TAG` constants in src/utils/config.py.
+#
+# FIT and SELECT are unbalanced by design -- class balancing happens at
+# training time via class-weighted CE (torch) and class_weight="balanced"
+# (sklearn), never inside the cache.
+# ==============================================================================
+default_train_tag: "FIT"
+default_select_tag: "SELECT"
+raw_train_tag: "_raw_df40_train"
+
+# Subdirectories created automatically under output_dir:
+#   output/cached_features/   -- .npy from 01_extract + 02_resplit
+#   output/checkpoints/       -- model weights from 05_feature_space
+#   output/results/           -- metrics JSONs, predictions
+#   output/figures/           -- generated plots
+#   output/tables/            -- generated LaTeX tables
+#   output/logs/              -- screenlogs for every run

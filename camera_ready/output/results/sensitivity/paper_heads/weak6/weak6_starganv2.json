@@ -1,0 +1,51 @@
+{
+  "pool": "weak6",
+  "held_out": "starganv2",
+  "n_fit": 11836,
+  "n_select": 2089,
+  "n_test": 4000,
+  "n_excluded_training_rows": 0,
+  "auc": {
+    "G_disagreement_LR": 0.6671151671151672,
+    "G_disagreement_XGB": 0.6614336614336613,
+    "H_uncertainty_mi_LR": 0.6469483969483969,
+    "H_uncertainty_mi_XGB": 0.6522626522626523,
+    "I_quadratic_LR": 0.6672746672746673,
+    "I_quadratic_XGB": 0.6574964074964074,
+    "J_rank_ecdf_LR": 0.6623914123914124,
+    "J_rank_ecdf_XGB": 0.6533349033349034,
+    "K_cv_selected_LR": 0.6672746672746673,
+    "K_cv_selected_XGB": 0.6574964074964074
+  },
+  "cv_auc_logistic_head": {
+    "G_disagreement": 0.7709553660339183,
+    "H_uncertainty_mi": 0.7686735479186854,
+    "I_quadratic": 0.7823604448572647,
+    "J_rank_ecdf": 0.7656388364837217
+  },
+  "k_selected": "I_quadratic",
+  "n_features": {
+    "G_disagreement": 27,
+    "H_uncertainty_mi": 15,
+    "I_quadratic": 33,
+    "J_rank_ecdf": 6
+  },
+  "temperatures": [
+    99.99994475084318,
+    99.99994763874624,
+    99.9999610168323,
+    99.99995251885467,
+    99.99996451276347,
+    99.999959932326
+  ],
+  "seconds_per_map": {
+    "G_disagreement": 138.6,
+    "H_uncertainty_mi": 99.4,
+    "I_quadratic": 160.0,
+    "J_rank_ecdf": 70.1
+  },
+  "fold_seconds": 471.8,
+  "omp_threads": 4,
+  "scores_file": "weak6/weak6_starganv2.npz",
+  "implementation": "appB_richer_inputs.py (fit_logreg, fit_xgb mode cv, cv_auc, maps); logo_common folds"
+}

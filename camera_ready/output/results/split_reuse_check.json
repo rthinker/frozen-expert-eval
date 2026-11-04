@@ -1,0 +1,206 @@
+{
+  "_written_utc": "2026-10-23T00:47:04+00:00",
+  "_inputs": {
+    "DF40_all_json_sha256": "6308d04ffd0e9da59a7df058bf6a27ae41da0a15f03add8a11f694f510a5b2f6"
+  },
+  "route_a": {
+    "per_generator": {
+      "whichisreal": {
+        "test_paths": 2001,
+        "in_DF40_all": 988
+      },
+      "CollabDiff": {
+        "test_paths": 2000,
+        "in_DF40_all": 1993
+      },
+      "MidJourney": {
+        "test_paths": 1882,
+        "in_DF40_all": 1882
+      },
+      "heygen": {
+        "test_paths": 9141,
+        "in_DF40_all": 7536
+      },
+      "starganv2": {
+        "test_paths": 4000,
+        "in_DF40_all": 3000
+      },
+      "deepfacelab": {
+        "test_paths": 4669,
+        "in_DF40_all": 4669
+      },
+      "stargan": {
+        "test_paths": 3968,
+        "in_DF40_all": 0
+      },
+      "styleclip": {
+        "test_paths": 3824,
+        "in_DF40_all": 3824
+      }
+    },
+    "total_test_paths": 31485,
+    "in_DF40_all": 23892,
+    "pct": 75.9
+  },
+  "route_b": {
+    "content_reuse": {
+      "definition": "test rows whose df40-clip-large feature row (SHA-1 of the stored float16 bytes) also occurs in FIT or SELECT",
+      "per_generator": {
+        "whichisreal": {
+          "n": 2001,
+          "content_reuse": 988
+        },
+        "CollabDiff": {
+          "n": 2000,
+          "content_reuse": 2000
+        },
+        "MidJourney": {
+          "n": 1882,
+          "content_reuse": 1882
+        },
+        "heygen": {
+          "n": 101,
+          "content_reuse": 50
+        },
+        "starganv2": {
+          "n": 4000,
+          "content_reuse": 4000
+        },
+        "deepfacelab": {
+          "n": 149,
+          "content_reuse": 149
+        },
+        "stargan": {
+          "n": 3968,
+          "content_reuse": 0
+        },
+        "styleclip": {
+          "n": 3824,
+          "content_reuse": 3824
+        }
+      },
+      "totals": {
+        "n": 17925,
+        "content_reuse": 12893,
+        "content_pct": 71.9
+      }
+    },
+    "select_fit_content_twins": {
+      "df40-clip-large": 794,
+      "arch6_features": 793
+    },
+    "distinct_test_images": {
+      "definition": "distinct arch6 feature rows per generator, summed",
+      "per_generator": {
+        "whichisreal": 2001,
+        "CollabDiff": 2000,
+        "MidJourney": 1877,
+        "heygen": 101,
+        "starganv2": 1024,
+        "deepfacelab": 149,
+        "stargan": 3968,
+        "styleclip": 3824
+      },
+      "total": 14944
+    },
+    "first_row_signature_test_splits": {
+      "definition": "rows after the first whose arch6 features equal the split's first row; FIT and SELECT were re-split after extraction, so their fallback rows cannot be located this way",
+      "per_generator": {
+        "MidJourney": 5,
+        "starganv2": 7
+      },
+      "total": 12
+    },
+    "cross_generator_matches": {
+      "definition": "test images (12 arch6 logits, float32, bit-exact) that occur under more than one held-out generator; rows are counted per withheld generator (LOGO fold), so one shared image contributes a row to each fold it appears in",
+      "shared_images": 7,
+      "pairs": {
+        "CollabDiff|styleclip": 7
+      },
+      "rows_per_fold": {
+        "CollabDiff": 7,
+        "styleclip": 7
+      },
+      "rows_total": 14,
+      "rows_real": 14,
+      "rows_fake": 0
+    },
+    "path_reuse": {
+      "per_generator": {
+        "whichisreal": {
+          "path_reuse": 988,
+          "path_reuse_fake": 0
+        },
+        "CollabDiff": {
+          "path_reuse": 1993,
+          "path_reuse_fake": 1000
+        },
+        "MidJourney": {
+          "path_reuse": 1882,
+          "path_reuse_fake": 877
+        },
+        "heygen": {
+          "path_reuse": 50,
+          "path_reuse_fake": 0
+        },
+        "starganv2": {
+          "path_reuse": 3000,
+          "path_reuse_fake": 999
+        },
+        "deepfacelab": {
+          "path_reuse": 149,
+          "path_reuse_fake": 100
+        },
+        "stargan": {
+          "path_reuse": 0,
+          "path_reuse_fake": 0
+        },
+        "styleclip": {
+          "path_reuse": 3824,
+          "path_reuse_fake": 2824
+        }
+      },
+      "total": 11886,
+      "generators_with_fake_path_reuse": 5
+    },
+    "fit_real_source_families": {
+      "real_rows": 5438,
+      "families": 8,
+      "per_family": {
+        "FaceForensics++": 586,
+        "styleclip": 807,
+        "starganv2": 1578,
+        "CollabDiff": 797,
+        "deepfacelab": 44,
+        "MidJourney": 791,
+        "whichisreal": 797,
+        "heygen": 38
+      },
+      "real_rows_after_strict_filter": 586,
+      "families_after_strict_filter": 1,
+      "per_family_after_strict_filter": {
+        "FaceForensics++": 586
+      }
+    },
+    "label_path_disagreements": {
+      "per_split": {
+        "FIT": 2,
+        "MidJourney": 5,
+        "starganv2": 2
+      },
+      "total": 9
+    },
+    "raw_files": {
+      "zero_byte": {
+        "FIT": 7,
+        "SELECT": 1,
+        "MidJourney": 5,
+        "starganv2": 4
+      },
+      "zero_byte_total": 17,
+      "missing": {},
+      "missing_total": 0,
+      "zero_byte_rows_whose_label_disagrees_with_path": 9
+    }
+  }
+}

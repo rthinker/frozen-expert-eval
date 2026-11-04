@@ -1,0 +1,125 @@
+{
+  "run": "D_cost_ledger",
+  "pool": "arch6",
+  "experts": [
+    "fs-clip-base",
+    "fs-clip-large",
+    "fs-xception",
+    "fs-srm",
+    "fs-recce",
+    "fs-rfm"
+  ],
+  "widths_and_storage": {
+    "per_expert": {
+      "fs-clip-base": {
+        "feature_floats": 768,
+        "feature_dtype": "float16",
+        "feature_bytes_per_sample": 1536,
+        "logit_floats": 2,
+        "logit_dtype": "float32",
+        "logit_bytes_per_sample": 8
+      },
+      "fs-clip-large": {
+        "feature_floats": 1024,
+        "feature_dtype": "float16",
+        "feature_bytes_per_sample": 2048,
+        "logit_floats": 2,
+        "logit_dtype": "float32",
+        "logit_bytes_per_sample": 8
+      },
+      "fs-xception": {
+        "feature_floats": 2048,
+        "feature_dtype": "float16",
+        "feature_bytes_per_sample": 4096,
+        "logit_floats": 2,
+        "logit_dtype": "float32",
+        "logit_bytes_per_sample": 8
+      },
+      "fs-srm": {
+        "feature_floats": 2048,
+        "feature_dtype": "float16",
+        "feature_bytes_per_sample": 4096,
+        "logit_floats": 2,
+        "logit_dtype": "float32",
+        "logit_bytes_per_sample": 8
+      },
+      "fs-recce": {
+        "feature_floats": 2048,
+        "feature_dtype": "float16",
+        "feature_bytes_per_sample": 4096,
+        "logit_floats": 2,
+        "logit_dtype": "float32",
+        "logit_bytes_per_sample": 8
+      },
+      "fs-rfm": {
+        "feature_floats": 2048,
+        "feature_dtype": "float16",
+        "feature_bytes_per_sample": 4096,
+        "logit_floats": 2,
+        "logit_dtype": "float32",
+        "logit_bytes_per_sample": 8
+      }
+    },
+    "pool_totals": {
+      "feature_floats": 9984,
+      "feature_bytes_per_sample_stored": 19968,
+      "prediction_floats": 12,
+      "prediction_bytes_per_sample_stored": 48,
+      "width_ratio_floats": 832.0
+    },
+    "storage": {
+      "pool_features_bytes": 1021630464,
+      "pool_logits_bytes": 2463504,
+      "release_features_bytes": 3457827072,
+      "release_logits_bytes": 8622264,
+      "n_release_experts": 21,
+      "pool_features_gib": 0.9514675140380859,
+      "pool_logits_mib": 2.3493804931640625,
+      "release_features_gib": 3.2203524112701416,
+      "release_logits_mib": 8.222831726074219
+    }
+  },
+  "extraction": {
+    "note": "One-time cost, identical for both interfaces: the expert forward pass happens under either interface and reading the penultimate representation instead of the logit is free. Where an expert is exposed only as a scoring API, feature access is an access/contract cost, not a compute cost.",
+    "paper_reference": "Appendix A: GPU portion completes in under one hour over the cache on one consumer GPU",
+    "measured_imgs_per_sec": null
+  },
+  "host": {
+    "platform": "win32",
+    "python": "3.11.3"
+  },
+  "combiner_costs": {
+    "PS_2_logreg_logits": {
+      "total_fit_plus_predict_sec": 0.15725240000028862,
+      "input_dims": 12,
+      "peak_working_set_gib_after": null
+    },
+    "PS_4_xgboost_cv": {
+      "total_fit_plus_predict_sec": 62.43726339999557,
+      "includes": "5-fold CV grid as submitted",
+      "macro_auroc": 0.8425909912831497,
+      "peak_working_set_gib_after": null
+    },
+    "FS_1_frozen_total": {
+      "total_fit_plus_predict_sec": 52.68205480000324,
+      "input_dims": 9984,
+      "macro_auroc": 0.9657375624159219,
+      "peak_working_set_gib_after": null,
+      "note": "frozen FS_1 call; sklearn lbfgs upcasts the input to float64 internally (see codebase feature_space.py)"
+    },
+    "FS_1_config_split_timing": {
+      "fit_sec": 52.37595110000257,
+      "predict_sec_total": 0.624952399994072,
+      "predict_us_per_sample": 34.86484797735409,
+      "score_parity_max_abs_diff_vs_frozen": 0.0,
+      "parity_ok": true
+    },
+    "PS_predict_only": {
+      "predict_sec_total": 0.0016942000002018176,
+      "predict_us_per_sample": 0.0945160390628629,
+      "head": "logistic on flat logits (PS_2 family)"
+    }
+  },
+  "_written_utc": "2026-07-25T10:20:54.035835+00:00",
+  "_protocol_note": "macro AUROC over held-out generators; paired generator-level bootstrap (10k, percentile); exact two-sided sign-flip permutation; BCa on mean per-generator delta"
+}

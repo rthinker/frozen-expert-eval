@@ -1,0 +1,11 @@
+% Block A capacity ablation for pool=clip4, d=64
+\begin{tabular}{lrr}
+\toprule
+Variant & Avg(8) AUC & Params \\
+\midrule
+PCA + LogReg (unsupervised) & 0.9412 & --- \\
+Random proj + MLP & 0.9693 & 263938 \\
+Learned proj + Linear & 0.9775 & 263426 \\
+Learned proj + MLP & 0.9809 & 526338 \\
+\bottomrule
+\end{tabular}

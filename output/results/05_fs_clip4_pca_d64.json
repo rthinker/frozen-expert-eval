@@ -1,0 +1,19 @@
+{
+  "combiner_type": "pca",
+  "pool": "clip4",
+  "train_tag": "FIT",
+  "select_tag": "SELECT",
+  "proj_dim": 64,
+  "per_generator": {
+    "whichisreal": 0.9303156843156842,
+    "CollabDiff": 0.999495,
+    "MidJourney": 0.9985942579009173,
+    "heygen": 0.6996078431372549,
+    "starganv2": 0.9716932216932217,
+    "deepfacelab": 0.9328571428571428,
+    "stargan": 0.9983075287786161,
+    "styleclip": 0.9991104815864023
+  },
+  "avg_auc_8": 0.9412476450336549,
+  "val_auc": 0.9978212989216285
+}

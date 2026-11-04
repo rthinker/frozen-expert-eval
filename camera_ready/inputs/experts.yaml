@@ -1,0 +1,174 @@
+# Expert pool inventory: 21 frozen detectors from the DF40 benchmark.
+# 4 training regimes (FS, FR, EFS, DF40) x 6 architectures, minus 3 SPSL.
+#
+# Weight paths are relative to weights_root from paths.yaml.
+# Feature dims and resolutions match DF40 training configs.
+
+architectures:
+  clip-large:
+    detector_name: clip        # DF40 registry name
+    feature_dim: 1024
+    resolution: 224
+    backbone_name: vit
+  clip-base:
+    detector_name: clip-base   # registered at runtime by our adapter (subclasses CLIPDetector with ViT-B/16)
+    feature_dim: 768
+    resolution: 224
+    backbone_name: vit
+  xception:
+    detector_name: xception
+    feature_dim: 2048
+    resolution: 256
+    backbone_name: xception
+  srm:
+    detector_name: srm
+    feature_dim: 2048
+    resolution: 256
+    backbone_name: xception
+  recce:
+    detector_name: recce
+    feature_dim: 2048
+    resolution: 256
+    backbone_name: xception
+  rfm:
+    detector_name: rfm
+    feature_dim: 2048
+    resolution: 256
+    backbone_name: xception
+
+# Training regimes and their weight subdirectories
+regimes:
+  fs:   { weight_subdir: "train_on_fs" }
+  fr:   { weight_subdir: "train_on_fr" }
+  efs:  { weight_subdir: "train_on_efs" }
+  df40: { weight_subdir: "train_on_df40" }
+
+# Full 21-expert grid
+# Format: {regime}-{architecture} -> weight file path
+# All 6 archs available for FS, FR, EFS; only 3 for DF40.
+experts:
+  fs-clip-large:   { regime: fs,  arch: clip-large, weight: "train_on_fs/clip-large.pth" }
+  fs-clip-base:    { regime: fs,  arch: clip-base,  weight: "train_on_fs/clip-base.pth" }
+  fs-xception:     { regime: fs,  arch: xception,   weight: "train_on_fs/xception.pth" }
+  fs-srm:          { regime: fs,  arch: srm,        weight: "train_on_fs/srm.pth" }
+  fs-recce:        { regime: fs,  arch: recce,      weight: "train_on_fs/recce.pth" }
+  fs-rfm:          { regime: fs,  arch: rfm,        weight: "train_on_fs/rfm.pth" }
+  fr-clip-large:   { regime: fr,  arch: clip-large, weight: "train_on_fr/clip-large.pth" }
+  fr-clip-base:    { regime: fr,  arch: clip-base,  weight: "train_on_fr/clip-base.pth" }
+  fr-xception:     { regime: fr,  arch: xception,   weight: "train_on_fr/xception.pth" }
+  fr-srm:          { regime: fr,  arch: srm,        weight: "train_on_fr/srm.pth" }
+  fr-recce:        { regime: fr,  arch: recce,      weight: "train_on_fr/recce.pth" }
+  fr-rfm:          { regime: fr,  arch: rfm,        weight: "train_on_fr/rfm.pth" }
+  efs-clip-large:  { regime: efs, arch: clip-large, weight: "train_on_efs/clip-large.pth" }
+  efs-clip-base:   { regime: efs, arch: clip-base,  weight: "train_on_efs/clip-base.pth" }
+  efs-xception:    { regime: efs, arch: xception,   weight: "train_on_efs/xception.pth" }
+  efs-srm:         { regime: efs, arch: srm,        weight: "train_on_efs/srm.pth" }
+  efs-recce:       { regime: efs, arch: recce,      weight: "train_on_efs/recce.pth" }
+  efs-rfm:         { regime: efs, arch: rfm,        weight: "train_on_efs/rfm.pth" }
+  df40-clip-large: { regime: df40, arch: clip-large, weight: "train_on_df40/clip-large.pth" }
+  df40-clip-base:  { regime: df40, arch: clip-base,  weight: "train_on_df40/clip-base.pth" }
+  df40-xception:   { regime: df40, arch: xception,   weight: "train_on_df40/xception.pth" }
+
+# Named pools (paper-exact, hardcoded)
+pools:
+  clip4:          # Tables 2, 3, 5a, A1, A2 -- data-diverse, same architecture
+    - fs-clip-large
+    - fr-clip-large
+    - efs-clip-large
+    - df40-clip-large
+
+  weak6:          # Table 4 -- 6 near-chance experts
+    - fr-recce        # 0.36
+    - fr-xception     # 0.37
+    - fr-srm          # 0.41
+    - fr-rfm          # 0.38
+    - fs-recce        # 0.54
+    - fs-xception     # 0.54
+
+  low_het4:       # Table 7 -- same data (FS), related arch (Xception-family)
+    - fs-xception
+    - fs-srm
+    - fs-recce
+    - fs-rfm
+
+  arch6:          # Table 8 "Arch only" -- same data (FS), all 6 architectures
+    - fs-clip-base
+    - fs-clip-large
+    - fs-xception
+    - fs-srm
+    - fs-recce
+    - fs-rfm
+
+  arch6_fr:       # Replication of arch6 under FR training regime
+    - fr-clip-base
+    - fr-clip-large
+    - fr-xception
+    - fr-srm
+    - fr-recce
+    - fr-rfm
+
+  arch6_efs:      # Replication of arch6 under EFS training regime
+    - efs-clip-base
+    - efs-clip-large
+    - efs-xception
+    - efs-srm
+    - efs-recce
+    - efs-rfm
+
+  mixed6:         # Table 8 "Mixed" -- diff data + diff arch. VERIFY vs paper.
+    - df40-clip-large
+    - fs-xception
+    - fr-srm
+    - efs-recce
+    - efs-clip-base
+    - fr-rfm
+
+  merged9:        # clip4 + arch6 merged, deduplicated (fs-clip-large shared)
+    - fs-clip-base
+    - fs-clip-large
+    - fs-xception
+    - fs-srm
+    - fs-recce
+    - fs-rfm
+    - fr-clip-large
+    - efs-clip-large
+    - df40-clip-large
+
+  strong4:        # Ceiling probe -- 4 strongest individual experts
+    - df40-clip-large   # 0.889
+    - efs-clip-large    # 0.847
+    - fs-clip-large     # 0.796
+    - efs-clip-base     # 0.787
+
+  balanced8:      # Systematic heterogeneity -- 4 regimes x 2 architectures
+    - fs-clip-large
+    - fr-clip-large
+    - efs-clip-large
+    - df40-clip-large
+    - fs-xception
+    - fr-xception
+    - efs-xception
+    - df40-xception
+
+  full21:         # All 21 experts (for 200-pool sweep)
+    - fs-clip-large
+    - fs-clip-base
+    - fs-xception
+    - fs-srm
+    - fs-recce
+    - fs-rfm
+    - fr-clip-large
+    - fr-clip-base
+    - fr-xception
+    - fr-srm
+    - fr-recce
+    - fr-rfm
+    - efs-clip-large
+    - efs-clip-base
+    - efs-xception
+    - efs-srm
+    - efs-recce
+    - efs-rfm
+    - df40-clip-large
+    - df40-clip-base
+    - df40-xception

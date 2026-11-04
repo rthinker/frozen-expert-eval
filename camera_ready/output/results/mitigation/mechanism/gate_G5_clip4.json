@@ -1,0 +1,30 @@
+{
+  "gate": "g5",
+  "pool": "clip4",
+  "g5": {
+    "FS_1": {
+      "group": "fs1",
+      "max_abs_diff": 2.220446049250313e-16,
+      "fold": "whichisreal",
+      "status": "PASS"
+    },
+    "PS_4": {
+      "group": "exact",
+      "max_abs_diff": 0.0,
+      "fold": "CollabDiff",
+      "status": "PASS"
+    }
+  },
+  "fs1_tolerance": 0.0001,
+  "per_fold_fs1_abs_diff": {
+    "CollabDiff": 0.0,
+    "MidJourney": 0.0,
+    "deepfacelab": 0.0,
+    "heygen": 0.0,
+    "stargan": 0.0,
+    "starganv2": 0.0,
+    "styleclip": 0.0,
+    "whichisreal": 2.220446049250313e-16
+  },
+  "status": "PASS"
+}

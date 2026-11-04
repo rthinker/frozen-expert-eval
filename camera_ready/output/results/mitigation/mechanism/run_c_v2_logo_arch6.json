@@ -1,0 +1,183 @@
+{
+  "run": "C_v2_logo",
+  "pool": "arch6",
+  "experts": [
+    "fs-clip-base",
+    "fs-clip-large",
+    "fs-xception",
+    "fs-srm",
+    "fs-recce",
+    "fs-rfm"
+  ],
+  "exclusion": "content",
+  "exclusion_manifest": "code/output/results/mitigation/exclusions/logo_exclusions_arch6.json",
+  "mean_auroc": {
+    "PS_4_xgboost": 0.7274954498741324,
+    "FS_1_raw_feat_logreg": 0.8979130473006334,
+    "FS_D_xgb_features": 0.8690556284662776,
+    "FS_pca1_logreg": 0.7719033088601992,
+    "FS_pca2_logreg": 0.7300039957188242,
+    "FS_pca4_logreg": 0.7952718520756255,
+    "FS_pca8_logreg": 0.827971637797333,
+    "FS_probe2_logreg": 0.8801430431608719
+  },
+  "per_fold": [
+    {
+      "held_out": "whichisreal",
+      "n_fit": 13535,
+      "n_test": 2001,
+      "n_excluded_training_rows": 0,
+      "auroc": {
+        "PS_4_xgboost": 0.5306803196803197,
+        "FS_1_raw_feat_logreg": 0.8139895104895104,
+        "FS_D_xgb_features": 0.6706713286713286,
+        "FS_pca1_logreg": 0.5192677322677323,
+        "FS_pca2_logreg": 0.4989200799200799,
+        "FS_pca4_logreg": 0.6292377622377622,
+        "FS_pca8_logreg": 0.6822977022977023,
+        "FS_probe2_logreg": 0.8096133866133867
+      },
+      "scores_file": "scores/arch6_mechanism_whichisreal.npz",
+      "fold_seconds": 292.8
+    },
+    {
+      "held_out": "CollabDiff",
+      "n_fit": 13530,
+      "n_test": 2000,
+      "n_excluded_training_rows": 7,
+      "auroc": {
+        "PS_4_xgboost": 0.8157500000000001,
+        "FS_1_raw_feat_logreg": 0.998683,
+        "FS_D_xgb_features": 0.9889,
+        "FS_pca1_logreg": 0.832634,
+        "FS_pca2_logreg": 0.8066010000000001,
+        "FS_pca4_logreg": 0.8968970000000002,
+        "FS_pca8_logreg": 0.9711169999999999,
+        "FS_probe2_logreg": 0.999529
+      },
+      "scores_file": "scores/arch6_mechanism_CollabDiff.npz",
+      "fold_seconds": 289.6
+    },
+    {
+      "held_out": "MidJourney",
+      "n_fit": 13636,
+      "n_test": 1882,
+      "n_excluded_training_rows": 0,
+      "auroc": {
+        "PS_4_xgboost": 0.5239764688529984,
+        "FS_1_raw_feat_logreg": 0.8677830913845822,
+        "FS_D_xgb_features": 0.7977013450421779,
+        "FS_pca1_logreg": 0.6284052939407864,
+        "FS_pca2_logreg": 0.45934523505619,
+        "FS_pca4_logreg": 0.6170402264617619,
+        "FS_pca8_logreg": 0.7389086494551189,
+        "FS_probe2_logreg": 0.7675590122364233
+      },
+      "scores_file": "scores/arch6_mechanism_MidJourney.npz",
+      "fold_seconds": 282.4
+    },
+    {
+      "held_out": "heygen",
+      "n_fit": 15150,
+      "n_test": 101,
+      "n_excluded_training_rows": 0,
+      "auroc": {
+        "PS_4_xgboost": 0.6835294117647059,
+        "FS_1_raw_feat_logreg": 0.7705882352941177,
+        "FS_D_xgb_features": 0.8180392156862744,
+        "FS_pca1_logreg": 0.7788235294117648,
+        "FS_pca2_logreg": 0.6627450980392157,
+        "FS_pca4_logreg": 0.771764705882353,
+        "FS_pca8_logreg": 0.7266666666666667,
+        "FS_probe2_logreg": 0.7396078431372549
+      },
+      "scores_file": "scores/arch6_mechanism_heygen.npz",
+      "fold_seconds": 314.7
+    },
+    {
+      "held_out": "starganv2",
+      "n_fit": 11836,
+      "n_test": 4000,
+      "n_excluded_training_rows": 0,
+      "auroc": {
+        "PS_4_xgboost": 0.687966187966188,
+        "FS_1_raw_feat_logreg": 0.8529128529128529,
+        "FS_D_xgb_features": 0.8221978221978221,
+        "FS_pca1_logreg": 0.7107599607599607,
+        "FS_pca2_logreg": 0.693036693036693,
+        "FS_pca4_logreg": 0.7432534932534932,
+        "FS_pca8_logreg": 0.796888296888297,
+        "FS_probe2_logreg": 0.8512566012566013
+      },
+      "scores_file": "scores/arch6_mechanism_starganv2.npz",
+      "fold_seconds": 251.5
+    },
+    {
+      "held_out": "deepfacelab",
+      "n_fit": 15109,
+      "n_test": 149,
+      "n_excluded_training_rows": 0,
+      "auroc": {
+        "PS_4_xgboost": 0.886734693877551,
+        "FS_1_raw_feat_logreg": 0.9155102040816326,
+        "FS_D_xgb_features": 0.916734693877551,
+        "FS_pca1_logreg": 0.936938775510204,
+        "FS_pca2_logreg": 0.8997959183673468,
+        "FS_pca4_logreg": 0.9377551020408164,
+        "FS_pca8_logreg": 0.9338775510204081,
+        "FS_probe2_logreg": 0.9112244897959183
+      },
+      "scores_file": "scores/arch6_mechanism_deepfacelab.npz",
+      "fold_seconds": 349.4
+    },
+    {
+      "held_out": "stargan",
+      "n_fit": 11863,
+      "n_test": 3968,
+      "n_excluded_training_rows": 0,
+      "auroc": {
+        "PS_4_xgboost": 0.8994763043867064,
+        "FS_1_raw_feat_logreg": 0.9704784190865634,
+        "FS_D_xgb_features": 0.95612201035705,
+        "FS_pca1_logreg": 0.9232176464132414,
+        "FS_pca2_logreg": 0.9435819215010406,
+        "FS_pca4_logreg": 0.8585445153973725,
+        "FS_pca8_logreg": 0.8019110037558532,
+        "FS_probe2_logreg": 0.9716110944003643
+      },
+      "scores_file": "scores/arch6_mechanism_stargan.npz",
+      "fold_seconds": 285.5
+    },
+    {
+      "held_out": "styleclip",
+      "n_fit": 11979,
+      "n_test": 3824,
+      "n_excluded_training_rows": 7,
+      "auroc": {
+        "PS_4_xgboost": 0.7918502124645892,
+        "FS_1_raw_feat_logreg": 0.9933590651558073,
+        "FS_D_xgb_features": 0.9820786118980169,
+        "FS_pca1_logreg": 0.8451795325779037,
+        "FS_pca2_logreg": 0.8760060198300283,
+        "FS_pca4_logreg": 0.9076820113314447,
+        "FS_pca8_logreg": 0.9721062322946176,
+        "FS_probe2_logreg": 0.9907429178470256
+      },
+      "scores_file": "scores/arch6_mechanism_styleclip.npz",
+      "fold_seconds": 290.5
+    }
+  ],
+  "environment": {
+    "python": "3.11.3",
+    "numpy": "1.26.4",
+    "scipy": "1.11.4",
+    "sklearn": "1.6.0",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "xgboost": "3.2.0",
+    "torch": "2.10.0+cu128",
+    "cuda": "NVIDIA GeForce RTX 5080",
+    "torch_cuda_build": "12.8",
+    "cuda_visible_devices": null
+  },
+  "elapsed_sec": 2357.7
+}

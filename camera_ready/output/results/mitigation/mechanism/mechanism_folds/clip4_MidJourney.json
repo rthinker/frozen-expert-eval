@@ -1,0 +1,18 @@
+{
+  "held_out": "MidJourney",
+  "n_fit": 13636,
+  "n_test": 1882,
+  "n_excluded_training_rows": 0,
+  "auroc": {
+    "PS_4_xgboost": 0.30130533194914827,
+    "FS_1_raw_feat_logreg": 0.6328970881056519,
+    "FS_D_xgb_features": 0.7168592612762867,
+    "FS_pca1_logreg": 0.5505097091509386,
+    "FS_pca2_logreg": 0.5765789070610459,
+    "FS_pca4_logreg": 0.6994173942147869,
+    "FS_pca8_logreg": 0.9312207491618305,
+    "FS_probe2_logreg": 0.6664091174685296
+  },
+  "scores_file": "scores/clip4_mechanism_MidJourney.npz",
+  "fold_seconds": 156.2
+}

@@ -1,0 +1,162 @@
+{
+  "pool": "weak6",
+  "combiner_type": "mlp",
+  "proj_dim": 256,
+  "train_tag": "FIT",
+  "select_tag": "SELECT",
+  "fit_samples": 26591,
+  "seeds": [
+    7,
+    10,
+    24,
+    42,
+    1024,
+    1973,
+    3392,
+    9721
+  ],
+  "mean_avg8": 0.7840370590673444,
+  "std_avg8": 0.003609395433693698,
+  "n_trainable_params": 4069122,
+  "feature_dims": [
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048
+  ],
+  "per_seed": [
+    {
+      "seed": 7,
+      "val_auc": 0.9590835011505079,
+      "per_generator": {
+        "whichisreal": 0.7123486513486513,
+        "CollabDiff": 0.9619239999999999,
+        "MidJourney": 0.8981285136461363,
+        "heygen": 0.7576470588235295,
+        "starganv2": 0.6404916404916404,
+        "deepfacelab": 0.6408163265306123,
+        "stargan": 0.5971735578173778,
+        "styleclip": 0.9806080028328611
+      },
+      "avg_auc_8": 0.773642218936351
+    },
+    {
+      "seed": 10,
+      "val_auc": 0.9607598639205877,
+      "per_generator": {
+        "whichisreal": 0.7106303696303695,
+        "CollabDiff": 0.954452,
+        "MidJourney": 0.8889872189792202,
+        "heygen": 0.7501960784313725,
+        "starganv2": 0.6545349045349045,
+        "deepfacelab": 0.7016326530612245,
+        "stargan": 0.6192178557492195,
+        "styleclip": 0.9677669971671387
+      },
+      "avg_auc_8": 0.7809272596941812
+    },
+    {
+      "seed": 24,
+      "val_auc": 0.956300741735213,
+      "per_generator": {
+        "whichisreal": 0.6919400599400599,
+        "CollabDiff": 0.916455,
+        "MidJourney": 0.8572315163067219,
+        "heygen": 0.7647058823529412,
+        "starganv2": 0.6701036701036701,
+        "deepfacelab": 0.7636734693877552,
+        "stargan": 0.631376109683923,
+        "styleclip": 0.9244812322946175
+      },
+      "avg_auc_8": 0.7774958675087111
+    },
+    {
+      "seed": 42,
+      "val_auc": 0.9595612095749856,
+      "per_generator": {
+        "whichisreal": 0.7152247752247752,
+        "CollabDiff": 0.954654,
+        "MidJourney": 0.8887534959183558,
+        "heygen": 0.7380392156862745,
+        "starganv2": 0.6549751549751549,
+        "deepfacelab": 0.7185714285714285,
+        "stargan": 0.6076848152152706,
+        "styleclip": 0.9657677053824362
+      },
+      "avg_auc_8": 0.7804588238717121
+    },
+    {
+      "seed": 1024,
+      "val_auc": 0.9557079547010516,
+      "per_generator": {
+        "whichisreal": 0.7268051948051948,
+        "CollabDiff": 0.9658359999999999,
+        "MidJourney": 0.8439195130391373,
+        "heygen": 0.7270588235294119,
+        "starganv2": 0.6710676710676711,
+        "deepfacelab": 0.7310204081632653,
+        "stargan": 0.594752856521527,
+        "styleclip": 0.9729366147308782
+      },
+      "avg_auc_8": 0.7791746352321357
+    },
+    {
+      "seed": 1973,
+      "val_auc": 0.9568835098335855,
+      "per_generator": {
+        "whichisreal": 0.707146853146853,
+        "CollabDiff": 0.9505399999999998,
+        "MidJourney": 0.8486904133834817,
+        "heygen": 0.7388235294117648,
+        "starganv2": 0.6801376801376802,
+        "deepfacelab": 0.7428571428571429,
+        "stargan": 0.6191233497008325,
+        "styleclip": 0.9540743626062324
+      },
+      "avg_auc_8": 0.7801741664054984
+    },
+    {
+      "seed": 3392,
+      "val_auc": 0.9605778532537608,
+      "per_generator": {
+        "whichisreal": 0.7088701298701299,
+        "CollabDiff": 0.967147,
+        "MidJourney": 0.8719095514446014,
+        "heygen": 0.7752941176470588,
+        "starganv2": 0.6763844263844263,
+        "deepfacelab": 0.7210204081632653,
+        "stargan": 0.5974311630137877,
+        "styleclip": 0.9749964589235127
+      },
+      "avg_auc_8": 0.7866316569308478
+    },
+    {
+      "seed": 9721,
+      "val_auc": 0.9544309578436578,
+      "per_generator": {
+        "whichisreal": 0.7038381618381618,
+        "CollabDiff": 0.9538599999999999,
+        "MidJourney": 0.8392223602625415,
+        "heygen": 0.7627450980392158,
+        "starganv2": 0.6660769160769161,
+        "deepfacelab": 0.7046938775510204,
+        "stargan": 0.624832963099961,
+        "styleclip": 0.9532854107648725
+      },
+      "avg_auc_8": 0.7760693484540861
+    }
+  ],
+  "per_generator_seed_averaged": {
+    "whichisreal": 0.7122207792207792,
+    "CollabDiff": 0.9565569999999999,
+    "MidJourney": 0.8704028319066015,
+    "heygen": 0.7596078431372548,
+    "starganv2": 0.6687099187099188,
+    "deepfacelab": 0.7191836734693878,
+    "stargan": 0.618830431760536,
+    "styleclip": 0.9667839943342776
+  },
+  "aggregation_protocol": "auc_on_seed_averaged_predictions (std_avg8 is std across per-seed macro AUCs)"
+}

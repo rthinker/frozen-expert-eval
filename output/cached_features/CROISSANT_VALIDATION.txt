@@ -1,0 +1,53 @@
+# Croissant validation
+
+File: croissant.json (SHA-256 6ea76da80c2985d2b78c03bb9cae3fa69eca4ac8b50758909b2209f259a3d38a)
+Metadata version: 1.0.8; specification: Croissant 1.0
+Validation date: 4 November 2026
+Validator: mlcroissant 1.1.0
+
+METADATA / SCHEMA: PASSED
+Strict JSON parsing rejects duplicate keys and non-finite constants.
+mlcroissant.Dataset accepts the metadata with no errors or warnings.
+The Croissant copies for the code repository and the Hub's main branch are
+byte-identical; the pinned data revision keeps its older metadata.
+
+INVENTORY / RELEASE CONTRACT: PASSED
+460 data/provenance FileObjects match CHECKSUMS.txt. Their ids, sizes and
+digests are unchanged from the reviewed source; all contentUrl values use
+revision 18fb1b212f7251799fca8cb4d549be6d239ce13a.
+CACHE_PROVENANCE.json binds the data manifest and current notice separately.
+The current package includes the current LICENSE_NOTICE.txt. The pinned
+review revision retains its original notice. The download preserves the
+release sidecars while retrieving pinned data. A populated cache must pass
+scripts/review/validate_cache_release.py; metadata validation alone does not
+prove that a consumer has downloaded intact data files.
+
+SOURCE-INTEGRITY ANNOTATIONS: PASSED
+All 17 embedded exclusion records loaded through Dataset.records and
+matched the literal source annotations. The 20 original NumPy RecordSets
+remain unchanged; the embedded annotation set gives 21 in total.
+A check of all 51,163 cached row paths against the local extraction-source
+images found 17 zero-byte row occurrences across nine distinct paths (counts:
+camera_ready/output/results/split_reuse_check.json in the code repository;
+paths: the annotation set in croissant.json). The affected rows
+are FIT 7, SELECT 1, MidJourney 5 and starganv2 4. Nine cached labels disagree
+with their requested path classes: FIT 2, MidJourney 5, starganv2 2.
+The dataset card gives every index, id and application rule. These are
+annotations only: the cache and the paper results remain unfiltered.
+
+NUMPY RECORD LOADING: NOT VALIDATED THROUGH MLCROISSANT
+mlcroissant 1.1.0 has no application/x-numpy decoder. Use NumPy and
+the paired code for array loading. Metadata validation and successful
+loading of the inline annotations do not establish automatic NumPy record
+loading or image-level ground-truth correctness.
+
+NEURIPS ONLINE CHECKER (4 November 2026)
+https://huggingface.co/spaces/JoaquinVanschoren/croissant-checker
+
+This result is for this file (the SHA-256 above), read from the Hub's revision
+a9d6c7bd9a6454f7a5b3540e297dfcd97ea9b719.
+JSON format, Croissant schema and required Responsible AI metadata passed.
+The optional automatic record-generation check returned a warning because
+the checker cannot decode application/x-numpy for CollabDiff/sample_ids.npy.
+The checker states that passing this test is not required to submit to
+NeurIPS. Use NumPy and the paired code to read the cache arrays.

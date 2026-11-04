@@ -1,0 +1,90 @@
+# Experiment hyperparameters. Authoritative source of hyperparameters.
+# See README.md "Data splits" section for the human-readable protocol description.
+
+feature_assembly:
+  # Ablation default; Tables 2/4/7/8 use d=256, scripts override via --proj_dim.
+  proj_dim: 64
+  hidden_dims: [512, 256]         # MLP classifier layers
+  dropout: 0.1
+  expert_dropout: 0.25             # per-sample Bernoulli, inverted scaling
+  lr: 2.0e-4
+  weight_decay: 0.0
+  epochs: 10
+  batch_size: 256
+  # Balancing convention: class-weighted cross-entropy loss, uniform
+  # minibatch sampling. Same mechanism is used by the DS MLP ladder
+  # (see src/models/decision_baselines.py::_train_mlp) so FS and DS are
+  # balanced identically. Hardcoded in src/training/fs_runtime.py -- no
+  # config knob on purpose, since the convention must stay unified.
+  seeds: [7, 10, 24, 42, 1024, 1973, 3392, 9721]
+
+decision_baselines:
+  # PS_A: Temperature scaling -- fitted on SELECT with balanced NLL
+  temp_max_iter: 50
+
+  # PS_B: Learned weights -- fitted on SELECT by AUC
+  weights_max_iter: 2000
+
+  # PS_2: Logistic regression -- fitted on FIT
+  logreg_C: 1.0
+  logreg_solver: "lbfgs"
+  logreg_max_iter: 1000
+  logreg_class_weight: "balanced"
+  logreg_random_state: 1024
+
+  # Raw-feature LogReg -- fitted on concatenated features
+  raw_feature_logreg_C: 1.0
+  raw_feature_logreg_solver: "lbfgs"
+  raw_feature_logreg_max_iter: 2000
+  raw_feature_logreg_class_weight: "balanced"
+  raw_feature_logreg_random_state: 1024
+
+  # PS_C: Regularised logistic regression -- CV inside FIT only
+  logreg_cv_C: [0.001, 0.01, 0.1, 1.0, 10.0, 100.0]
+  logreg_cv_penalties: ["l1", "l2", "elasticnet"]
+  logreg_cv_l1_ratio: 0.5
+  logreg_cv_solver: "saga"        # Required for L1/elasticnet; lbfgs for L2
+  logreg_cv_folds: 5
+  logreg_cv_max_iter: 2000
+  logreg_cv_random_state: 1024
+
+  # PS_3/PS_D: MLP baselines -- fitted on FIT, fixed epochs, class-weighted CE
+  mlp_hidden: 64
+  mlp_dropout: 0.1
+  mlp_lr: 2.0e-4
+  mlp_epochs: 10
+  mlp_seeds: [7, 10, 24, 42, 1024, 1973, 3392, 9721]
+
+  # PS_F/PS_E: Improved MLP -- WD selected on SELECT, refit on FIT
+  mlp_es_weight_decay: [0.0, 0.0001, 0.001, 0.01]
+  mlp_es_max_epochs: 200
+  mlp_es_patience: 10
+
+  # PS_4: XGBoost -- CV inside FIT only
+  xgb_n_estimators: [50, 100, 200]
+  xgb_max_depth: [2, 3, 4]
+  xgb_learning_rate: [0.05, 0.1, 0.3]
+  xgb_subsample: [0.8, 1.0]
+  xgb_colsample_bytree: [0.8, 1.0]
+  xgb_cv_folds: 5
+  xgb_random_state: 1024
+
+evaluation:
+  bootstrap_resamples: 10000
+  confidence_level: 0.95
+
+data:
+  # Optional balanced-subset size for the trainable combiners. 0 = use the
+  # entire cached FIT split (current policy). CLI --train_samples overrides.
+  train_subset_size: 0
+  # Test generators (TEST split) are defined in src/utils/dataset_helpers.py.
+  # Per-expert input resolution is hardcoded in scripts/01_extract.py
+  # (CLIP 224x224, Xception family 256x256). DF40's own data loader
+  # handles frame_num_train / frame_num_test from its bundled config.
+
+reporting:
+  headline_pool: "arch6"
+  headline_dim: 256
+  secondary_pool: "clip4"
+  secondary_dim: 32
+  secondary_dim_alt: 256

@@ -1,0 +1,18 @@
+{
+  "held_out": "deepfacelab",
+  "n_fit": 12569,
+  "n_test": 149,
+  "n_excluded_training_rows": 0,
+  "auroc": {
+    "PS_4_xgboost": 0.9053061224489796,
+    "FS_1_raw_feat_logreg": 0.923265306122449,
+    "FS_D_xgb_features": 0.9308163265306122,
+    "FS_pca1_logreg": 0.9179591836734694,
+    "FS_pca2_logreg": 0.8597959183673468,
+    "FS_pca4_logreg": 0.9514285714285714,
+    "FS_pca8_logreg": 0.9534693877551019,
+    "FS_probe2_logreg": 0.9222448979591835
+  },
+  "scores_file": "scores/arch6_mechanism_deepfacelab.npz",
+  "fold_seconds": 263.8
+}

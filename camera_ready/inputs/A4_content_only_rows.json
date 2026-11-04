@@ -1,0 +1,92 @@
+{
+  "content_expert": "df40-clip-large",
+  "per_generator": {
+    "whichisreal": {
+      "n": 2001,
+      "path_reuse": 988,
+      "content_reuse": 988,
+      "content_only": 0,
+      "content_only_fake": 0,
+      "content_only_real": 0,
+      "content_only_in_fit": 0,
+      "content_only_in_select": 0
+    },
+    "CollabDiff": {
+      "n": 2000,
+      "path_reuse": 1993,
+      "content_reuse": 2000,
+      "content_only": 7,
+      "content_only_fake": 0,
+      "content_only_real": 7,
+      "content_only_in_fit": 7,
+      "content_only_in_select": 0
+    },
+    "MidJourney": {
+      "n": 1882,
+      "path_reuse": 1882,
+      "content_reuse": 1882,
+      "content_only": 0,
+      "content_only_fake": 0,
+      "content_only_real": 0,
+      "content_only_in_fit": 0,
+      "content_only_in_select": 0
+    },
+    "heygen": {
+      "n": 101,
+      "path_reuse": 50,
+      "content_reuse": 50,
+      "content_only": 0,
+      "content_only_fake": 0,
+      "content_only_real": 0,
+      "content_only_in_fit": 0,
+      "content_only_in_select": 0
+    },
+    "starganv2": {
+      "n": 4000,
+      "path_reuse": 3000,
+      "content_reuse": 4000,
+      "content_only": 1000,
+      "content_only_fake": 999,
+      "content_only_real": 1,
+      "content_only_in_fit": 947,
+      "content_only_in_select": 53
+    },
+    "deepfacelab": {
+      "n": 149,
+      "path_reuse": 149,
+      "content_reuse": 149,
+      "content_only": 0,
+      "content_only_fake": 0,
+      "content_only_real": 0,
+      "content_only_in_fit": 0,
+      "content_only_in_select": 0
+    },
+    "stargan": {
+      "n": 3968,
+      "path_reuse": 0,
+      "content_reuse": 0,
+      "content_only": 0,
+      "content_only_fake": 0,
+      "content_only_real": 0,
+      "content_only_in_fit": 0,
+      "content_only_in_select": 0
+    },
+    "styleclip": {
+      "n": 3824,
+      "path_reuse": 3824,
+      "content_reuse": 3824,
+      "content_only": 0,
+      "content_only_fake": 0,
+      "content_only_real": 0,
+      "content_only_in_fit": 0,
+      "content_only_in_select": 0
+    }
+  },
+  "totals": {
+    "n": 17925,
+    "path": 11886,
+    "content": 12893,
+    "content_only": 1007,
+    "content_only_fake": 999
+  }
+}

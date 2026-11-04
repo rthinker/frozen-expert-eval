@@ -1,0 +1,26 @@
+{
+  "pool": "clip4",
+  "method": "xgboost_on_features",
+  "avg_auc_8": 0.9590309226283973,
+  "per_generator": {
+    "whichisreal": 0.9266123876123875,
+    "CollabDiff": 0.9999910000000001,
+    "MidJourney": 1.0,
+    "heygen": 0.7627450980392158,
+    "starganv2": 0.9998879998879998,
+    "deepfacelab": 0.9840816326530613,
+    "stargan": 0.9989352826645421,
+    "styleclip": 0.9999939801699717
+  },
+  "params": {
+    "n_estimators": 200,
+    "max_depth": 3,
+    "learning_rate": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.5
+  },
+  "seed": 1024,
+  "fit_samples": 26591,
+  "feature_dim": 4096,
+  "elapsed_s": 88.0
+}

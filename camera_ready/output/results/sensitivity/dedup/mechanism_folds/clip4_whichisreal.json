@@ -1,0 +1,18 @@
+{
+  "held_out": "whichisreal",
+  "n_fit": 10995,
+  "n_test": 2001,
+  "n_excluded_training_rows": 0,
+  "auroc": {
+    "PS_4_xgboost": 0.8681688311688311,
+    "FS_1_raw_feat_logreg": 0.9384570429570429,
+    "FS_D_xgb_features": 0.9084555444555444,
+    "FS_pca1_logreg": 0.9074045954045954,
+    "FS_pca2_logreg": 0.8608251748251748,
+    "FS_pca4_logreg": 0.8410899100899101,
+    "FS_pca8_logreg": 0.874013986013986,
+    "FS_probe2_logreg": 0.9439150849150849
+  },
+  "scores_file": "scores/clip4_mechanism_whichisreal.npz",
+  "fold_seconds": 130.1
+}

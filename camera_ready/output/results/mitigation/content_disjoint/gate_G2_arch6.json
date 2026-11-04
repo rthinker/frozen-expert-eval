@@ -1,0 +1,225 @@
+{
+  "gate": "g2",
+  "pool": "arch6",
+  "changed_folds": {
+    "PS_1_prob_avg": {
+      "group": "exact",
+      "max_abs_diff": 0.0,
+      "fold": "CollabDiff",
+      "status": "report"
+    },
+    "PS_2_logreg": {
+      "group": "exact",
+      "max_abs_diff": 0.0020336402266289966,
+      "fold": "styleclip",
+      "status": "report"
+    },
+    "PS_3_mlp_logits": {
+      "group": "stochastic",
+      "max_abs_diff": 0.001993980169971654,
+      "fold": "styleclip",
+      "status": "report"
+    },
+    "PS_4_xgboost": {
+      "group": "xgboost",
+      "max_abs_diff": 0.0035155807365440106,
+      "fold": "styleclip",
+      "status": "report"
+    },
+    "PS_A_calibrated_avg": {
+      "group": "exact",
+      "max_abs_diff": 0.0007910000000000972,
+      "fold": "CollabDiff",
+      "status": "report"
+    },
+    "PS_B_learned_weights": {
+      "group": "exact",
+      "max_abs_diff": 0.0003025849858356855,
+      "fold": "styleclip",
+      "status": "report"
+    },
+    "PS_C_logreg_cv": {
+      "group": "exact",
+      "max_abs_diff": 0.0018863314447590263,
+      "fold": "styleclip",
+      "status": "report"
+    },
+    "PS_D_mlp_probs": {
+      "group": "stochastic",
+      "max_abs_diff": 0.001081975920679934,
+      "fold": "styleclip",
+      "status": "report"
+    },
+    "PS_E_mlp_probs_es": {
+      "group": "stochastic",
+      "max_abs_diff": 0.0024263456090651836,
+      "fold": "styleclip",
+      "status": "report"
+    },
+    "PS_F_mlp_logits_es": {
+      "group": "stochastic",
+      "max_abs_diff": 0.0036533286118980435,
+      "fold": "styleclip",
+      "status": "report"
+    },
+    "fs_mlp_mean": {
+      "group": "stochastic",
+      "max_abs_diff": 0.0002655807365438134,
+      "fold": "styleclip",
+      "status": "report"
+    },
+    "raw_feat_auc": {
+      "group": "exact",
+      "max_abs_diff": 8.299999999994423e-05,
+      "fold": "CollabDiff",
+      "status": "report"
+    }
+  },
+  "untouched_folds": {
+    "PS_1_prob_avg": {
+      "group": "exact",
+      "max_abs_diff": 0.0,
+      "fold": "MidJourney",
+      "status": "PASS"
+    },
+    "PS_2_logreg": {
+      "group": "exact",
+      "max_abs_diff": 0.0,
+      "fold": "MidJourney",
+      "status": "PASS"
+    },
+    "PS_3_mlp_logits": {
+      "group": "stochastic",
+      "max_abs_diff": 0.0,
+      "fold": "MidJourney",
+      "status": "PASS"
+    },
+    "PS_4_xgboost": {
+      "group": "xgboost",
+      "max_abs_diff": 0.0,
+      "fold": "MidJourney",
+      "status": "PASS"
+    },
+    "PS_A_calibrated_avg": {
+      "group": "exact",
+      "max_abs_diff": 0.0,
+      "fold": "MidJourney",
+      "status": "PASS"
+    },
+    "PS_B_learned_weights": {
+      "group": "exact",
+      "max_abs_diff": 0.0,
+      "fold": "MidJourney",
+      "status": "PASS"
+    },
+    "PS_C_logreg_cv": {
+      "group": "exact",
+      "max_abs_diff": 0.0,
+      "fold": "MidJourney",
+      "status": "PASS"
+    },
+    "PS_D_mlp_probs": {
+      "group": "stochastic",
+      "max_abs_diff": 0.0,
+      "fold": "MidJourney",
+      "status": "PASS"
+    },
+    "PS_E_mlp_probs_es": {
+      "group": "stochastic",
+      "max_abs_diff": 0.0,
+      "fold": "MidJourney",
+      "status": "PASS"
+    },
+    "PS_F_mlp_logits_es": {
+      "group": "stochastic",
+      "max_abs_diff": 0.0,
+      "fold": "MidJourney",
+      "status": "PASS"
+    },
+    "fs_mlp_mean": {
+      "group": "stochastic",
+      "max_abs_diff": 0.0,
+      "fold": "MidJourney",
+      "status": "PASS"
+    },
+    "raw_feat_auc": {
+      "group": "exact",
+      "max_abs_diff": 0.0,
+      "fold": "MidJourney",
+      "status": "PASS"
+    },
+    "rung:disagreement_logreg": {
+      "group": "exact",
+      "max_abs_diff": 0.0,
+      "fold": "MidJourney",
+      "status": "PASS"
+    },
+    "rung:disagreement_xgb_capped": {
+      "group": "xgboost",
+      "max_abs_diff": 0.0,
+      "fold": "MidJourney",
+      "status": "PASS"
+    },
+    "rung:disagreement_xgb_widened": {
+      "group": "xgboost",
+      "max_abs_diff": 0.0,
+      "fold": "MidJourney",
+      "status": "PASS"
+    },
+    "rung:quadratic_logreg": {
+      "group": "exact",
+      "max_abs_diff": 0.0,
+      "fold": "MidJourney",
+      "status": "PASS"
+    },
+    "rung:quadratic_xgb_capped": {
+      "group": "xgboost",
+      "max_abs_diff": 0.0,
+      "fold": "MidJourney",
+      "status": "PASS"
+    },
+    "rung:quadratic_xgb_widened": {
+      "group": "xgboost",
+      "max_abs_diff": 0.0,
+      "fold": "MidJourney",
+      "status": "PASS"
+    },
+    "rung:rank ECDF_logreg": {
+      "group": "exact",
+      "max_abs_diff": 0.0,
+      "fold": "MidJourney",
+      "status": "PASS"
+    },
+    "rung:rank ECDF_xgb_capped": {
+      "group": "xgboost",
+      "max_abs_diff": 0.0,
+      "fold": "MidJourney",
+      "status": "PASS"
+    },
+    "rung:rank ECDF_xgb_widened": {
+      "group": "xgboost",
+      "max_abs_diff": 0.0,
+      "fold": "MidJourney",
+      "status": "PASS"
+    },
+    "rung:uncertainty+MI_logreg": {
+      "group": "exact",
+      "max_abs_diff": 0.0,
+      "fold": "MidJourney",
+      "status": "PASS"
+    },
+    "rung:uncertainty+MI_xgb_capped": {
+      "group": "xgboost",
+      "max_abs_diff": 0.0,
+      "fold": "MidJourney",
+      "status": "PASS"
+    },
+    "rung:uncertainty+MI_xgb_widened": {
+      "group": "xgboost",
+      "max_abs_diff": 0.0,
+      "fold": "MidJourney",
+      "status": "PASS"
+    }
+  },
+  "status": "PASS"
+}

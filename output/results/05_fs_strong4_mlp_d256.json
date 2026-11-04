@@ -1,0 +1,159 @@
+{
+  "pool": "strong4",
+  "combiner_type": "mlp",
+  "proj_dim": 256,
+  "train_tag": "FIT",
+  "select_tag": "SELECT",
+  "fit_samples": 26591,
+  "seeds": [
+    7,
+    10,
+    24,
+    42,
+    1024,
+    1973,
+    3392,
+    9721
+  ],
+  "mean_avg8": 0.9837121793423158,
+  "std_avg8": 0.0020393532237470875,
+  "n_trainable_params": 1642754,
+  "feature_dims": [
+    1024,
+    1024,
+    1024,
+    768
+  ],
+  "per_generator_seed_averaged": {
+    "whichisreal": 0.9545664335664336,
+    "CollabDiff": 1.0,
+    "MidJourney": 1.0,
+    "heygen": 0.9333333333333333,
+    "starganv2": 1.0,
+    "deepfacelab": 0.983265306122449,
+    "stargan": 0.9985323617163111,
+    "styleclip": 1.0
+  },
+  "per_seed": [
+    {
+      "seed": 7,
+      "val_auc": 0.9998886784912373,
+      "per_generator": {
+        "whichisreal": 0.9505464535464535,
+        "CollabDiff": 1.0,
+        "MidJourney": 1.0,
+        "heygen": 0.9392156862745099,
+        "starganv2": 1.0,
+        "deepfacelab": 0.9855102040816326,
+        "stargan": 0.9977905400461758,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.9841328604935965
+    },
+    {
+      "seed": 10,
+      "val_auc": 0.9998971667562806,
+      "per_generator": {
+        "whichisreal": 0.9640329670329671,
+        "CollabDiff": 1.0,
+        "MidJourney": 1.0,
+        "heygen": 0.9098039215686275,
+        "starganv2": 1.0,
+        "deepfacelab": 0.983265306122449,
+        "stargan": 0.9982831401209677,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.9819231668556264
+    },
+    {
+      "seed": 24,
+      "val_auc": 0.9998878435799217,
+      "per_generator": {
+        "whichisreal": 0.9441298701298702,
+        "CollabDiff": 1.0,
+        "MidJourney": 1.0,
+        "heygen": 0.9180392156862744,
+        "starganv2": 1.0,
+        "deepfacelab": 0.9840816326530613,
+        "stargan": 0.9973822840790842,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.9804541253185363
+    },
+    {
+      "seed": 42,
+      "val_auc": 0.9998701712904055,
+      "per_generator": {
+        "whichisreal": 0.9476483516483516,
+        "CollabDiff": 0.999999,
+        "MidJourney": 1.0,
+        "heygen": 0.9396078431372549,
+        "starganv2": 1.0,
+        "deepfacelab": 0.9691836734693878,
+        "stargan": 0.9984934922931842,
+        "styleclip": 0.9999992917847026
+      },
+      "avg_auc_8": 0.9818664565416102
+    },
+    {
+      "seed": 1024,
+      "val_auc": 0.9998927138959299,
+      "per_generator": {
+        "whichisreal": 0.9523826173826174,
+        "CollabDiff": 1.0,
+        "MidJourney": 1.0,
+        "heygen": 0.8917647058823529,
+        "starganv2": 1.0,
+        "deepfacelab": 0.983265306122449,
+        "stargan": 0.9985943495545004,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.9782508723677399
+    },
+    {
+      "seed": 1973,
+      "val_auc": 0.9998943837185614,
+      "per_generator": {
+        "whichisreal": 0.9535794205794206,
+        "CollabDiff": 1.0,
+        "MidJourney": 1.0,
+        "heygen": 0.9007843137254902,
+        "starganv2": 1.0,
+        "deepfacelab": 0.9846938775510203,
+        "stargan": 0.9979665956685744,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.9796280259405632
+    },
+    {
+      "seed": 3392,
+      "val_auc": 0.9998753199101857,
+      "per_generator": {
+        "whichisreal": 0.9223556443556443,
+        "CollabDiff": 1.0,
+        "MidJourney": 1.0,
+        "heygen": 0.9223529411764706,
+        "starganv2": 1.0,
+        "deepfacelab": 0.9755102040816327,
+        "stargan": 0.9983682463742196,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.9773233794984959
+    },
+    {
+      "seed": 9721,
+      "val_auc": 0.9998975842119383,
+      "per_generator": {
+        "whichisreal": 0.9585704295704296,
+        "CollabDiff": 1.0,
+        "MidJourney": 0.9999965962661039,
+        "heygen": 0.9196078431372549,
+        "starganv2": 0.9999539999539999,
+        "deepfacelab": 0.9724489795918367,
+        "stargan": 0.9979592282615766,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.9810671345976503
+    }
+  ]
+}

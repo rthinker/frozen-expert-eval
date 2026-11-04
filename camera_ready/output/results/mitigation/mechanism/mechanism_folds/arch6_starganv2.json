@@ -1,0 +1,18 @@
+{
+  "held_out": "starganv2",
+  "n_fit": 11836,
+  "n_test": 4000,
+  "n_excluded_training_rows": 0,
+  "auroc": {
+    "PS_4_xgboost": 0.687966187966188,
+    "FS_1_raw_feat_logreg": 0.8529128529128529,
+    "FS_D_xgb_features": 0.8221978221978221,
+    "FS_pca1_logreg": 0.7107599607599607,
+    "FS_pca2_logreg": 0.693036693036693,
+    "FS_pca4_logreg": 0.7432534932534932,
+    "FS_pca8_logreg": 0.796888296888297,
+    "FS_probe2_logreg": 0.8512566012566013
+  },
+  "scores_file": "scores/arch6_mechanism_starganv2.npz",
+  "fold_seconds": 251.5
+}

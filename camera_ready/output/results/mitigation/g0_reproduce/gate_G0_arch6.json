@@ -1,0 +1,153 @@
+{
+  "gate": "g0",
+  "pool": "arch6",
+  "logo": {
+    "PS_1_prob_avg": {
+      "group": "exact",
+      "max_abs_diff": 0.0,
+      "fold": "CollabDiff",
+      "status": "PASS"
+    },
+    "PS_2_logreg": {
+      "group": "exact",
+      "max_abs_diff": 0.0,
+      "fold": "CollabDiff",
+      "status": "PASS"
+    },
+    "PS_3_mlp_logits": {
+      "group": "stochastic",
+      "max_abs_diff": 0.0,
+      "fold": "CollabDiff",
+      "status": "report"
+    },
+    "PS_4_xgboost": {
+      "group": "xgboost",
+      "max_abs_diff": 0.0,
+      "fold": "CollabDiff",
+      "status": "PASS"
+    },
+    "PS_A_calibrated_avg": {
+      "group": "exact",
+      "max_abs_diff": 0.0,
+      "fold": "CollabDiff",
+      "status": "PASS"
+    },
+    "PS_B_learned_weights": {
+      "group": "exact",
+      "max_abs_diff": 0.0,
+      "fold": "CollabDiff",
+      "status": "PASS"
+    },
+    "PS_C_logreg_cv": {
+      "group": "exact",
+      "max_abs_diff": 0.0,
+      "fold": "CollabDiff",
+      "status": "PASS"
+    },
+    "PS_D_mlp_probs": {
+      "group": "stochastic",
+      "max_abs_diff": 0.0,
+      "fold": "CollabDiff",
+      "status": "report"
+    },
+    "PS_E_mlp_probs_es": {
+      "group": "stochastic",
+      "max_abs_diff": 0.0,
+      "fold": "CollabDiff",
+      "status": "report"
+    },
+    "PS_F_mlp_logits_es": {
+      "group": "stochastic",
+      "max_abs_diff": 0.0,
+      "fold": "CollabDiff",
+      "status": "report"
+    },
+    "fs_mlp_mean": {
+      "group": "stochastic",
+      "max_abs_diff": 0.0,
+      "fold": "CollabDiff",
+      "status": "report"
+    },
+    "raw_feat_auc": {
+      "group": "exact",
+      "max_abs_diff": 0.0,
+      "fold": "CollabDiff",
+      "status": "PASS"
+    }
+  },
+  "rungs": {
+    "disagreement_logreg": {
+      "group": "exact",
+      "max_abs_diff": 0.0,
+      "fold": "CollabDiff",
+      "status": "PASS"
+    },
+    "disagreement_xgb_capped": {
+      "group": "xgboost",
+      "max_abs_diff": 0.0,
+      "fold": "CollabDiff",
+      "status": "PASS"
+    },
+    "disagreement_xgb_widened": {
+      "group": "xgboost",
+      "max_abs_diff": 0.0,
+      "fold": "CollabDiff",
+      "status": "PASS"
+    },
+    "quadratic_logreg": {
+      "group": "exact",
+      "max_abs_diff": 0.0,
+      "fold": "CollabDiff",
+      "status": "PASS"
+    },
+    "quadratic_xgb_capped": {
+      "group": "xgboost",
+      "max_abs_diff": 0.0,
+      "fold": "CollabDiff",
+      "status": "PASS"
+    },
+    "quadratic_xgb_widened": {
+      "group": "xgboost",
+      "max_abs_diff": 0.0,
+      "fold": "CollabDiff",
+      "status": "PASS"
+    },
+    "rank ECDF_logreg": {
+      "group": "exact",
+      "max_abs_diff": 0.0,
+      "fold": "CollabDiff",
+      "status": "PASS"
+    },
+    "rank ECDF_xgb_capped": {
+      "group": "xgboost",
+      "max_abs_diff": 0.0,
+      "fold": "CollabDiff",
+      "status": "PASS"
+    },
+    "rank ECDF_xgb_widened": {
+      "group": "xgboost",
+      "max_abs_diff": 0.0,
+      "fold": "CollabDiff",
+      "status": "PASS"
+    },
+    "uncertainty+MI_logreg": {
+      "group": "exact",
+      "max_abs_diff": 0.0,
+      "fold": "CollabDiff",
+      "status": "PASS"
+    },
+    "uncertainty+MI_xgb_capped": {
+      "group": "xgboost",
+      "max_abs_diff": 0.0,
+      "fold": "CollabDiff",
+      "status": "PASS"
+    },
+    "uncertainty+MI_xgb_widened": {
+      "group": "xgboost",
+      "max_abs_diff": 0.0,
+      "fold": "CollabDiff",
+      "status": "PASS"
+    }
+  },
+  "status": "PASS"
+}

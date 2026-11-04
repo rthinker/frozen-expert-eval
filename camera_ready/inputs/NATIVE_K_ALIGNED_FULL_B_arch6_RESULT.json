@@ -1,0 +1,3470 @@
+{
+  "status": "COMPLETE",
+  "view": "B_arch6",
+  "naming_authority": "camera_ready/scripts/analyses/README.md#three-class-protocol",
+  "design_authority": "camera_ready/scripts/analyses/README.md#three-class-protocol",
+  "head_authority": "camera_ready/scripts/analyses/README.md#three-class-protocol",
+  "manifest_sha256": "dd13f7d6bbdbe2e8fbff38a465d4ac41088a999b6fadaceaa77a843bc84d9907",
+  "inner_assignment_sha256": "b01cd8b1f6c3706713c09e89ba855ac10f2e24bf36e416cf8a4ba675bfc31ef9",
+  "scope": "genuine K-class heads on frozen binary-trained backbones; not end-to-end multiclass experts",
+  "classes": [
+    "GAN-synthesis",
+    "diffusion-synthesis",
+    "reenactment"
+  ],
+  "experts": [
+    "fs-clip-base",
+    "fs-clip-large",
+    "fs-xception",
+    "fs-srm",
+    "fs-recce",
+    "fs-rfm"
+  ],
+  "folds": [
+    {
+      "fold": 0,
+      "smoke_internal_fit_only": false,
+      "n_fit": 7178,
+      "n_select": 1817,
+      "n_test": 5126,
+      "methods": {
+        "PS1-K3": {
+          "name": "PS1-K3",
+          "select": {
+            "macro": 0.9989603347137964,
+            "per_class": {
+              "GAN-synthesis": 0.9999920170728204,
+              "diffusion-synthesis": 0.9983222242512784,
+              "reenactment": 0.9985667628172905
+            }
+          },
+          "test": {
+            "macro": 0.9575926660962709,
+            "per_class": {
+              "GAN-synthesis": 0.9758686967597272,
+              "diffusion-synthesis": 0.9113437481151925,
+              "reenactment": 0.9855655534138927
+            }
+          },
+          "metadata": {
+            "paper_recipe": true,
+            "selection": "none"
+          }
+        },
+        "PS2-K3": {
+          "name": "PS2-K3",
+          "select": {
+            "macro": 0.9996564611584606,
+            "per_class": {
+              "GAN-synthesis": 1.0,
+              "diffusion-synthesis": 0.9994179145361578,
+              "reenactment": 0.9995514689392241
+            }
+          },
+          "test": {
+            "macro": 0.955507048201451,
+            "per_class": {
+              "GAN-synthesis": 0.9704191634824504,
+              "diffusion-synthesis": 0.9081069790214257,
+              "reenactment": 0.9879950021004771
+            }
+          },
+          "metadata": {
+            "scaled": false,
+            "solver": "lbfgs",
+            "C": 1.0,
+            "class_weight": "balanced",
+            "max_iter": 1000,
+            "n_iter": [
+              110
+            ],
+            "convergence_warnings": 0,
+            "classes": [
+              0,
+              1,
+              2
+            ],
+            "elapsed_seconds": 0.2576119899749756
+          }
+        },
+        "PS3-K3": {
+          "name": "PS3-K3",
+          "select": {
+            "macro": 0.9996694792390272,
+            "per_class": {
+              "GAN-synthesis": 1.0,
+              "diffusion-synthesis": 0.9994505243660649,
+              "reenactment": 0.9995579133510168
+            }
+          },
+          "test": {
+            "macro": 0.9698268656459431,
+            "per_class": {
+              "GAN-synthesis": 0.9847831717277079,
+              "diffusion-synthesis": 0.9378607743588107,
+              "reenactment": 0.9868366508513109
+            }
+          },
+          "metadata": {
+            "seeds": [
+              7,
+              10,
+              24,
+              42,
+              1024,
+              1973,
+              3392,
+              9721
+            ],
+            "epochs": 10,
+            "hidden": 64,
+            "dropout": 0.1,
+            "lr": 0.0002,
+            "averaging": "per-sample class probabilities",
+            "elapsed_seconds": 19.138928174972534
+          }
+        },
+        "PS4-K3": {
+          "name": "PS4-K3",
+          "select": {
+            "macro": 0.9994019943029254,
+            "per_class": {
+              "GAN-synthesis": 1.0,
+              "diffusion-synthesis": 0.9989793123239069,
+              "reenactment": 0.999226670584869
+            }
+          },
+          "test": {
+            "macro": 0.9495870291788343,
+            "per_class": {
+              "GAN-synthesis": 0.9581989576348459,
+              "diffusion-synthesis": 0.9054611525620967,
+              "reenactment": 0.9851009773395607
+            }
+          },
+          "metadata": {
+            "best_parameters": {
+              "colsample_bytree": 0.8,
+              "learning_rate": 0.1,
+              "max_depth": 4,
+              "n_estimators": 100,
+              "subsample": 0.8
+            },
+            "in_fit_cv_macro_ovr": 0.9996183776572763,
+            "grid_size": 108,
+            "cv_folds": 5,
+            "selection_split": "FIT only",
+            "multiclass_extension": "balanced sample weights and macro one-vs-rest AUROC",
+            "elapsed_seconds": 410.16758275032043
+          }
+        },
+        "FS1-K3": {
+          "name": "FS1-K3",
+          "select": {
+            "macro": 0.9994605597729862,
+            "per_class": {
+              "GAN-synthesis": 0.9999654073155544,
+              "diffusion-synthesis": 0.9990233355942816,
+              "reenactment": 0.9993929364091223
+            }
+          },
+          "test": {
+            "macro": 0.9385518096411571,
+            "per_class": {
+              "GAN-synthesis": 0.9473278305819577,
+              "diffusion-synthesis": 0.880963974895249,
+              "reenactment": 0.9873636234462648
+            }
+          },
+          "metadata": {
+            "scaled": false,
+            "solver": "lbfgs",
+            "C": 1.0,
+            "class_weight": "balanced",
+            "max_iter": 2000,
+            "n_iter": [
+              52
+            ],
+            "convergence_warnings": 0,
+            "classes": [
+              0,
+              1,
+              2
+            ],
+            "elapsed_seconds": 34.24938750267029
+          }
+        },
+        "FS2-K3": {
+          "name": "FS2-K3",
+          "select": {
+            "macro": 0.9997354669820617,
+            "per_class": {
+              "GAN-synthesis": 0.9999946780485468,
+              "diffusion-synthesis": 0.999528787957842,
+              "reenactment": 0.9996829349397963
+            }
+          },
+          "test": {
+            "macro": 0.9466852194682444,
+            "per_class": {
+              "GAN-synthesis": 0.9581421916632075,
+              "diffusion-synthesis": 0.8929934825568813,
+              "reenactment": 0.9889199841846443
+            }
+          },
+          "metadata": {
+            "seeds": [
+              7,
+              10,
+              24,
+              42,
+              1024,
+              1973,
+              3392,
+              9721
+            ],
+            "epochs": 10,
+            "proj_dim": 256,
+            "hidden": [
+              512,
+              256
+            ],
+            "dropout": 0.1,
+            "expert_dropout": 0.25,
+            "lr": 0.0002,
+            "selection": "best SELECT macro OvR checkpoint per seed",
+            "per_seed": {
+              "7": {
+                "best_select_macro": 0.9995748171729946,
+                "best_epoch": 10,
+                "seed": 7,
+                "epochs": 10,
+                "device": "cuda",
+                "paper_aligned": true
+              },
+              "10": {
+                "best_select_macro": 0.9994915485394325,
+                "best_epoch": 9,
+                "seed": 10,
+                "epochs": 10,
+                "device": "cuda",
+                "paper_aligned": true
+              },
+              "24": {
+                "best_select_macro": 0.9995445345545183,
+                "best_epoch": 10,
+                "seed": 24,
+                "epochs": 10,
+                "device": "cuda",
+                "paper_aligned": true
+              },
+              "42": {
+                "best_select_macro": 0.9994561686006495,
+                "best_epoch": 9,
+                "seed": 42,
+                "epochs": 10,
+                "device": "cuda",
+                "paper_aligned": true
+              },
+              "1024": {
+                "best_select_macro": 0.9997679523622943,
+                "best_epoch": 9,
+                "seed": 1024,
+                "epochs": 10,
+                "device": "cuda",
+                "paper_aligned": true
+              },
+              "1973": {
+                "best_select_macro": 0.9995283248109232,
+                "best_epoch": 9,
+                "seed": 1973,
+                "epochs": 10,
+                "device": "cuda",
+                "paper_aligned": true
+              },
+              "3392": {
+                "best_select_macro": 0.9994812325574226,
+                "best_epoch": 9,
+                "seed": 3392,
+                "epochs": 10,
+                "device": "cuda",
+                "paper_aligned": true
+              },
+              "9721": {
+                "best_select_macro": 0.9996353872172538,
+                "best_epoch": 9,
+                "seed": 9721,
+                "epochs": 10,
+                "device": "cuda",
+                "paper_aligned": true
+              }
+            },
+            "elapsed_seconds": 107.33274483680725
+          }
+        },
+        "FSB-K3-18": {
+          "name": "FSB-K3-18",
+          "select": {
+            "macro": 0.9835577210640767,
+            "per_class": {
+              "GAN-synthesis": 0.9981213511370348,
+              "diffusion-synthesis": 0.9707147422519045,
+              "reenactment": 0.9818370698032908
+            }
+          },
+          "test": {
+            "macro": 0.9029801739528426,
+            "per_class": {
+              "GAN-synthesis": 0.9494640937490022,
+              "diffusion-synthesis": 0.8043463220972189,
+              "reenactment": 0.9551301060123064
+            }
+          },
+          "metadata": {
+            "scaled": false,
+            "solver": "lbfgs",
+            "C": 1.0,
+            "class_weight": "balanced",
+            "max_iter": 2000,
+            "n_iter": [
+              95
+            ],
+            "convergence_warnings": 0,
+            "classes": [
+              0,
+              1,
+              2
+            ],
+            "pca_width": 18,
+            "pca_fit_split": "outer FIT only",
+            "explained_variance_ratio": 0.4100731313228607,
+            "elapsed_seconds": 5.294317960739136
+          }
+        },
+        "PS+-K3": {
+          "name": "PS+-K3",
+          "select": {
+            "macro": 0.999655689921871,
+            "per_class": null
+          },
+          "test": {
+            "macro": 0.9637265339502891,
+            "per_class": {
+              "GAN-synthesis": 0.977005790129107,
+              "diffusion-synthesis": 0.9258476756108551,
+              "reenactment": 0.9883261361109053
+            }
+          },
+          "metadata": {
+            "selected": {
+              "select": 0.999655689921871,
+              "test": 0.9637265339502891,
+              "per_class": {
+                "GAN-synthesis": 0.977005790129107,
+                "diffusion-synthesis": 0.9258476756108551,
+                "reenactment": 0.9883261361109053
+              },
+              "rung": "raw_logits|logreg"
+            },
+            "all_scores": {
+              "mean_probability": {
+                "select": 0.9990009370854963,
+                "test": 0.9595926410716086,
+                "per_class": {
+                  "GAN-synthesis": 0.9790422693616312,
+                  "diffusion-synthesis": 0.9133777881848726,
+                  "reenactment": 0.9863578656683223
+                }
+              },
+              "raw_logits|logreg": {
+                "select": 0.999655689921871,
+                "test": 0.9637265339502891,
+                "per_class": {
+                  "GAN-synthesis": 0.977005790129107,
+                  "diffusion-synthesis": 0.9258476756108551,
+                  "reenactment": 0.9883261361109053
+                }
+              },
+              "raw_logits|xgb_d2_n50": {
+                "select": 0.999293346572694,
+                "test": 0.9414391398774319,
+                "per_class": {
+                  "GAN-synthesis": 0.9570066504883648,
+                  "diffusion-synthesis": 0.8863682727888766,
+                  "reenactment": 0.9809424963550546
+                }
+              },
+              "raw_logits|xgb_d3_n50": {
+                "select": 0.9990948654661519,
+                "test": 0.941078444171386,
+                "per_class": {
+                  "GAN-synthesis": 0.9523216838915911,
+                  "diffusion-synthesis": 0.889477540188534,
+                  "reenactment": 0.9814361084340326
+                }
+              },
+              "raw_logits|xgb_d4_n50": {
+                "select": 0.9991983582847933,
+                "test": 0.9409104513181544,
+                "per_class": {
+                  "GAN-synthesis": 0.9510641845745569,
+                  "diffusion-synthesis": 0.8899334418982542,
+                  "reenactment": 0.9817337274816518
+                }
+              },
+              "raw_logits|xgb_d2_n100": {
+                "select": 0.9994680012044426,
+                "test": 0.9524528593445577,
+                "per_class": {
+                  "GAN-synthesis": 0.9715207781195563,
+                  "diffusion-synthesis": 0.9001686126751319,
+                  "reenactment": 0.9856691872389849
+                }
+              },
+              "raw_logits|xgb_d3_n100": {
+                "select": 0.9993249001828085,
+                "test": 0.9501119804698521,
+                "per_class": {
+                  "GAN-synthesis": 0.9655483770253923,
+                  "diffusion-synthesis": 0.898910337260829,
+                  "reenactment": 0.9858772271233351
+                }
+              },
+              "raw_logits|xgb_d4_n100": {
+                "select": 0.9994682289438671,
+                "test": 0.9509474130336227,
+                "per_class": {
+                  "GAN-synthesis": 0.9654042446755292,
+                  "diffusion-synthesis": 0.9019845694123657,
+                  "reenactment": 0.9854534250129735
+                }
+              },
+              "raw_logits|xgb_d2_n200": {
+                "select": 0.9994599263011544,
+                "test": 0.9561368360301022,
+                "per_class": {
+                  "GAN-synthesis": 0.9751879485842212,
+                  "diffusion-synthesis": 0.9059698288860742,
+                  "reenactment": 0.9872527306200114
+                }
+              },
+              "raw_logits|xgb_d3_n200": {
+                "select": 0.9993819729261321,
+                "test": 0.9548858953852756,
+                "per_class": {
+                  "GAN-synthesis": 0.9714892907446632,
+                  "diffusion-synthesis": 0.9061343615069946,
+                  "reenactment": 0.9870340339041688
+                }
+              },
+              "raw_logits|xgb_d4_n200": {
+                "select": 0.999372617143042,
+                "test": 0.9556756486949333,
+                "per_class": {
+                  "GAN-synthesis": 0.9705442260137161,
+                  "diffusion-synthesis": 0.9107366183091544,
+                  "reenactment": 0.9857461017619294
+                }
+              },
+              "probabilities|logreg": {
+                "select": 0.9991171586962047,
+                "test": 0.9575482051616331,
+                "per_class": {
+                  "GAN-synthesis": 0.9667355841041089,
+                  "diffusion-synthesis": 0.9221244044007821,
+                  "reenactment": 0.9837846269800083
+                }
+              },
+              "probabilities|xgb_d2_n50": {
+                "select": 0.9994572555949798,
+                "test": 0.9390856387406353,
+                "per_class": {
+                  "GAN-synthesis": 0.9463399696302053,
+                  "diffusion-synthesis": 0.886808985166342,
+                  "reenactment": 0.984107961425359
+                }
+              },
+              "probabilities|xgb_d3_n50": {
+                "select": 0.9993507455378854,
+                "test": 0.9382239809268808,
+                "per_class": {
+                  "GAN-synthesis": 0.9426747948442306,
+                  "diffusion-synthesis": 0.887329857304539,
+                  "reenactment": 0.9846672906318727
+                }
+              },
+              "probabilities|xgb_d4_n50": {
+                "select": 0.9994284816376107,
+                "test": 0.940694340279752,
+                "per_class": {
+                  "GAN-synthesis": 0.9464364274335748,
+                  "diffusion-synthesis": 0.8916559343501539,
+                  "reenactment": 0.9839906590555267
+                }
+              },
+              "probabilities|xgb_d2_n100": {
+                "select": 0.9994778980231268,
+                "test": 0.9508962680433509,
+                "per_class": {
+                  "GAN-synthesis": 0.9691091112932352,
+                  "diffusion-synthesis": 0.8977094930443945,
+                  "reenactment": 0.9858701997924235
+                }
+              },
+              "probabilities|xgb_d3_n100": {
+                "select": 0.9994947568993732,
+                "test": 0.9506728627336626,
+                "per_class": {
+                  "GAN-synthesis": 0.9673635576653575,
+                  "diffusion-synthesis": 0.8988046771612755,
+                  "reenactment": 0.9858503533743544
+                }
+              },
+              "probabilities|xgb_d4_n100": {
+                "select": 0.999556493377758,
+                "test": 0.9491264244896437,
+                "per_class": {
+                  "GAN-synthesis": 0.9629513338229398,
+                  "diffusion-synthesis": 0.8985877025392129,
+                  "reenactment": 0.9858402371067784
+                }
+              },
+              "probabilities|xgb_d2_n200": {
+                "select": 0.9993817347225801,
+                "test": 0.9542640706597028,
+                "per_class": {
+                  "GAN-synthesis": 0.9751968182672897,
+                  "diffusion-synthesis": 0.901001919399416,
+                  "reenactment": 0.9865934743124027
+                }
+              },
+              "probabilities|xgb_d3_n200": {
+                "select": 0.9994279633739973,
+                "test": 0.9560678386779489,
+                "per_class": {
+                  "GAN-synthesis": 0.973907166349132,
+                  "diffusion-synthesis": 0.9076118289641274,
+                  "reenactment": 0.9866845207205872
+                }
+              },
+              "probabilities|xgb_d4_n200": {
+                "select": 0.9993778009854432,
+                "test": 0.9546268683312628,
+                "per_class": {
+                  "GAN-synthesis": 0.9694625681635144,
+                  "diffusion-synthesis": 0.9083331559396719,
+                  "reenactment": 0.9860848808906022
+                }
+              },
+              "disagreement|logreg": {
+                "select": 0.9989490617281166,
+                "test": 0.9500128145286967,
+                "per_class": {
+                  "GAN-synthesis": 0.9599963989086743,
+                  "diffusion-synthesis": 0.9033031586715344,
+                  "reenactment": 0.9867388860058814
+                }
+              },
+              "disagreement|xgb_d2_n50": {
+                "select": 0.99949969515351,
+                "test": 0.951079593511305,
+                "per_class": {
+                  "GAN-synthesis": 0.959232497454401,
+                  "diffusion-synthesis": 0.9102682990431388,
+                  "reenactment": 0.9837379840363754
+                }
+              },
+              "disagreement|xgb_d3_n50": {
+                "select": 0.9993769060328583,
+                "test": 0.9501618467603584,
+                "per_class": {
+                  "GAN-synthesis": 0.9555744184148812,
+                  "diffusion-synthesis": 0.9102197375283386,
+                  "reenactment": 0.9846913843378556
+                }
+              },
+              "disagreement|xgb_d4_n50": {
+                "select": 0.9993868754825899,
+                "test": 0.949201426274706,
+                "per_class": {
+                  "GAN-synthesis": 0.9529268180189385,
+                  "diffusion-synthesis": 0.9099571949095115,
+                  "reenactment": 0.9847202658956682
+                }
+              },
+              "disagreement|xgb_d2_n100": {
+                "select": 0.9991945531867931,
+                "test": 0.95782291381016,
+                "per_class": {
+                  "GAN-synthesis": 0.9731909394413518,
+                  "diffusion-synthesis": 0.9136140543676095,
+                  "reenactment": 0.9866637476215188
+                }
+              },
+              "disagreement|xgb_d3_n100": {
+                "select": 0.9992626072815605,
+                "test": 0.9546944422332047,
+                "per_class": {
+                  "GAN-synthesis": 0.9656758787195016,
+                  "diffusion-synthesis": 0.9113572743818719,
+                  "reenactment": 0.9870501735982407
+                }
+              },
+              "disagreement|xgb_d4_n100": {
+                "select": 0.9993559238393006,
+                "test": 0.9542269108984275,
+                "per_class": {
+                  "GAN-synthesis": 0.9636209948946105,
+                  "diffusion-synthesis": 0.912311430537964,
+                  "reenactment": 0.9867483072627079
+                }
+              },
+              "disagreement|xgb_d2_n200": {
+                "select": 0.9990150895578888,
+                "test": 0.9593836250070407,
+                "per_class": {
+                  "GAN-synthesis": 0.9772603500331727,
+                  "diffusion-synthesis": 0.9135607253981601,
+                  "reenactment": 0.9873297995897893
+                }
+              },
+              "disagreement|xgb_d3_n200": {
+                "select": 0.9991833367112125,
+                "test": 0.9578532731720347,
+                "per_class": {
+                  "GAN-synthesis": 0.9711859475837208,
+                  "diffusion-synthesis": 0.9152708002937638,
+                  "reenactment": 0.9871030716386191
+                }
+              },
+              "disagreement|xgb_d4_n200": {
+                "select": 0.9991386899279133,
+                "test": 0.9568372623598148,
+                "per_class": {
+                  "GAN-synthesis": 0.9674061321440861,
+                  "diffusion-synthesis": 0.9164260765134341,
+                  "reenactment": 0.9866795784219241
+                }
+              },
+              "calibrated_uncertainty_mi|logreg": {
+                "select": 0.998918609765922,
+                "test": 0.9474542739147845,
+                "per_class": {
+                  "GAN-synthesis": 0.9538949439258636,
+                  "diffusion-synthesis": 0.9043890296211935,
+                  "reenactment": 0.9840788481972965
+                }
+              },
+              "calibrated_uncertainty_mi|xgb_d2_n50": {
+                "select": 0.9992185196916173,
+                "test": 0.9526469996706454,
+                "per_class": {
+                  "GAN-synthesis": 0.9621484057631653,
+                  "diffusion-synthesis": 0.9109974978624064,
+                  "reenactment": 0.9847950953863642
+                }
+              },
+              "calibrated_uncertainty_mi|xgb_d3_n50": {
+                "select": 0.9992225260598017,
+                "test": 0.9520909473793577,
+                "per_class": {
+                  "GAN-synthesis": 0.9593453641714476,
+                  "diffusion-synthesis": 0.9123313873248682,
+                  "reenactment": 0.9845960906417575
+                }
+              },
+              "calibrated_uncertainty_mi|xgb_d4_n50": {
+                "select": 0.9992964524473074,
+                "test": 0.9513004690168908,
+                "per_class": {
+                  "GAN-synthesis": 0.9572869324733289,
+                  "diffusion-synthesis": 0.9126404957798048,
+                  "reenactment": 0.9839739787975388
+                }
+              },
+              "calibrated_uncertainty_mi|xgb_d2_n100": {
+                "select": 0.9993013691553453,
+                "test": 0.9557645072350839,
+                "per_class": {
+                  "GAN-synthesis": 0.9708799435178582,
+                  "diffusion-synthesis": 0.9096695954360158,
+                  "reenactment": 0.9867439827513776
+                }
+              },
+              "calibrated_uncertainty_mi|xgb_d3_n100": {
+                "select": 0.9994294178288605,
+                "test": 0.9551246374432057,
+                "per_class": {
+                  "GAN-synthesis": 0.9670509013371934,
+                  "diffusion-synthesis": 0.9118805856829124,
+                  "reenactment": 0.9864424253095114
+                }
+              },
+              "calibrated_uncertainty_mi|xgb_d4_n100": {
+                "select": 0.9994979403281751,
+                "test": 0.955033327725963,
+                "per_class": {
+                  "GAN-synthesis": 0.9649421341876612,
+                  "diffusion-synthesis": 0.9139725004346146,
+                  "reenactment": 0.9861853485556132
+                }
+              },
+              "calibrated_uncertainty_mi|xgb_d2_n200": {
+                "select": 0.9994015388240762,
+                "test": 0.9577946618865276,
+                "per_class": {
+                  "GAN-synthesis": 0.9754704479899523,
+                  "diffusion-synthesis": 0.9109870759848009,
+                  "reenactment": 0.9869264616848298
+                }
+              },
+              "calibrated_uncertainty_mi|xgb_d3_n200": {
+                "select": 0.9994802714382449,
+                "test": 0.9567970504514868,
+                "per_class": {
+                  "GAN-synthesis": 0.9705978875962804,
+                  "diffusion-synthesis": 0.9134312280253603,
+                  "reenactment": 0.9863620357328193
+                }
+              },
+              "calibrated_uncertainty_mi|xgb_d4_n200": {
+                "select": 0.9993274859500824,
+                "test": 0.9564597490624909,
+                "per_class": {
+                  "GAN-synthesis": 0.9668251679031005,
+                  "diffusion-synthesis": 0.9167780920602144,
+                  "reenactment": 0.9857759872241578
+                }
+              },
+              "quadratic|logreg": {
+                "select": 0.9991755076044418,
+                "test": 0.9619442376860542,
+                "per_class": {
+                  "GAN-synthesis": 0.9715385174856932,
+                  "diffusion-synthesis": 0.9286143515019922,
+                  "reenactment": 0.9856798440704773
+                }
+              },
+              "quadratic|xgb_d2_n50": {
+                "select": 0.9993690002416189,
+                "test": 0.9586231443814345,
+                "per_class": {
+                  "GAN-synthesis": 0.9763489900978858,
+                  "diffusion-synthesis": 0.9124203058976297,
+                  "reenactment": 0.9871001371487879
+                }
+              },
+              "quadratic|xgb_d3_n50": {
+                "select": 0.9994715736398767,
+                "test": 0.9574057923816564,
+                "per_class": {
+                  "GAN-synthesis": 0.9713056883051454,
+                  "diffusion-synthesis": 0.9132070467858042,
+                  "reenactment": 0.9877046420540194
+                }
+              },
+              "quadratic|xgb_d4_n50": {
+                "select": 0.9994538087290742,
+                "test": 0.9556015381919756,
+                "per_class": {
+                  "GAN-synthesis": 0.9685383471877782,
+                  "diffusion-synthesis": 0.9110592530307707,
+                  "reenactment": 0.9872070143573776
+                }
+              },
+              "quadratic|xgb_d2_n100": {
+                "select": 0.9995744084737965,
+                "test": 0.9672852818366415,
+                "per_class": {
+                  "GAN-synthesis": 0.9835117026598407,
+                  "diffusion-synthesis": 0.9297000007095746,
+                  "reenactment": 0.9886441421405097
+                }
+              },
+              "quadratic|xgb_d3_n100": {
+                "select": 0.9995634400480508,
+                "test": 0.9646993397997177,
+                "per_class": {
+                  "GAN-synthesis": 0.9803900177038873,
+                  "diffusion-synthesis": 0.9251698100823461,
+                  "reenactment": 0.9885381916129192
+                }
+              },
+              "quadratic|xgb_d4_n100": {
+                "select": 0.999616594441506,
+                "test": 0.9635488693824265,
+                "per_class": {
+                  "GAN-synthesis": 0.9789105545680642,
+                  "diffusion-synthesis": 0.9235444406600464,
+                  "reenactment": 0.9881916129191688
+                }
+              },
+              "quadratic|xgb_d2_n200": {
+                "select": 0.9995749415068342,
+                "test": 0.9676625857280623,
+                "per_class": {
+                  "GAN-synthesis": 0.9836296694446514,
+                  "diffusion-synthesis": 0.9307175750996066,
+                  "reenactment": 0.9886405126399288
+                }
+              },
+              "quadratic|xgb_d3_n200": {
+                "select": 0.9995559191060551,
+                "test": 0.9675314248518688,
+                "per_class": {
+                  "GAN-synthesis": 0.9821825806520281,
+                  "diffusion-synthesis": 0.932573223668572,
+                  "reenactment": 0.9878384702350063
+                }
+              },
+              "quadratic|xgb_d4_n200": {
+                "select": 0.9995647135431405,
+                "test": 0.9657550442850811,
+                "per_class": {
+                  "GAN-synthesis": 0.9795496152331487,
+                  "diffusion-synthesis": 0.930308571839111,
+                  "reenactment": 0.9874069457829836
+                }
+              },
+              "rank|logreg": {
+                "select": 0.9995482632502576,
+                "test": 0.9763310909538344,
+                "per_class": {
+                  "GAN-synthesis": 0.9882068693921429,
+                  "diffusion-synthesis": 0.9516480314625398,
+                  "reenactment": 0.9891383720068205
+                }
+              },
+              "rank|xgb_d2_n50": {
+                "select": 0.9991979043440465,
+                "test": 0.9538054942795408,
+                "per_class": {
+                  "GAN-synthesis": 0.9736259973958611,
+                  "diffusion-synthesis": 0.9005615396350657,
+                  "reenactment": 0.9872289458076953
+                }
+              },
+              "rank|xgb_d3_n50": {
+                "select": 0.9994056289052794,
+                "test": 0.9579368343042741,
+                "per_class": {
+                  "GAN-synthesis": 0.9760447599686368,
+                  "diffusion-synthesis": 0.9096018532315804,
+                  "reenactment": 0.9881638897126053
+                }
+              },
+              "rank|xgb_d4_n50": {
+                "select": 0.9995338997772333,
+                "test": 0.9570253901662324,
+                "per_class": {
+                  "GAN-synthesis": 0.9730915989909849,
+                  "diffusion-synthesis": 0.9100516570341907,
+                  "reenactment": 0.9879329144735216
+                }
+              },
+              "rank|xgb_d2_n100": {
+                "select": 0.9994362924859507,
+                "test": 0.9657013870163144,
+                "per_class": {
+                  "GAN-synthesis": 0.9828070063400495,
+                  "diffusion-synthesis": 0.9249978491018559,
+                  "reenactment": 0.9892993056070378
+                }
+              },
+              "rank|xgb_d3_n100": {
+                "select": 0.9995593456615505,
+                "test": 0.9649473714985762,
+                "per_class": {
+                  "GAN-synthesis": 0.9819395513359516,
+                  "diffusion-synthesis": 0.9231932012105344,
+                  "reenactment": 0.9897093619492424
+                }
+              },
+              "rank|xgb_d4_n100": {
+                "select": 0.9995891087486509,
+                "test": 0.9639174639739125,
+                "per_class": {
+                  "GAN-synthesis": 0.9801722669845562,
+                  "diffusion-synthesis": 0.9221252913690887,
+                  "reenactment": 0.9894548335680926
+                }
+              },
+              "rank|xgb_d2_n200": {
+                "select": 0.9994649525736076,
+                "test": 0.9663462428500517,
+                "per_class": {
+                  "GAN-synthesis": 0.9827156486044439,
+                  "diffusion-synthesis": 0.9264654490365751,
+                  "reenactment": 0.9898576309091359
+                }
+              },
+              "rank|xgb_d3_n200": {
+                "select": 0.9995531289891822,
+                "test": 0.9655802831863375,
+                "per_class": {
+                  "GAN-synthesis": 0.9815905293072068,
+                  "diffusion-synthesis": 0.9252729201480172,
+                  "reenactment": 0.9898774001037883
+                }
+              },
+              "rank|xgb_d4_n200": {
+                "select": 0.999578378526457,
+                "test": 0.9656990628193975,
+                "per_class": {
+                  "GAN-synthesis": 0.9806073249390652,
+                  "diffusion-synthesis": 0.9270290065245389,
+                  "reenactment": 0.9894608569945882
+                }
+              }
+            },
+            "ladder": "extended diagnostic, not PS1-PS4",
+            "selection_split": "SELECT",
+            "select_probability_carrier": "calibrated mean only; selected SELECT score is metadata",
+            "elapsed_seconds": 88.3209638595581
+          }
+        }
+      },
+      "head_quality": {
+        "fs-clip-base": {
+          "oof_fit_macro": 0.9969063286160318,
+          "select_macro": 0.9977301119384797,
+          "select_per_class": {
+            "GAN-synthesis": 0.9998243756020457,
+            "diffusion-synthesis": 0.9959759469894605,
+            "reenactment": 0.9973900132239331
+          },
+          "test_macro": 0.9184384195200952,
+          "test_per_class": {
+            "GAN-synthesis": 0.9350109451889065,
+            "diffusion-synthesis": 0.8520133293597153,
+            "reenactment": 0.9682909840116638
+          },
+          "temperature_from_oof_fit": 1.8454376114467839,
+          "inner_n_iter": [
+            25,
+            24,
+            27,
+            26,
+            24
+          ],
+          "final_n_iter": 26,
+          "head_max_iter": 500,
+          "head_tolerance": 0.001,
+          "all_fits_converged_before_cap": true
+        },
+        "fs-clip-large": {
+          "oof_fit_macro": 0.9970666860747114,
+          "select_macro": 0.9982733235866957,
+          "select_per_class": {
+            "GAN-synthesis": 0.9999973390242733,
+            "diffusion-synthesis": 0.9969982651570489,
+            "reenactment": 0.9978243665787649
+          },
+          "test_macro": 0.9214222464998119,
+          "test_per_class": {
+            "GAN-synthesis": 0.9141459027386034,
+            "diffusion-synthesis": 0.8682566017051078,
+            "reenactment": 0.9818642350557245
+          },
+          "temperature_from_oof_fit": 1.823218592789885,
+          "inner_n_iter": [
+            17,
+            17,
+            17,
+            19,
+            17
+          ],
+          "final_n_iter": 17,
+          "head_max_iter": 500,
+          "head_tolerance": 0.001,
+          "all_fits_converged_before_cap": true
+        },
+        "fs-xception": {
+          "oof_fit_macro": 0.9432676406620554,
+          "select_macro": 0.9428512431997317,
+          "select_per_class": {
+            "GAN-synthesis": 0.9551199833955114,
+            "diffusion-synthesis": 0.9371934675988731,
+            "reenactment": 0.9362402786048106
+          },
+          "test_macro": 0.852283403740486,
+          "test_per_class": {
+            "GAN-synthesis": 0.8771854899080747,
+            "diffusion-synthesis": 0.807186838099901,
+            "reenactment": 0.8724778832134825
+          },
+          "temperature_from_oof_fit": 1.0383043269774497,
+          "inner_n_iter": [
+            500,
+            500,
+            500,
+            500,
+            500
+          ],
+          "final_n_iter": 500,
+          "head_max_iter": 500,
+          "head_tolerance": 0.001,
+          "all_fits_converged_before_cap": false
+        },
+        "fs-srm": {
+          "oof_fit_macro": 0.9887070856559427,
+          "select_macro": 0.9908281115276024,
+          "select_per_class": {
+            "GAN-synthesis": 0.9950851778330079,
+            "diffusion-synthesis": 0.9872397735573412,
+            "reenactment": 0.9901593831924584
+          },
+          "test_macro": 0.9222520721567857,
+          "test_per_class": {
+            "GAN-synthesis": 0.9484813328650141,
+            "diffusion-synthesis": 0.8615304992921993,
+            "reenactment": 0.956744384313144
+          },
+          "temperature_from_oof_fit": 1.054004117903316,
+          "inner_n_iter": [
+            351,
+            331,
+            369,
+            327,
+            354
+          ],
+          "final_n_iter": 404,
+          "head_max_iter": 500,
+          "head_tolerance": 0.001,
+          "all_fits_converged_before_cap": true
+        },
+        "fs-recce": {
+          "oof_fit_macro": 0.9250715273186071,
+          "select_macro": 0.9370094077463219,
+          "select_per_class": {
+            "GAN-synthesis": 0.9555191297544984,
+            "diffusion-synthesis": 0.9288877439215277,
+            "reenactment": 0.92662134956294
+          },
+          "test_macro": 0.7901758698065517,
+          "test_per_class": {
+            "GAN-synthesis": 0.8516177414948609,
+            "diffusion-synthesis": 0.7043470760202797,
+            "reenactment": 0.8145627919045149
+          },
+          "temperature_from_oof_fit": 1.0410674606190884,
+          "inner_n_iter": [
+            500,
+            500,
+            500,
+            500,
+            500
+          ],
+          "final_n_iter": 500,
+          "head_max_iter": 500,
+          "head_tolerance": 0.001,
+          "all_fits_converged_before_cap": false
+        },
+        "fs-rfm": {
+          "oof_fit_macro": 0.9549213324103527,
+          "select_macro": 0.952561086374823,
+          "select_per_class": {
+            "GAN-synthesis": 0.9714716792353421,
+            "diffusion-synthesis": 0.9399180188876135,
+            "reenactment": 0.9462935610015131
+          },
+          "test_macro": 0.8386291686784159,
+          "test_per_class": {
+            "GAN-synthesis": 0.8625327734789381,
+            "diffusion-synthesis": 0.7883673663072672,
+            "reenactment": 0.8649873662490424
+          },
+          "temperature_from_oof_fit": 1.3948271008545259,
+          "inner_n_iter": [
+            500,
+            500,
+            500,
+            500,
+            500
+          ],
+          "final_n_iter": 500,
+          "head_max_iter": 500,
+          "head_tolerance": 0.001,
+          "all_fits_converged_before_cap": false
+        }
+      },
+      "core_ps_select_chosen": {
+        "method": "PS3-K3",
+        "test": 0.9698268656459431
+      },
+      "core_ps_test_max_diagnostic": {
+        "method": "PS3-K3",
+        "test": 0.9698268656459431,
+        "non_deployable": true
+      },
+      "contrasts": {
+        "FS1_minus_select_chosen_core_PS": -0.03127505600478597,
+        "FS2_minus_select_chosen_core_PS": -0.02314164617769876,
+        "FS1_minus_PS_plus": -0.025174724309131924,
+        "FS2_minus_PS_plus": -0.01704131448204471
+      },
+      "validity": {
+        "paper_labels_follow_registry": true,
+        "composer_inputs_unscaled_for_PS2_FS1_FSB": true,
+        "PS4_grid_size": 108,
+        "PS3_seed_count": 8,
+        "FS2_seed_count": 8,
+        "selection_uses_test": false
+      }
+    },
+    {
+      "fold": 1,
+      "smoke_internal_fit_only": false,
+      "n_fit": 7632,
+      "n_select": 1928,
+      "n_test": 4561,
+      "methods": {
+        "PS1-K3": {
+          "name": "PS1-K3",
+          "select": {
+            "macro": 0.9982177607664985,
+            "per_class": {
+              "GAN-synthesis": 0.999947777464857,
+              "diffusion-synthesis": 0.9966411630248643,
+              "reenactment": 0.9980643418097739
+            }
+          },
+          "test": {
+            "macro": 0.9288703137023256,
+            "per_class": {
+              "GAN-synthesis": 0.9426214164169227,
+              "diffusion-synthesis": 0.8799834418958254,
+              "reenactment": 0.964006082794229
+            }
+          },
+          "metadata": {
+            "paper_recipe": true,
+            "selection": "none"
+          }
+        },
+        "PS2-K3": {
+          "name": "PS2-K3",
+          "select": {
+            "macro": 0.9995186688917684,
+            "per_class": {
+              "GAN-synthesis": 0.9999962698189183,
+              "diffusion-synthesis": 0.9992429754738754,
+              "reenactment": 0.9993167613825118
+            }
+          },
+          "test": {
+            "macro": 0.9226027817580551,
+            "per_class": {
+              "GAN-synthesis": 0.9910877306916357,
+              "diffusion-synthesis": 0.8317529278818642,
+              "reenactment": 0.9449676867006651
+            }
+          },
+          "metadata": {
+            "scaled": false,
+            "solver": "lbfgs",
+            "C": 1.0,
+            "class_weight": "balanced",
+            "max_iter": 1000,
+            "n_iter": [
+              117
+            ],
+            "convergence_warnings": 0,
+            "classes": [
+              0,
+              1,
+              2
+            ],
+            "elapsed_seconds": 0.38539624214172363
+          }
+        },
+        "PS3-K3": {
+          "name": "PS3-K3",
+          "select": {
+            "macro": 0.999578841755452,
+            "per_class": {
+              "GAN-synthesis": 0.9999962698189183,
+              "diffusion-synthesis": 0.9992385656222668,
+              "reenactment": 0.9995016898251706
+            }
+          },
+          "test": {
+            "macro": 0.9375696855765666,
+            "per_class": {
+              "GAN-synthesis": 0.9922353112351994,
+              "diffusion-synthesis": 0.8602428349788143,
+              "reenactment": 0.9602309105156862
+            }
+          },
+          "metadata": {
+            "seeds": [
+              7,
+              10,
+              24,
+              42,
+              1024,
+              1973,
+              3392,
+              9721
+            ],
+            "epochs": 10,
+            "hidden": 64,
+            "dropout": 0.1,
+            "lr": 0.0002,
+            "averaging": "per-sample class probabilities",
+            "elapsed_seconds": 13.523655891418457
+          }
+        },
+        "PS4-K3": {
+          "name": "PS4-K3",
+          "select": {
+            "macro": 0.9994123697980927,
+            "per_class": {
+              "GAN-synthesis": 0.9999981349094592,
+              "diffusion-synthesis": 0.9989930838827273,
+              "reenactment": 0.9992458906020915
+            }
+          },
+          "test": {
+            "macro": 0.9306659959490903,
+            "per_class": {
+              "GAN-synthesis": 0.9863891713111075,
+              "diffusion-synthesis": 0.848624789021037,
+              "reenactment": 0.9569840275151266
+            }
+          },
+          "metadata": {
+            "best_parameters": {
+              "colsample_bytree": 1.0,
+              "learning_rate": 0.05,
+              "max_depth": 2,
+              "n_estimators": 200,
+              "subsample": 0.8
+            },
+            "in_fit_cv_macro_ovr": 0.9991338769293087,
+            "grid_size": 108,
+            "cv_folds": 5,
+            "selection_split": "FIT only",
+            "multiclass_extension": "balanced sample weights and macro one-vs-rest AUROC",
+            "elapsed_seconds": 419.2727735042572
+          }
+        },
+        "FS1-K3": {
+          "name": "FS1-K3",
+          "select": {
+            "macro": 0.9989678222329953,
+            "per_class": {
+              "GAN-synthesis": 0.9999701585513469,
+              "diffusion-synthesis": 0.9980993539567393,
+              "reenactment": 0.9988339541908993
+            }
+          },
+          "test": {
+            "macro": 0.8879663553266064,
+            "per_class": {
+              "GAN-synthesis": 0.9990786529613522,
+              "diffusion-synthesis": 0.7766422271941296,
+              "reenactment": 0.8881781858243373
+            }
+          },
+          "metadata": {
+            "scaled": false,
+            "solver": "lbfgs",
+            "C": 1.0,
+            "class_weight": "balanced",
+            "max_iter": 2000,
+            "n_iter": [
+              55
+            ],
+            "convergence_warnings": 0,
+            "classes": [
+              0,
+              1,
+              2
+            ],
+            "elapsed_seconds": 24.620559453964233
+          }
+        },
+        "FS2-K3": {
+          "name": "FS2-K3",
+          "select": {
+            "macro": 0.9995949121182944,
+            "per_class": {
+              "GAN-synthesis": 0.9999944047283775,
+              "diffusion-synthesis": 0.9992664946824539,
+              "reenactment": 0.999523836944052
+            }
+          },
+          "test": {
+            "macro": 0.9080469493257023,
+            "per_class": {
+              "GAN-synthesis": 0.998116495172798,
+              "diffusion-synthesis": 0.8072705881380757,
+              "reenactment": 0.9187537646662333
+            }
+          },
+          "metadata": {
+            "seeds": [
+              7,
+              10,
+              24,
+              42,
+              1024,
+              1973,
+              3392,
+              9721
+            ],
+            "epochs": 10,
+            "proj_dim": 256,
+            "hidden": [
+              512,
+              256
+            ],
+            "dropout": 0.1,
+            "expert_dropout": 0.25,
+            "lr": 0.0002,
+            "selection": "best SELECT macro OvR checkpoint per seed",
+            "per_seed": {
+              "7": {
+                "best_select_macro": 0.9993428674107205,
+                "best_epoch": 7,
+                "seed": 7,
+                "epochs": 10,
+                "device": "cuda",
+                "paper_aligned": true
+              },
+              "10": {
+                "best_select_macro": 0.9994380360135673,
+                "best_epoch": 9,
+                "seed": 10,
+                "epochs": 10,
+                "device": "cuda",
+                "paper_aligned": true
+              },
+              "24": {
+                "best_select_macro": 0.9995770158092467,
+                "best_epoch": 8,
+                "seed": 24,
+                "epochs": 10,
+                "device": "cuda",
+                "paper_aligned": true
+              },
+              "42": {
+                "best_select_macro": 0.9994174406406177,
+                "best_epoch": 10,
+                "seed": 42,
+                "epochs": 10,
+                "device": "cuda",
+                "paper_aligned": true
+              },
+              "1024": {
+                "best_select_macro": 0.9994443927511122,
+                "best_epoch": 10,
+                "seed": 1024,
+                "epochs": 10,
+                "device": "cuda",
+                "paper_aligned": true
+              },
+              "1973": {
+                "best_select_macro": 0.9995054707250061,
+                "best_epoch": 10,
+                "seed": 1973,
+                "epochs": 10,
+                "device": "cuda",
+                "paper_aligned": true
+              },
+              "3392": {
+                "best_select_macro": 0.9994340878496063,
+                "best_epoch": 10,
+                "seed": 3392,
+                "epochs": 10,
+                "device": "cuda",
+                "paper_aligned": true
+              },
+              "9721": {
+                "best_select_macro": 0.9994081156312689,
+                "best_epoch": 9,
+                "seed": 9721,
+                "epochs": 10,
+                "device": "cuda",
+                "paper_aligned": true
+              }
+            },
+            "elapsed_seconds": 101.5933895111084
+          }
+        },
+        "FSB-K3-18": {
+          "name": "FSB-K3-18",
+          "select": {
+            "macro": 0.9865475976309197,
+            "per_class": {
+              "GAN-synthesis": 0.9967062501049113,
+              "diffusion-synthesis": 0.9746080744382951,
+              "reenactment": 0.9883284683495525
+            }
+          },
+          "test": {
+            "macro": 0.8888778286341431,
+            "per_class": {
+              "GAN-synthesis": 0.9967329220319495,
+              "diffusion-synthesis": 0.7930027806872388,
+              "reenactment": 0.876897783183241
+            }
+          },
+          "metadata": {
+            "scaled": false,
+            "solver": "lbfgs",
+            "C": 1.0,
+            "class_weight": "balanced",
+            "max_iter": 2000,
+            "n_iter": [
+              56
+            ],
+            "convergence_warnings": 0,
+            "classes": [
+              0,
+              1,
+              2
+            ],
+            "pca_width": 18,
+            "pca_fit_split": "outer FIT only",
+            "explained_variance_ratio": 0.41919583082199097,
+            "elapsed_seconds": 5.080310821533203
+          }
+        },
+        "PS+-K3": {
+          "name": "PS+-K3",
+          "select": {
+            "macro": 0.9995383791412014,
+            "per_class": null
+          },
+          "test": {
+            "macro": 0.925509174093533,
+            "per_class": {
+              "GAN-synthesis": 0.992446906101562,
+              "diffusion-synthesis": 0.8375069465533733,
+              "reenactment": 0.9465736696256635
+            }
+          },
+          "metadata": {
+            "selected": {
+              "select": 0.9995383791412014,
+              "test": 0.925509174093533,
+              "per_class": {
+                "GAN-synthesis": 0.992446906101562,
+                "diffusion-synthesis": 0.8375069465533733,
+                "reenactment": 0.9465736696256635
+              },
+              "rung": "raw_logits|logreg"
+            },
+            "all_scores": {
+              "mean_probability": {
+                "select": 0.9983743461161158,
+                "test": 0.9321558564320359,
+                "per_class": {
+                  "GAN-synthesis": 0.9543975357404579,
+                  "diffusion-synthesis": 0.8775679006224526,
+                  "reenactment": 0.9645021329331972
+                }
+              },
+              "raw_logits|logreg": {
+                "select": 0.9995383791412014,
+                "test": 0.925509174093533,
+                "per_class": {
+                  "GAN-synthesis": 0.992446906101562,
+                  "diffusion-synthesis": 0.8375069465533733,
+                  "reenactment": 0.9465736696256635
+                }
+              },
+              "raw_logits|xgb_d2_n50": {
+                "select": 0.9993164595260925,
+                "test": 0.9411400622828618,
+                "per_class": {
+                  "GAN-synthesis": 0.9864344180120905,
+                  "diffusion-synthesis": 0.8655335779346477,
+                  "reenactment": 0.9714521909018473
+                }
+              },
+              "raw_logits|xgb_d3_n50": {
+                "select": 0.9994019767268693,
+                "test": 0.9417849826057184,
+                "per_class": {
+                  "GAN-synthesis": 0.9808921407367582,
+                  "diffusion-synthesis": 0.870917544153223,
+                  "reenactment": 0.9735452629271739
+                }
+              },
+              "raw_logits|xgb_d4_n50": {
+                "select": 0.9993992112650588,
+                "test": 0.9353179471466021,
+                "per_class": {
+                  "GAN-synthesis": 0.9742333345753996,
+                  "diffusion-synthesis": 0.8610709984237264,
+                  "reenactment": 0.9706495084406803
+                }
+              },
+              "raw_logits|xgb_d2_n100": {
+                "select": 0.9994349481839828,
+                "test": 0.9338811289699697,
+                "per_class": {
+                  "GAN-synthesis": 0.9901410987318503,
+                  "diffusion-synthesis": 0.8502684623378017,
+                  "reenactment": 0.961233825840257
+                }
+              },
+              "raw_logits|xgb_d3_n100": {
+                "select": 0.9994868569081795,
+                "test": 0.9338320766967857,
+                "per_class": {
+                  "GAN-synthesis": 0.9869148315137062,
+                  "diffusion-synthesis": 0.8521734706736659,
+                  "reenactment": 0.9624079279029852
+                }
+              },
+              "raw_logits|xgb_d4_n100": {
+                "select": 0.9994533345514096,
+                "test": 0.927160209869543,
+                "per_class": {
+                  "GAN-synthesis": 0.9831926249651777,
+                  "diffusion-synthesis": 0.8412960460941262,
+                  "reenactment": 0.9569919585493253
+                }
+              },
+              "raw_logits|xgb_d2_n200": {
+                "select": 0.999456157912033,
+                "test": 0.9249330478382672,
+                "per_class": {
+                  "GAN-synthesis": 0.9902914774733532,
+                  "diffusion-synthesis": 0.8340729217668313,
+                  "reenactment": 0.9504347442746173
+                }
+              },
+              "raw_logits|xgb_d3_n200": {
+                "select": 0.9994301322690315,
+                "test": 0.9287113062799953,
+                "per_class": {
+                  "GAN-synthesis": 0.98815601062499,
+                  "diffusion-synthesis": 0.8418792725176789,
+                  "reenactment": 0.956098635697317
+                }
+              },
+              "raw_logits|xgb_d4_n200": {
+                "select": 0.9994327160995677,
+                "test": 0.9254025281964336,
+                "per_class": {
+                  "GAN-synthesis": 0.983077733832289,
+                  "diffusion-synthesis": 0.8378151514400282,
+                  "reenactment": 0.9553146993169834
+                }
+              },
+              "probabilities|logreg": {
+                "select": 0.9985514720375824,
+                "test": 0.9641332982818658,
+                "per_class": {
+                  "GAN-synthesis": 0.9860045743527504,
+                  "diffusion-synthesis": 0.9207599684332087,
+                  "reenactment": 0.9856353520596381
+                }
+              },
+              "probabilities|xgb_d2_n50": {
+                "select": 0.9992323774559311,
+                "test": 0.952015183467161,
+                "per_class": {
+                  "GAN-synthesis": 0.9797418986225485,
+                  "diffusion-synthesis": 0.891183919942651,
+                  "reenactment": 0.9851197318362837
+                }
+              },
+              "probabilities|xgb_d3_n50": {
+                "select": 0.9993699416182955,
+                "test": 0.9450518299007378,
+                "per_class": {
+                  "GAN-synthesis": 0.9836570690429169,
+                  "diffusion-synthesis": 0.8767752446529615,
+                  "reenactment": 0.974723176006335
+                }
+              },
+              "probabilities|xgb_d4_n50": {
+                "select": 0.9993283290719078,
+                "test": 0.9436862951894502,
+                "per_class": {
+                  "GAN-synthesis": 0.9791984946156426,
+                  "diffusion-synthesis": 0.8757895571352725,
+                  "reenactment": 0.9760708338174356
+                }
+              },
+              "probabilities|xgb_d2_n100": {
+                "select": 0.9992838713930882,
+                "test": 0.940852936823605,
+                "per_class": {
+                  "GAN-synthesis": 0.9866948083402977,
+                  "diffusion-synthesis": 0.8666773059974838,
+                  "reenactment": 0.9691866961330337
+                }
+              },
+              "probabilities|xgb_d3_n100": {
+                "select": 0.9993838963623052,
+                "test": 0.9328718483348216,
+                "per_class": {
+                  "GAN-synthesis": 0.9864370795827367,
+                  "diffusion-synthesis": 0.8529569592585936,
+                  "reenactment": 0.9592215061631346
+                }
+              },
+              "probabilities|xgb_d4_n100": {
+                "select": 0.9993440150683495,
+                "test": 0.9377784342756043,
+                "per_class": {
+                  "GAN-synthesis": 0.9831837530630243,
+                  "diffusion-synthesis": 0.8622098199990498,
+                  "reenactment": 0.9679417297647387
+                }
+              },
+              "probabilities|xgb_d2_n200": {
+                "select": 0.9992431049007489,
+                "test": 0.9322581006579028,
+                "per_class": {
+                  "GAN-synthesis": 0.9875473981372553,
+                  "diffusion-synthesis": 0.8508830644578177,
+                  "reenactment": 0.9583438393786354
+                }
+              },
+              "probabilities|xgb_d3_n200": {
+                "select": 0.9993179741775955,
+                "test": 0.9231164353259255,
+                "per_class": {
+                  "GAN-synthesis": 0.9871654627495444,
+                  "diffusion-synthesis": 0.834514763879162,
+                  "reenactment": 0.9476690793490703
+                }
+              },
+              "probabilities|xgb_d4_n200": {
+                "select": 0.9992437548934604,
+                "test": 0.9331155544369724,
+                "per_class": {
+                  "GAN-synthesis": 0.9826887009228553,
+                  "diffusion-synthesis": 0.8534300479492948,
+                  "reenactment": 0.9632279144387671
+                }
+              },
+              "disagreement|logreg": {
+                "select": 0.9991418952543413,
+                "test": 0.9561378525941198,
+                "per_class": {
+                  "GAN-synthesis": 0.9876955589032199,
+                  "diffusion-synthesis": 0.9010642946123667,
+                  "reenactment": 0.9796537042667728
+                }
+              },
+              "disagreement|xgb_d2_n50": {
+                "select": 0.9994086678380087,
+                "test": 0.9418427319846013,
+                "per_class": {
+                  "GAN-synthesis": 0.9847318999888215,
+                  "diffusion-synthesis": 0.8716125868448289,
+                  "reenactment": 0.9691837091201537
+                }
+              },
+              "disagreement|xgb_d3_n50": {
+                "select": 0.9994030253663101,
+                "test": 0.9426777776921963,
+                "per_class": {
+                  "GAN-synthesis": 0.9851994492323144,
+                  "diffusion-synthesis": 0.8728002150590948,
+                  "reenactment": 0.9700336687851798
+                }
+              },
+              "disagreement|xgb_d4_n50": {
+                "select": 0.9993681561235093,
+                "test": 0.9441510048043259,
+                "per_class": {
+                  "GAN-synthesis": 0.9810633684483221,
+                  "diffusion-synthesis": 0.8776505362016143,
+                  "reenactment": 0.9737391097630413
+                }
+              },
+              "disagreement|xgb_d2_n100": {
+                "select": 0.9992599048520576,
+                "test": 0.9410226079701319,
+                "per_class": {
+                  "GAN-synthesis": 0.9839001591619246,
+                  "diffusion-synthesis": 0.8702688548568029,
+                  "reenactment": 0.9688988098916683
+                }
+              },
+              "disagreement|xgb_d3_n100": {
+                "select": 0.9992506768858571,
+                "test": 0.9382699738069803,
+                "per_class": {
+                  "GAN-synthesis": 0.9864668004549513,
+                  "diffusion-synthesis": 0.8632325644092693,
+                  "reenactment": 0.9651105565567201
+                }
+              },
+              "disagreement|xgb_d4_n100": {
+                "select": 0.9993411243423931,
+                "test": 0.9384128690477912,
+                "per_class": {
+                  "GAN-synthesis": 0.9838216428278657,
+                  "diffusion-synthesis": 0.8644179976159636,
+                  "reenactment": 0.9669989666995444
+                }
+              },
+              "disagreement|xgb_d2_n200": {
+                "select": 0.9991774201213524,
+                "test": 0.938594472564851,
+                "per_class": {
+                  "GAN-synthesis": 0.9817633615282384,
+                  "diffusion-synthesis": 0.8668288906380086,
+                  "reenactment": 0.9671911655283059
+                }
+              },
+              "disagreement|xgb_d3_n200": {
+                "select": 0.999247965666401,
+                "test": 0.9309307168120133,
+                "per_class": {
+                  "GAN-synthesis": 0.9838912872597709,
+                  "diffusion-synthesis": 0.8506323171222985,
+                  "reenactment": 0.9582685460539705
+                }
+              },
+              "disagreement|xgb_d4_n200": {
+                "select": 0.9993017330319495,
+                "test": 0.9332130720690031,
+                "per_class": {
+                  "GAN-synthesis": 0.9819465663077096,
+                  "diffusion-synthesis": 0.8546681613377048,
+                  "reenactment": 0.9630244885615946
+                }
+              },
+              "calibrated_uncertainty_mi|logreg": {
+                "select": 0.9992103729737226,
+                "test": 0.9546366206162328,
+                "per_class": {
+                  "GAN-synthesis": 0.9906729692659566,
+                  "diffusion-synthesis": 0.8993351451184064,
+                  "reenactment": 0.9739017474643352
+                }
+              },
+              "calibrated_uncertainty_mi|xgb_d2_n50": {
+                "select": 0.9993838834639274,
+                "test": 0.9409656996220163,
+                "per_class": {
+                  "GAN-synthesis": 0.9849674489909985,
+                  "diffusion-synthesis": 0.8697980902917656,
+                  "reenactment": 0.9681315595832849
+                }
+              },
+              "calibrated_uncertainty_mi|xgb_d3_n50": {
+                "select": 0.999375561725096,
+                "test": 0.9440114474452638,
+                "per_class": {
+                  "GAN-synthesis": 0.9847336743692521,
+                  "diffusion-synthesis": 0.8762341107275444,
+                  "reenactment": 0.9710665572389949
+                }
+              },
+              "calibrated_uncertainty_mi|xgb_d4_n50": {
+                "select": 0.9993720608187199,
+                "test": 0.940831152693835,
+                "per_class": {
+                  "GAN-synthesis": 0.9798020057596388,
+                  "diffusion-synthesis": 0.8726256473981154,
+                  "reenactment": 0.9700658049237509
+                }
+              },
+              "calibrated_uncertainty_mi|xgb_d2_n100": {
+                "select": 0.9993177172749816,
+                "test": 0.9433815505563158,
+                "per_class": {
+                  "GAN-synthesis": 0.9850668142951184,
+                  "diffusion-synthesis": 0.8750839267600862,
+                  "reenactment": 0.9699939106137426
+                }
+              },
+              "calibrated_uncertainty_mi|xgb_d3_n100": {
+                "select": 0.9993061428835581,
+                "test": 0.9373421395562862,
+                "per_class": {
+                  "GAN-synthesis": 0.9840234786018591,
+                  "diffusion-synthesis": 0.8642108921956894,
+                  "reenactment": 0.9637920478713103
+                }
+              },
+              "calibrated_uncertainty_mi|xgb_d4_n100": {
+                "select": 0.999308877999597,
+                "test": 0.9372539145474224,
+                "per_class": {
+                  "GAN-synthesis": 0.9823240657443437,
+                  "diffusion-synthesis": 0.8640094679714825,
+                  "reenactment": 0.965428209926441
+                }
+              },
+              "calibrated_uncertainty_mi|xgb_d2_n200": {
+                "select": 0.9992189009544051,
+                "test": 0.9324599592724687,
+                "per_class": {
+                  "GAN-synthesis": 0.9863616684144315,
+                  "diffusion-synthesis": 0.8542026906144575,
+                  "reenactment": 0.9568155187885171
+                }
+              },
+              "calibrated_uncertainty_mi|xgb_d3_n200": {
+                "select": 0.9992745500401979,
+                "test": 0.9344433281761818,
+                "per_class": {
+                  "GAN-synthesis": 0.9846112421195329,
+                  "diffusion-synthesis": 0.8572289604650731,
+                  "reenactment": 0.9614897819439396
+                }
+              },
+              "calibrated_uncertainty_mi|xgb_d4_n200": {
+                "select": 0.9992569302059316,
+                "test": 0.9335524111400888,
+                "per_class": {
+                  "GAN-synthesis": 0.9821807845245636,
+                  "diffusion-synthesis": 0.8560672849873877,
+                  "reenactment": 0.9624091639083148
+                }
+              },
+              "quadratic|logreg": {
+                "select": 0.9994030219056235,
+                "test": 0.9020864438230706,
+                "per_class": {
+                  "GAN-synthesis": 0.9856678856660226,
+                  "diffusion-synthesis": 0.7877510313953223,
+                  "reenactment": 0.9328404144078668
+                }
+              },
+              "quadratic|xgb_d2_n50": {
+                "select": 0.9989172828694187,
+                "test": 0.9562437045822514,
+                "per_class": {
+                  "GAN-synthesis": 0.992595954057742,
+                  "diffusion-synthesis": 0.8873089568704255,
+                  "reenactment": 0.9888262028185865
+                }
+              },
+              "quadratic|xgb_d3_n50": {
+                "select": 0.9992016123153801,
+                "test": 0.9498243839971106,
+                "per_class": {
+                  "GAN-synthesis": 0.9931934766677846,
+                  "diffusion-synthesis": 0.8768565890511989,
+                  "reenactment": 0.9794230862723481
+                }
+              },
+              "quadratic|xgb_d4_n50": {
+                "select": 0.9992548699006477,
+                "test": 0.9457255853870344,
+                "per_class": {
+                  "GAN-synthesis": 0.9903132136336296,
+                  "diffusion-synthesis": 0.871216452537222,
+                  "reenactment": 0.975647089990252
+                }
+              },
+              "quadratic|xgb_d2_n100": {
+                "select": 0.9991619297776423,
+                "test": 0.951538939482168,
+                "per_class": {
+                  "GAN-synthesis": 0.9958625884306848,
+                  "diffusion-synthesis": 0.8788087254908037,
+                  "reenactment": 0.9799455045250154
+                }
+              },
+              "quadratic|xgb_d3_n100": {
+                "select": 0.9992631193047568,
+                "test": 0.9444120488957942,
+                "per_class": {
+                  "GAN-synthesis": 0.9962059310440277,
+                  "diffusion-synthesis": 0.8664570305317807,
+                  "reenactment": 0.9705731851115743
+                }
+              },
+              "quadratic|xgb_d4_n100": {
+                "select": 0.9992655632683684,
+                "test": 0.9394341461681696,
+                "per_class": {
+                  "GAN-synthesis": 0.9948139295961332,
+                  "diffusion-synthesis": 0.8584669447353905,
+                  "reenactment": 0.9650215641729848
+                }
+              },
+              "quadratic|xgb_d2_n200": {
+                "select": 0.9992046688259215,
+                "test": 0.9401634594462235,
+                "per_class": {
+                  "GAN-synthesis": 0.9966020614751844,
+                  "diffusion-synthesis": 0.8583353733991939,
+                  "reenactment": 0.9655529434642922
+                }
+              },
+              "quadratic|xgb_d3_n200": {
+                "select": 0.9992090413643472,
+                "test": 0.9405616427309301,
+                "per_class": {
+                  "GAN-synthesis": 0.9958129057786247,
+                  "diffusion-synthesis": 0.8590208613519594,
+                  "reenactment": 0.9668511610622066
+                }
+              },
+              "quadratic|xgb_d4_n200": {
+                "select": 0.9992283860767238,
+                "test": 0.9402283746240666,
+                "per_class": {
+                  "GAN-synthesis": 0.9943650113471628,
+                  "diffusion-synthesis": 0.8594956285778623,
+                  "reenactment": 0.9668244839471747
+                }
+              },
+              "rank|logreg": {
+                "select": 0.9994504976244524,
+                "test": 0.917422692204906,
+                "per_class": {
+                  "GAN-synthesis": 0.9974763874324183,
+                  "diffusion-synthesis": 0.8237282384367002,
+                  "reenactment": 0.9310634507455996
+                }
+              },
+              "rank|xgb_d2_n50": {
+                "select": 0.998870509410616,
+                "test": 0.9602883846221574,
+                "per_class": {
+                  "GAN-synthesis": 0.9969613735124039,
+                  "diffusion-synthesis": 0.8934576895505245,
+                  "reenactment": 0.9904460908035436
+                }
+              },
+              "rank|xgb_d3_n50": {
+                "select": 0.9991437256575608,
+                "test": 0.9517125758464605,
+                "per_class": {
+                  "GAN-synthesis": 0.9967256027126729,
+                  "diffusion-synthesis": 0.878613498935034,
+                  "reenactment": 0.9797986258916748
+                }
+              },
+              "rank|xgb_d4_n50": {
+                "select": 0.9992371078730639,
+                "test": 0.944459885615701,
+                "per_class": {
+                  "GAN-synthesis": 0.9949993523511428,
+                  "diffusion-synthesis": 0.8662164835255644,
+                  "reenactment": 0.9721638209703961
+                }
+              },
+              "rank|xgb_d2_n100": {
+                "select": 0.9991154873295964,
+                "test": 0.953053345780546,
+                "per_class": {
+                  "GAN-synthesis": 0.9975225213236169,
+                  "diffusion-synthesis": 0.8812854687399935,
+                  "reenactment": 0.9803520472780277
+                }
+              },
+              "rank|xgb_d3_n100": {
+                "select": 0.9992089856881573,
+                "test": 0.9387303487903772,
+                "per_class": {
+                  "GAN-synthesis": 0.9970722722893234,
+                  "diffusion-synthesis": 0.8563346885568316,
+                  "reenactment": 0.9627840855249769
+                }
+              },
+              "rank|xgb_d4_n100": {
+                "select": 0.9992696386944973,
+                "test": 0.9351376771608707,
+                "per_class": {
+                  "GAN-synthesis": 0.9961717742207366,
+                  "diffusion-synthesis": 0.8495750981813976,
+                  "reenactment": 0.959666159080478
+                }
+              },
+              "rank|xgb_d2_n200": {
+                "select": 0.9991921964355854,
+                "test": 0.9434871263189187,
+                "per_class": {
+                  "GAN-synthesis": 0.9972417256204564,
+                  "diffusion-synthesis": 0.8646083176842205,
+                  "reenactment": 0.9686113356520792
+                }
+              },
+              "rank|xgb_d3_n200": {
+                "select": 0.9990895925533367,
+                "test": 0.9289695571626472,
+                "per_class": {
+                  "GAN-synthesis": 0.9969303218548663,
+                  "diffusion-synthesis": 0.8386395704602596,
+                  "reenactment": 0.9513387791728158
+                }
+              },
+              "rank|xgb_d4_n200": {
+                "select": 0.9991630108587256,
+                "test": 0.9380249876800586,
+                "per_class": {
+                  "GAN-synthesis": 0.995951751047328,
+                  "diffusion-synthesis": 0.8537796997436231,
+                  "reenactment": 0.9643435122492248
+                }
+              }
+            },
+            "ladder": "extended diagnostic, not PS1-PS4",
+            "selection_split": "SELECT",
+            "select_probability_carrier": "calibrated mean only; selected SELECT score is metadata",
+            "elapsed_seconds": 101.23361539840698
+          }
+        }
+      },
+      "head_quality": {
+        "fs-clip-base": {
+          "oof_fit_macro": 0.995674689888766,
+          "select_macro": 0.996798684174601,
+          "select_per_class": {
+            "GAN-synthesis": 0.9994628539242438,
+            "diffusion-synthesis": 0.9942098648380481,
+            "reenactment": 0.996723333761511
+          },
+          "test_macro": 0.7993150633126923,
+          "test_per_class": {
+            "GAN-synthesis": 0.9803562778466828,
+            "diffusion-synthesis": 0.6291178342041058,
+            "reenactment": 0.7884710778872879
+          },
+          "temperature_from_oof_fit": 2.034348887304183,
+          "inner_n_iter": [
+            25,
+            28,
+            26,
+            30,
+            29
+          ],
+          "final_n_iter": 32,
+          "head_max_iter": 500,
+          "head_tolerance": 0.001,
+          "all_fits_converged_before_cap": true
+        },
+        "fs-clip-large": {
+          "oof_fit_macro": 0.995827701654397,
+          "select_macro": 0.9969382856148356,
+          "select_per_class": {
+            "GAN-synthesis": 0.9999626981891836,
+            "diffusion-synthesis": 0.9946714293064038,
+            "reenactment": 0.9961807293489191
+          },
+          "test_macro": 0.9213316756469455,
+          "test_per_class": {
+            "GAN-synthesis": 0.9533085097511077,
+            "diffusion-synthesis": 0.8550422164515041,
+            "reenactment": 0.9556443007382248
+          },
+          "temperature_from_oof_fit": 2.275693569480363,
+          "inner_n_iter": [
+            21,
+            20,
+            21,
+            19,
+            20
+          ],
+          "final_n_iter": 21,
+          "head_max_iter": 500,
+          "head_tolerance": 0.001,
+          "all_fits_converged_before_cap": true
+        },
+        "fs-xception": {
+          "oof_fit_macro": 0.9534450259937959,
+          "select_macro": 0.9518299913417367,
+          "select_per_class": {
+            "GAN-synthesis": 0.9755691790057949,
+            "diffusion-synthesis": 0.9335744052212641,
+            "reenactment": 0.9463463897981512
+          },
+          "test_macro": 0.7313515074936078,
+          "test_per_class": {
+            "GAN-synthesis": 0.7634684346593279,
+            "diffusion-synthesis": 0.6672611263642618,
+            "reenactment": 0.7633249614572338
+          },
+          "temperature_from_oof_fit": 0.9987010763961301,
+          "inner_n_iter": [
+            500,
+            500,
+            500,
+            500,
+            500
+          ],
+          "final_n_iter": 500,
+          "head_max_iter": 500,
+          "head_tolerance": 0.001,
+          "all_fits_converged_before_cap": false
+        },
+        "fs-srm": {
+          "oof_fit_macro": 0.9877478827667322,
+          "select_macro": 0.9837979126853291,
+          "select_per_class": {
+            "GAN-synthesis": 0.9943711567478043,
+            "diffusion-synthesis": 0.9722664432341851,
+            "reenactment": 0.9847561380739978
+          },
+          "test_macro": 0.925783900878259,
+          "test_per_class": {
+            "GAN-synthesis": 0.8760275880669367,
+            "diffusion-synthesis": 0.9481048562863984,
+            "reenactment": 0.9532192582814417
+          },
+          "temperature_from_oof_fit": 1.0970102105995534,
+          "inner_n_iter": [
+            363,
+            431,
+            366,
+            387,
+            329
+          ],
+          "final_n_iter": 363,
+          "head_max_iter": 500,
+          "head_tolerance": 0.001,
+          "all_fits_converged_before_cap": true
+        },
+        "fs-recce": {
+          "oof_fit_macro": 0.9316702762319785,
+          "select_macro": 0.9382580562333741,
+          "select_per_class": {
+            "GAN-synthesis": 0.9752371928895289,
+            "diffusion-synthesis": 0.9082971358013803,
+            "reenactment": 0.9312398400092132
+          },
+          "test_macro": 0.7040164610998406,
+          "test_per_class": {
+            "GAN-synthesis": 0.8003010236400705,
+            "diffusion-synthesis": 0.6272634401604784,
+            "reenactment": 0.6844849194989728
+          },
+          "temperature_from_oof_fit": 0.9768578241203497,
+          "inner_n_iter": [
+            500,
+            500,
+            500,
+            500,
+            500
+          ],
+          "final_n_iter": 500,
+          "head_max_iter": 500,
+          "head_tolerance": 0.001,
+          "all_fits_converged_before_cap": false
+        },
+        "fs-rfm": {
+          "oof_fit_macro": 0.9579305996451684,
+          "select_macro": 0.9544764112919629,
+          "select_per_class": {
+            "GAN-synthesis": 0.9794168607915071,
+            "diffusion-synthesis": 0.936092430489714,
+            "reenactment": 0.9479199425946679
+          },
+          "test_macro": 0.7054606153875924,
+          "test_per_class": {
+            "GAN-synthesis": 0.8586240212073949,
+            "diffusion-synthesis": 0.599593432950524,
+            "reenactment": 0.6581643920048583
+          },
+          "temperature_from_oof_fit": 1.3419028636385828,
+          "inner_n_iter": [
+            500,
+            500,
+            500,
+            500,
+            500
+          ],
+          "final_n_iter": 500,
+          "head_max_iter": 500,
+          "head_tolerance": 0.001,
+          "all_fits_converged_before_cap": false
+        }
+      },
+      "core_ps_select_chosen": {
+        "method": "PS3-K3",
+        "test": 0.9375696855765666
+      },
+      "core_ps_test_max_diagnostic": {
+        "method": "PS3-K3",
+        "test": 0.9375696855765666,
+        "non_deployable": true
+      },
+      "contrasts": {
+        "FS1_minus_select_chosen_core_PS": -0.04960333024996022,
+        "FS2_minus_select_chosen_core_PS": -0.029522736250864323,
+        "FS1_minus_PS_plus": -0.037542818766926556,
+        "FS2_minus_PS_plus": -0.01746222476783066
+      },
+      "validity": {
+        "paper_labels_follow_registry": true,
+        "composer_inputs_unscaled_for_PS2_FS1_FSB": true,
+        "PS4_grid_size": 108,
+        "PS3_seed_count": 8,
+        "FS2_seed_count": 8,
+        "selection_uses_test": false
+      }
+    },
+    {
+      "fold": 2,
+      "smoke_internal_fit_only": false,
+      "n_fit": 7748,
+      "n_select": 1939,
+      "n_test": 4434,
+      "methods": {
+        "PS1-K3": {
+          "name": "PS1-K3",
+          "select": {
+            "macro": 0.9991566084211086,
+            "per_class": {
+              "GAN-synthesis": 1.0,
+              "diffusion-synthesis": 0.9984712464220661,
+              "reenactment": 0.9989985788412599
+            }
+          },
+          "test": {
+            "macro": 0.9312181161852252,
+            "per_class": {
+              "GAN-synthesis": 0.8552806641376655,
+              "diffusion-synthesis": 0.9476301416294465,
+              "reenactment": 0.9907435427885635
+            }
+          },
+          "metadata": {
+            "paper_recipe": true,
+            "selection": "none"
+          }
+        },
+        "PS2-K3": {
+          "name": "PS2-K3",
+          "select": {
+            "macro": 0.9996775148862618,
+            "per_class": {
+              "GAN-synthesis": 1.0,
+              "diffusion-synthesis": 0.9994346554651005,
+              "reenactment": 0.9995978891936852
+            }
+          },
+          "test": {
+            "macro": 0.9491318290000739,
+            "per_class": {
+              "GAN-synthesis": 0.9063050928216688,
+              "diffusion-synthesis": 0.9455012485358665,
+              "reenactment": 0.9955891456426862
+            }
+          },
+          "metadata": {
+            "scaled": false,
+            "solver": "lbfgs",
+            "C": 1.0,
+            "class_weight": "balanced",
+            "max_iter": 1000,
+            "n_iter": [
+              62
+            ],
+            "convergence_warnings": 0,
+            "classes": [
+              0,
+              1,
+              2
+            ],
+            "elapsed_seconds": 0.1371018886566162
+          }
+        },
+        "PS3-K3": {
+          "name": "PS3-K3",
+          "select": {
+            "macro": 0.9997449169732647,
+            "per_class": {
+              "GAN-synthesis": 1.0,
+              "diffusion-synthesis": 0.9995244910350296,
+              "reenactment": 0.9997102598847649
+            }
+          },
+          "test": {
+            "macro": 0.9555793890418159,
+            "per_class": {
+              "GAN-synthesis": 0.9070019425660197,
+              "diffusion-synthesis": 0.9628380914992298,
+              "reenactment": 0.9968981330601984
+            }
+          },
+          "metadata": {
+            "seeds": [
+              7,
+              10,
+              24,
+              42,
+              1024,
+              1973,
+              3392,
+              9721
+            ],
+            "epochs": 10,
+            "hidden": 64,
+            "dropout": 0.1,
+            "lr": 0.0002,
+            "averaging": "per-sample class probabilities",
+            "elapsed_seconds": 9.70367169380188
+          }
+        },
+        "PS4-K3": {
+          "name": "PS4-K3",
+          "select": {
+            "macro": 0.9996621968878528,
+            "per_class": {
+              "GAN-synthesis": 1.0,
+              "diffusion-synthesis": 0.9994052265715029,
+              "reenactment": 0.9995813640920559
+            }
+          },
+          "test": {
+            "macro": 0.9264295063657171,
+            "per_class": {
+              "GAN-synthesis": 0.8444975901185697,
+              "diffusion-synthesis": 0.9391372284649016,
+              "reenactment": 0.9956537005136801
+            }
+          },
+          "metadata": {
+            "best_parameters": {
+              "colsample_bytree": 0.8,
+              "learning_rate": 0.1,
+              "max_depth": 2,
+              "n_estimators": 200,
+              "subsample": 0.8
+            },
+            "in_fit_cv_macro_ovr": 0.9993453885672107,
+            "grid_size": 108,
+            "cv_folds": 5,
+            "selection_split": "FIT only",
+            "multiclass_extension": "balanced sample weights and macro one-vs-rest AUROC",
+            "elapsed_seconds": 382.50868701934814
+          }
+        },
+        "FS1-K3": {
+          "name": "FS1-K3",
+          "select": {
+            "macro": 0.9990404599394108,
+            "per_class": {
+              "GAN-synthesis": 1.0,
+              "diffusion-synthesis": 0.9981877997100479,
+              "reenactment": 0.9989335801081843
+            }
+          },
+          "test": {
+            "macro": 0.97321724340027,
+            "per_class": {
+              "GAN-synthesis": 0.9588615830080451,
+              "diffusion-synthesis": 0.9683897319723862,
+              "reenactment": 0.9924004152203789
+            }
+          },
+          "metadata": {
+            "scaled": false,
+            "solver": "lbfgs",
+            "C": 1.0,
+            "class_weight": "balanced",
+            "max_iter": 2000,
+            "n_iter": [
+              50
+            ],
+            "convergence_warnings": 0,
+            "classes": [
+              0,
+              1,
+              2
+            ],
+            "elapsed_seconds": 17.969756841659546
+          }
+        },
+        "FS2-K3": {
+          "name": "FS2-K3",
+          "select": {
+            "macro": 0.9997471530517386,
+            "per_class": {
+              "GAN-synthesis": 1.0,
+              "diffusion-synthesis": 0.9995477243720804,
+              "reenactment": 0.9996937347831355
+            }
+          },
+          "test": {
+            "macro": 0.9798339641092267,
+            "per_class": {
+              "GAN-synthesis": 0.9740475012370113,
+              "diffusion-synthesis": 0.969169798732586,
+              "reenactment": 0.9962845923580828
+            }
+          },
+          "metadata": {
+            "seeds": [
+              7,
+              10,
+              24,
+              42,
+              1024,
+              1973,
+              3392,
+              9721
+            ],
+            "epochs": 10,
+            "proj_dim": 256,
+            "hidden": [
+              512,
+              256
+            ],
+            "dropout": 0.1,
+            "expert_dropout": 0.25,
+            "lr": 0.0002,
+            "selection": "best SELECT macro OvR checkpoint per seed",
+            "per_seed": {
+              "7": {
+                "best_select_macro": 0.999372652872074,
+                "best_epoch": 10,
+                "seed": 7,
+                "epochs": 10,
+                "device": "cuda",
+                "paper_aligned": true
+              },
+              "10": {
+                "best_select_macro": 0.9996544633526994,
+                "best_epoch": 9,
+                "seed": 10,
+                "epochs": 10,
+                "device": "cuda",
+                "paper_aligned": true
+              },
+              "24": {
+                "best_select_macro": 0.9996688650986588,
+                "best_epoch": 10,
+                "seed": 24,
+                "epochs": 10,
+                "device": "cuda",
+                "paper_aligned": true
+              },
+              "42": {
+                "best_select_macro": 0.9996736608379674,
+                "best_epoch": 10,
+                "seed": 42,
+                "epochs": 10,
+                "device": "cuda",
+                "paper_aligned": true
+              },
+              "1024": {
+                "best_select_macro": 0.9996817034274473,
+                "best_epoch": 8,
+                "seed": 1024,
+                "epochs": 10,
+                "device": "cuda",
+                "paper_aligned": true
+              },
+              "1973": {
+                "best_select_macro": 0.9995698089501146,
+                "best_epoch": 9,
+                "seed": 1973,
+                "epochs": 10,
+                "device": "cuda",
+                "paper_aligned": true
+              },
+              "3392": {
+                "best_select_macro": 0.9995763462925779,
+                "best_epoch": 7,
+                "seed": 3392,
+                "epochs": 10,
+                "device": "cuda",
+                "paper_aligned": true
+              },
+              "9721": {
+                "best_select_macro": 0.9996430357516793,
+                "best_epoch": 9,
+                "seed": 9721,
+                "epochs": 10,
+                "device": "cuda",
+                "paper_aligned": true
+              }
+            },
+            "elapsed_seconds": 78.95147585868835
+          }
+        },
+        "FSB-K3-18": {
+          "name": "FSB-K3-18",
+          "select": {
+            "macro": 0.9838600019425319,
+            "per_class": {
+              "GAN-synthesis": 0.9997675182839004,
+              "diffusion-synthesis": 0.9707833042142177,
+              "reenactment": 0.9810291833294776
+            }
+          },
+          "test": {
+            "macro": 0.9006632673694798,
+            "per_class": {
+              "GAN-synthesis": 0.9473697472831564,
+              "diffusion-synthesis": 0.8352278577956262,
+              "reenactment": 0.9193921970296569
+            }
+          },
+          "metadata": {
+            "scaled": false,
+            "solver": "lbfgs",
+            "C": 1.0,
+            "class_weight": "balanced",
+            "max_iter": 2000,
+            "n_iter": [
+              75
+            ],
+            "convergence_warnings": 0,
+            "classes": [
+              0,
+              1,
+              2
+            ],
+            "pca_width": 18,
+            "pca_fit_split": "outer FIT only",
+            "explained_variance_ratio": 0.425072580575943,
+            "elapsed_seconds": 3.289764642715454
+          }
+        },
+        "PS+-K3": {
+          "name": "PS+-K3",
+          "select": {
+            "macro": 0.9997402448672904,
+            "per_class": null
+          },
+          "test": {
+            "macro": 0.9335294602848775,
+            "per_class": {
+              "GAN-synthesis": 0.8642279216376199,
+              "diffusion-synthesis": 0.941335171813123,
+              "reenactment": 0.9950252874038897
+            }
+          },
+          "metadata": {
+            "selected": {
+              "select": 0.9997402448672904,
+              "test": 0.9335294602848775,
+              "per_class": {
+                "GAN-synthesis": 0.8642279216376199,
+                "diffusion-synthesis": 0.941335171813123,
+                "reenactment": 0.9950252874038897
+              },
+              "rung": "calibrated_uncertainty_mi|xgb_d2_n200"
+            },
+            "all_scores": {
+              "mean_probability": {
+                "select": 0.9992035950090933,
+                "test": 0.9348371103164618,
+                "per_class": {
+                  "GAN-synthesis": 0.8652482269503546,
+                  "diffusion-synthesis": 0.9481106777704839,
+                  "reenactment": 0.991152426228547
+                }
+              },
+              "raw_logits|logreg": {
+                "select": 0.999677583966946,
+                "test": 0.9617392605407437,
+                "per_class": {
+                  "GAN-synthesis": 0.9301193945058369,
+                  "diffusion-synthesis": 0.9592501598211719,
+                  "reenactment": 0.9958482272952222
+                }
+              },
+              "raw_logits|xgb_d2_n50": {
+                "select": 0.9994477630556663,
+                "test": 0.9393679204341031,
+                "per_class": {
+                  "GAN-synthesis": 0.8783339747466418,
+                  "diffusion-synthesis": 0.9446845784367988,
+                  "reenactment": 0.9950852081188689
+                }
+              },
+              "raw_logits|xgb_d3_n50": {
+                "select": 0.9995060245552683,
+                "test": 0.939289289368325,
+                "per_class": {
+                  "GAN-synthesis": 0.8770057910458702,
+                  "diffusion-synthesis": 0.9454509692242344,
+                  "reenactment": 0.9954111078348706
+                }
+              },
+              "raw_logits|xgb_d4_n50": {
+                "select": 0.9995049119712963,
+                "test": 0.9368748657160397,
+                "per_class": {
+                  "GAN-synthesis": 0.8712197848516502,
+                  "diffusion-synthesis": 0.9440383216846223,
+                  "reenactment": 0.9953664906118466
+                }
+              },
+              "raw_logits|xgb_d2_n100": {
+                "select": 0.9996200751198607,
+                "test": 0.9435427141751012,
+                "per_class": {
+                  "GAN-synthesis": 0.8909414114758004,
+                  "diffusion-synthesis": 0.9437109028072751,
+                  "reenactment": 0.995975828242228
+                }
+              },
+              "raw_logits|xgb_d3_n100": {
+                "select": 0.9996512274130577,
+                "test": 0.9427494589901256,
+                "per_class": {
+                  "GAN-synthesis": 0.8876738688218153,
+                  "diffusion-synthesis": 0.9448504331261021,
+                  "reenactment": 0.9957240750224595
+                }
+              },
+              "raw_logits|xgb_d4_n100": {
+                "select": 0.9996994538358526,
+                "test": 0.9395077871750535,
+                "per_class": {
+                  "GAN-synthesis": 0.8793396191837558,
+                  "diffusion-synthesis": 0.9437267240306685,
+                  "reenactment": 0.995457018310736
+                }
+              },
+              "raw_logits|xgb_d2_n200": {
+                "select": 0.9996783184159073,
+                "test": 0.9385840804922786,
+                "per_class": {
+                  "GAN-synthesis": 0.8806742170176113,
+                  "diffusion-synthesis": 0.9393091166716008,
+                  "reenactment": 0.9957689077876237
+                }
+              },
+              "raw_logits|xgb_d3_n200": {
+                "select": 0.9996721337698905,
+                "test": 0.9411958047063681,
+                "per_class": {
+                  "GAN-synthesis": 0.8810952590393462,
+                  "diffusion-synthesis": 0.9467551475288857,
+                  "reenactment": 0.9957370075508722
+                }
+              },
+              "raw_logits|xgb_d4_n200": {
+                "select": 0.9997034242244555,
+                "test": 0.9406078579428226,
+                "per_class": {
+                  "GAN-synthesis": 0.8831111294372056,
+                  "diffusion-synthesis": 0.9436162436232426,
+                  "reenactment": 0.9950962007680197
+                }
+              },
+              "probabilities|logreg": {
+                "select": 0.9994146728858088,
+                "test": 0.9085994636814548,
+                "per_class": {
+                  "GAN-synthesis": 0.7807342349771841,
+                  "diffusion-synthesis": 0.9534515473692792,
+                  "reenactment": 0.9916126086979015
+                }
+              },
+              "probabilities|xgb_d2_n50": {
+                "select": 0.9996728791293816,
+                "test": 0.9409405058979944,
+                "per_class": {
+                  "GAN-synthesis": 0.8875313834368758,
+                  "diffusion-synthesis": 0.9400842225397192,
+                  "reenactment": 0.995205911717388
+                }
+              },
+              "probabilities|xgb_d3_n50": {
+                "select": 0.9996614624388916,
+                "test": 0.9321889937356199,
+                "per_class": {
+                  "GAN-synthesis": 0.8599412190518079,
+                  "diffusion-synthesis": 0.9412334064863798,
+                  "reenactment": 0.995392355668672
+                }
+              },
+              "probabilities|xgb_d4_n50": {
+                "select": 0.9996714793121432,
+                "test": 0.9278938460838789,
+                "per_class": {
+                  "GAN-synthesis": 0.8468149247713819,
+                  "diffusion-synthesis": 0.9416688923641949,
+                  "reenactment": 0.99519772111606
+                }
+              },
+              "probabilities|xgb_d2_n100": {
+                "select": 0.9997264757580181,
+                "test": 0.936629748380549,
+                "per_class": {
+                  "GAN-synthesis": 0.8769553942859238,
+                  "diffusion-synthesis": 0.9373401788280924,
+                  "reenactment": 0.9955936720276308
+                }
+              },
+              "probabilities|xgb_d3_n100": {
+                "select": 0.9997049040329081,
+                "test": 0.9267611762158318,
+                "per_class": {
+                  "GAN-synthesis": 0.8506437040702256,
+                  "diffusion-synthesis": 0.9342153531297059,
+                  "reenactment": 0.9954244714475637
+                }
+              },
+              "probabilities|xgb_d4_n100": {
+                "select": 0.9996893678819166,
+                "test": 0.9193695682254573,
+                "per_class": {
+                  "GAN-synthesis": 0.8269521872193817,
+                  "diffusion-synthesis": 0.9361467490871959,
+                  "reenactment": 0.9950097683697946
+                }
+              },
+              "probabilities|xgb_d2_n200": {
+                "select": 0.9997278755752567,
+                "test": 0.9298997062624972,
+                "per_class": {
+                  "GAN-synthesis": 0.8607340517162387,
+                  "diffusion-synthesis": 0.9338692973875139,
+                  "reenactment": 0.9950957696837393
+                }
+              },
+              "probabilities|xgb_d3_n200": {
+                "select": 0.9996881171365765,
+                "test": 0.9262888678481126,
+                "per_class": {
+                  "GAN-synthesis": 0.8501883006212545,
+                  "diffusion-synthesis": 0.933911666087449,
+                  "reenactment": 0.9947666368356344
+                }
+              },
+              "probabilities|xgb_d4_n200": {
+                "select": 0.9996775148862618,
+                "test": 0.9182430071743051,
+                "per_class": {
+                  "GAN-synthesis": 0.8233662286730075,
+                  "diffusion-synthesis": 0.9367147041913907,
+                  "reenactment": 0.9946480886585174
+                }
+              },
+              "disagreement|logreg": {
+                "select": 0.9995495534335244,
+                "test": 0.9236877658593338,
+                "per_class": {
+                  "GAN-synthesis": 0.8220380449722359,
+                  "diffusion-synthesis": 0.956208194428355,
+                  "reenactment": 0.9928170581774102
+                }
+              },
+              "disagreement|xgb_d2_n50": {
+                "select": 0.9997071073797921,
+                "test": 0.9320996957975997,
+                "per_class": {
+                  "GAN-synthesis": 0.8566386277420419,
+                  "diffusion-synthesis": 0.9441773607410553,
+                  "reenactment": 0.9954830989097017
+                }
+              },
+              "disagreement|xgb_d3_n50": {
+                "select": 0.9996920184444954,
+                "test": 0.9329951761504419,
+                "per_class": {
+                  "GAN-synthesis": 0.856730716367035,
+                  "diffusion-synthesis": 0.9466594157195385,
+                  "reenactment": 0.9955953963647525
+                }
+              },
+              "disagreement|xgb_d4_n50": {
+                "select": 0.999723527051643,
+                "test": 0.935468533992954,
+                "per_class": {
+                  "GAN-synthesis": 0.8635945259955651,
+                  "diffusion-synthesis": 0.9476418064297452,
+                  "reenactment": 0.9951692695535519
+                }
+              },
+              "disagreement|xgb_d2_n100": {
+                "select": 0.9997077727480693,
+                "test": 0.9316336634283178,
+                "per_class": {
+                  "GAN-synthesis": 0.8564988912712813,
+                  "diffusion-synthesis": 0.9426711266427257,
+                  "reenactment": 0.9957309723709464
+                }
+              },
+              "disagreement|xgb_d3_n100": {
+                "select": 0.9997211746328608,
+                "test": 0.9296837083814619,
+                "per_class": {
+                  "GAN-synthesis": 0.8494300584602414,
+                  "diffusion-synthesis": 0.9439392379211664,
+                  "reenactment": 0.9956818287629777
+                }
+              },
+              "disagreement|xgb_d4_n100": {
+                "select": 0.9997276574226741,
+                "test": 0.9312975438916179,
+                "per_class": {
+                  "GAN-synthesis": 0.8543813110488023,
+                  "diffusion-synthesis": 0.9440318859327335,
+                  "reenactment": 0.995479434693318
+                }
+              },
+              "disagreement|xgb_d2_n200": {
+                "select": 0.9997043877365291,
+                "test": 0.9332082190123859,
+                "per_class": {
+                  "GAN-synthesis": 0.8632910000549783,
+                  "diffusion-synthesis": 0.9409816076937269,
+                  "reenactment": 0.9953520492884523
+                }
+              },
+              "disagreement|xgb_d3_n200": {
+                "select": 0.9997216909292397,
+                "test": 0.931549161428005,
+                "per_class": {
+                  "GAN-synthesis": 0.856524776879799,
+                  "diffusion-synthesis": 0.9428576293693393,
+                  "reenactment": 0.9952650780348765
+                }
+              },
+              "disagreement|xgb_d4_n200": {
+                "select": 0.9996941527106952,
+                "test": 0.9313612132149202,
+                "per_class": {
+                  "GAN-synthesis": 0.8551885755126726,
+                  "diffusion-synthesis": 0.9438318413115204,
+                  "reenactment": 0.9950632228205673
+                }
+              },
+              "calibrated_uncertainty_mi|logreg": {
+                "select": 0.9996101491483532,
+                "test": 0.9216679989314861,
+                "per_class": {
+                  "GAN-synthesis": 0.8207698792310372,
+                  "diffusion-synthesis": 0.9509139840307543,
+                  "reenactment": 0.9933201335326667
+                }
+              },
+              "calibrated_uncertainty_mi|xgb_d2_n50": {
+                "select": 0.9996888461302729,
+                "test": 0.9392071183347038,
+                "per_class": {
+                  "GAN-synthesis": 0.8746811259552478,
+                  "diffusion-synthesis": 0.9470587004929787,
+                  "reenactment": 0.9958815285558849
+                }
+              },
+              "calibrated_uncertainty_mi|xgb_d3_n50": {
+                "select": 0.9996504129728822,
+                "test": 0.9336668882976186,
+                "per_class": {
+                  "GAN-synthesis": 0.8590022357835322,
+                  "diffusion-synthesis": 0.9463913934689991,
+                  "reenactment": 0.9956070356403239
+                }
+              },
+              "calibrated_uncertainty_mi|xgb_d4_n50": {
+                "select": 0.9996807508259037,
+                "test": 0.9361919539990758,
+                "per_class": {
+                  "GAN-synthesis": 0.8640902468524932,
+                  "diffusion-synthesis": 0.9489561746748872,
+                  "reenactment": 0.9955294404698474
+                }
+              },
+              "calibrated_uncertainty_mi|xgb_d2_n100": {
+                "select": 0.9997289081680144,
+                "test": 0.938844017189589,
+                "per_class": {
+                  "GAN-synthesis": 0.8755552806641375,
+                  "diffusion-synthesis": 0.9454456060976604,
+                  "reenactment": 0.995531164806969
+                }
+              },
+              "calibrated_uncertainty_mi|xgb_d3_n100": {
+                "select": 0.9997234579709589,
+                "test": 0.9332338095387134,
+                "per_class": {
+                  "GAN-synthesis": 0.8583544083420382,
+                  "diffusion-synthesis": 0.9458430137767996,
+                  "reenactment": 0.9955040064973023
+                }
+              },
+              "calibrated_uncertainty_mi|xgb_d4_n100": {
+                "select": 0.99973774337661,
+                "test": 0.9336306691317832,
+                "per_class": {
+                  "GAN-synthesis": 0.858530797001851,
+                  "diffusion-synthesis": 0.946852354198041,
+                  "reenactment": 0.995508856195457
+                }
+              },
+              "calibrated_uncertainty_mi|xgb_d2_n200": {
+                "select": 0.9997402448672904,
+                "test": 0.9335294602848775,
+                "per_class": {
+                  "GAN-synthesis": 0.8642279216376199,
+                  "diffusion-synthesis": 0.941335171813123,
+                  "reenactment": 0.9950252874038897
+                }
+              },
+              "calibrated_uncertainty_mi|xgb_d3_n200": {
+                "select": 0.9997070382991079,
+                "test": 0.9372951211548227,
+                "per_class": {
+                  "GAN-synthesis": 0.8698806054941631,
+                  "diffusion-synthesis": 0.9469943429740897,
+                  "reenactment": 0.9950104149962152
+                }
+              },
+              "calibrated_uncertainty_mi|xgb_d4_n200": {
+                "select": 0.999699751979649,
+                "test": 0.935585589960211,
+                "per_class": {
+                  "GAN-synthesis": 0.8641912694485677,
+                  "diffusion-synthesis": 0.9476288008478031,
+                  "reenactment": 0.9949366995842622
+                }
+              },
+              "quadratic|logreg": {
+                "select": 0.9996415777642866,
+                "test": 0.9608233858492,
+                "per_class": {
+                  "GAN-synthesis": 0.9222235966793118,
+                  "diffusion-synthesis": 0.9667507604913481,
+                  "reenactment": 0.9934958003769401
+                }
+              },
+              "quadratic|xgb_d2_n50": {
+                "select": 0.9996095092186404,
+                "test": 0.9458613112109134,
+                "per_class": {
+                  "GAN-synthesis": 0.8984393039749299,
+                  "diffusion-synthesis": 0.9441227909281642,
+                  "reenactment": 0.9950218387296463
+                }
+              },
+              "quadratic|xgb_d3_n50": {
+                "select": 0.9996595026831545,
+                "test": 0.9340769298204522,
+                "per_class": {
+                  "GAN-synthesis": 0.8708938094452691,
+                  "diffusion-synthesis": 0.9363513523659969,
+                  "reenactment": 0.9949856276500906
+                }
+              },
+              "quadratic|xgb_d4_n50": {
+                "select": 0.99962517262047,
+                "test": 0.9345888488764841,
+                "per_class": {
+                  "GAN-synthesis": 0.8705646269723459,
+                  "diffusion-synthesis": 0.9383257874142437,
+                  "reenactment": 0.9948761322428626
+                }
+              },
+              "quadratic|xgb_d2_n100": {
+                "select": 0.9996739589817637,
+                "test": 0.9572313098516908,
+                "per_class": {
+                  "GAN-synthesis": 0.9272843476826653,
+                  "diffusion-synthesis": 0.9490415824655795,
+                  "reenactment": 0.9953679994068281
+                }
+              },
+              "quadratic|xgb_d3_n100": {
+                "select": 0.9996412687099602,
+                "test": 0.9523832502179056,
+                "per_class": {
+                  "GAN-synthesis": 0.9176090860776661,
+                  "diffusion-synthesis": 0.9445653829486899,
+                  "reenactment": 0.9949752816273605
+                }
+              },
+              "quadratic|xgb_d4_n100": {
+                "select": 0.9996697595300484,
+                "test": 0.9516277742603231,
+                "per_class": {
+                  "GAN-synthesis": 0.9136442355269668,
+                  "diffusion-synthesis": 0.9460135612018552,
+                  "reenactment": 0.9952255260521474
+                }
+              },
+              "quadratic|xgb_d2_n200": {
+                "select": 0.9996652837555965,
+                "test": 0.9605834897160079,
+                "per_class": {
+                  "GAN-synthesis": 0.9331771033774992,
+                  "diffusion-synthesis": 0.9538106086934137,
+                  "reenactment": 0.9947627570771107
+                }
+              },
+              "quadratic|xgb_d3_n200": {
+                "select": 0.9996679924883293,
+                "test": 0.9544239362079199,
+                "per_class": {
+                  "GAN-synthesis": 0.9198476185240163,
+                  "diffusion-synthesis": 0.9490161076143527,
+                  "reenactment": 0.9944080824853906
+                }
+              },
+              "quadratic|xgb_d4_n200": {
+                "select": 0.9996271578147716,
+                "test": 0.9531535454087323,
+                "per_class": {
+                  "GAN-synthesis": 0.9149788333608224,
+                  "diffusion-synthesis": 0.9497716380704758,
+                  "reenactment": 0.9947101647948987
+                }
+              },
+              "rank|logreg": {
+                "select": 0.9996022919798656,
+                "test": 0.971861394872322,
+                "per_class": {
+                  "GAN-synthesis": 0.9552710429380394,
+                  "diffusion-synthesis": 0.9650391186452314,
+                  "reenactment": 0.9952740230336952
+                }
+              },
+              "rank|xgb_d2_n50": {
+                "select": 0.9996070913366785,
+                "test": 0.9555282511304908,
+                "per_class": {
+                  "GAN-synthesis": 0.9260947550717467,
+                  "diffusion-synthesis": 0.9450870810861833,
+                  "reenactment": 0.9954029172335426
+                }
+              },
+              "rank|xgb_d3_n50": {
+                "select": 0.9996701958352131,
+                "test": 0.9504765148688291,
+                "per_class": {
+                  "GAN-synthesis": 0.9122067824875841,
+                  "diffusion-synthesis": 0.9437025899610852,
+                  "reenactment": 0.9955201721578182
+                }
+              },
+              "rank|xgb_d4_n50": {
+                "select": 0.9996431739130477,
+                "test": 0.9407502175968183,
+                "per_class": {
+                  "GAN-synthesis": 0.8867827624754888,
+                  "diffusion-synthesis": 0.9400811387419393,
+                  "reenactment": 0.9953867515730266
+                }
+              },
+              "rank|xgb_d2_n100": {
+                "select": 0.9996816234362331,
+                "test": 0.9608018411366936,
+                "per_class": {
+                  "GAN-synthesis": 0.9404498139901405,
+                  "diffusion-synthesis": 0.9464060079889133,
+                  "reenactment": 0.9955497014310273
+                }
+              },
+              "rank|xgb_d3_n100": {
+                "select": 0.9996822888045104,
+                "test": 0.9587076941689028,
+                "per_class": {
+                  "GAN-synthesis": 0.9328779298843624,
+                  "diffusion-synthesis": 0.9476812254100647,
+                  "reenactment": 0.9955639272122815
+                }
+              },
+              "rank|xgb_d4_n100": {
+                "select": 0.9997079109094376,
+                "test": 0.9549077608201911,
+                "per_class": {
+                  "GAN-synthesis": 0.9230885883409388,
+                  "diffusion-synthesis": 0.9463930024069713,
+                  "reenactment": 0.9952416917126633
+                }
+              },
+              "rank|xgb_d2_n200": {
+                "select": 0.9996828850921035,
+                "test": 0.9591191127282116,
+                "per_class": {
+                  "GAN-synthesis": 0.9335953964850551,
+                  "diffusion-synthesis": 0.9483575156710559,
+                  "reenactment": 0.995404426028524
+                }
+              },
+              "rank|xgb_d3_n200": {
+                "select": 0.9996822888045104,
+                "test": 0.9583634715732066,
+                "per_class": {
+                  "GAN-synthesis": 0.9306357322191069,
+                  "diffusion-synthesis": 0.9492862751155217,
+                  "reenactment": 0.995168407384991
+                }
+              },
+              "rank|xgb_d4_n200": {
+                "select": 0.9996885425312114,
+                "test": 0.9558162514284062,
+                "per_class": {
+                  "GAN-synthesis": 0.9220586618285777,
+                  "diffusion-synthesis": 0.9503807551711267,
+                  "reenactment": 0.995009337285514
+                }
+              }
+            },
+            "ladder": "extended diagnostic, not PS1-PS4",
+            "selection_split": "SELECT",
+            "select_probability_carrier": "calibrated mean only; selected SELECT score is metadata",
+            "elapsed_seconds": 82.2815637588501
+          }
+        }
+      },
+      "head_quality": {
+        "fs-clip-base": {
+          "oof_fit_macro": 0.9964503477631051,
+          "select_macro": 0.9977870347484877,
+          "select_per_class": {
+            "GAN-synthesis": 1.0,
+            "diffusion-synthesis": 0.9960921527080778,
+            "reenactment": 0.9972689515373852
+          },
+          "test_macro": 0.8418152857203319,
+          "test_per_class": {
+            "GAN-synthesis": 0.7061983433210549,
+            "diffusion-synthesis": 0.848149774963209,
+            "reenactment": 0.9710977388767323
+          },
+          "temperature_from_oof_fit": 1.7873707242867167,
+          "inner_n_iter": [
+            28,
+            31,
+            27,
+            32,
+            29
+          ],
+          "final_n_iter": 30,
+          "head_max_iter": 500,
+          "head_tolerance": 0.001,
+          "all_fits_converged_before_cap": true
+        },
+        "fs-clip-large": {
+          "oof_fit_macro": 0.9954502004375998,
+          "select_macro": 0.9978560583767678,
+          "select_per_class": {
+            "GAN-synthesis": 0.9999930080686887,
+            "diffusion-synthesis": 0.9961200327125385,
+            "reenactment": 0.9974551343490762
+          },
+          "test_macro": 0.9519471749204743,
+          "test_per_class": {
+            "GAN-synthesis": 0.9094608462990452,
+            "diffusion-synthesis": 0.9595681932270146,
+            "reenactment": 0.9868124852353634
+          },
+          "temperature_from_oof_fit": 2.4655952262286367,
+          "inner_n_iter": [
+            19,
+            23,
+            20,
+            22,
+            20
+          ],
+          "final_n_iter": 23,
+          "head_max_iter": 500,
+          "head_tolerance": 0.001,
+          "all_fits_converged_before_cap": true
+        },
+        "fs-xception": {
+          "oof_fit_macro": 0.9499445267214407,
+          "select_macro": 0.9566829235447688,
+          "select_per_class": {
+            "GAN-synthesis": 0.9922144844849043,
+            "diffusion-synthesis": 0.9308622356046244,
+            "reenactment": 0.9469720505447775
+          },
+          "test_macro": 0.7636023185266855,
+          "test_per_class": {
+            "GAN-synthesis": 0.7162479154067476,
+            "diffusion-synthesis": 0.7342820167930219,
+            "reenactment": 0.8402770233802871
+          },
+          "temperature_from_oof_fit": 1.0109720521814327,
+          "inner_n_iter": [
+            500,
+            500,
+            500,
+            500,
+            500
+          ],
+          "final_n_iter": 500,
+          "head_max_iter": 500,
+          "head_tolerance": 0.001,
+          "all_fits_converged_before_cap": false
+        },
+        "fs-srm": {
+          "oof_fit_macro": 0.9852307198283627,
+          "select_macro": 0.9841976143577278,
+          "select_per_class": {
+            "GAN-synthesis": 0.9991015368265023,
+            "diffusion-synthesis": 0.970126575220252,
+            "reenactment": 0.9833647310264291
+          },
+          "test_macro": 0.8658124313738633,
+          "test_per_class": {
+            "GAN-synthesis": 0.7644304249821321,
+            "diffusion-synthesis": 0.9052609053815757,
+            "reenactment": 0.9277459637578823
+          },
+          "temperature_from_oof_fit": 1.071266232526798,
+          "inner_n_iter": [
+            348,
+            386,
+            382,
+            433,
+            364
+          ],
+          "final_n_iter": 337,
+          "head_max_iter": 500,
+          "head_tolerance": 0.001,
+          "all_fits_converged_before_cap": true
+        },
+        "fs-recce": {
+          "oof_fit_macro": 0.9324683799672943,
+          "select_macro": 0.9459345700472462,
+          "select_per_class": {
+            "GAN-synthesis": 0.9859182503391086,
+            "diffusion-synthesis": 0.9217888430417704,
+            "reenactment": 0.9300966167608598
+          },
+          "test_macro": 0.7164111188132521,
+          "test_per_class": {
+            "GAN-synthesis": 0.7820601279161398,
+            "diffusion-synthesis": 0.5856644162987562,
+            "reenactment": 0.7815088122248605
+          },
+          "temperature_from_oof_fit": 1.0151397198676575,
+          "inner_n_iter": [
+            500,
+            500,
+            500,
+            500,
+            500
+          ],
+          "final_n_iter": 500,
+          "head_max_iter": 500,
+          "head_tolerance": 0.001,
+          "all_fits_converged_before_cap": false
+        },
+        "fs-rfm": {
+          "oof_fit_macro": 0.96659706361267,
+          "select_macro": 0.9686028238780704,
+          "select_per_class": {
+            "GAN-synthesis": 0.9971000964886522,
+            "diffusion-synthesis": 0.9470543226398028,
+            "reenactment": 0.9616540525057563
+          },
+          "test_macro": 0.7840452426936798,
+          "test_per_class": {
+            "GAN-synthesis": 0.7322612568035626,
+            "diffusion-synthesis": 0.7950175481501504,
+            "reenactment": 0.8248569231273267
+          },
+          "temperature_from_oof_fit": 1.177196933957751,
+          "inner_n_iter": [
+            500,
+            486,
+            446,
+            500,
+            500
+          ],
+          "final_n_iter": 498,
+          "head_max_iter": 500,
+          "head_tolerance": 0.001,
+          "all_fits_converged_before_cap": false
+        }
+      },
+      "core_ps_select_chosen": {
+        "method": "PS3-K3",
+        "test": 0.9555793890418159
+      },
+      "core_ps_test_max_diagnostic": {
+        "method": "PS3-K3",
+        "test": 0.9555793890418159,
+        "non_deployable": true
+      },
+      "contrasts": {
+        "FS1_minus_select_chosen_core_PS": 0.017637854358454108,
+        "FS2_minus_select_chosen_core_PS": 0.0242545750674108,
+        "FS1_minus_PS_plus": 0.03968778311539256,
+        "FS2_minus_PS_plus": 0.04630450382434925
+      },
+      "validity": {
+        "paper_labels_follow_registry": true,
+        "composer_inputs_unscaled_for_PS2_FS1_FSB": true,
+        "PS4_grid_size": 108,
+        "PS3_seed_count": 8,
+        "FS2_seed_count": 8,
+        "selection_uses_test": false
+      }
+    }
+  ],
+  "summary": {
+    "PS1-K3": {
+      "mean_fold_macro_ovr": 0.9392270319946072,
+      "per_fold_macro_ovr": [
+        0.9575926660962709,
+        0.9288703137023256,
+        0.9312181161852252
+      ],
+      "pooled_oof": {
+        "macro": 0.9331445958706911,
+        "per_class": {
+          "GAN-synthesis": 0.934801945946269,
+          "diffusion-synthesis": 0.8974718946503233,
+          "reenactment": 0.9671599470154814
+        }
+      }
+    },
+    "PS2-K3": {
+      "mean_fold_macro_ovr": 0.94241388631986,
+      "per_fold_macro_ovr": [
+        0.955507048201451,
+        0.9226027817580551,
+        0.9491318290000739
+      ],
+      "pooled_oof": {
+        "macro": 0.9361885752207325,
+        "per_class": {
+          "GAN-synthesis": 0.9598571249249089,
+          "diffusion-synthesis": 0.8809405777639505,
+          "reenactment": 0.9677680229733381
+        }
+      }
+    },
+    "PS3-K3": {
+      "mean_fold_macro_ovr": 0.9543253134214419,
+      "per_fold_macro_ovr": [
+        0.9698268656459431,
+        0.9375696855765666,
+        0.9555793890418159
+      ],
+      "pooled_oof": {
+        "macro": 0.9460112500535945,
+        "per_class": {
+          "GAN-synthesis": 0.9705463428702932,
+          "diffusion-synthesis": 0.8990411682630773,
+          "reenactment": 0.9684462390274129
+        }
+      }
+    },
+    "PS4-K3": {
+      "mean_fold_macro_ovr": 0.9355608438312139,
+      "per_fold_macro_ovr": [
+        0.9495870291788343,
+        0.9306659959490903,
+        0.9264295063657171
+      ],
+      "pooled_oof": {
+        "macro": 0.9299260170574177,
+        "per_class": {
+          "GAN-synthesis": 0.92721750753901,
+          "diffusion-synthesis": 0.888444580625402,
+          "reenactment": 0.9741159630078414
+        }
+      }
+    },
+    "FS1-K3": {
+      "mean_fold_macro_ovr": 0.9332451361226779,
+      "per_fold_macro_ovr": [
+        0.9385518096411571,
+        0.8879663553266064,
+        0.97321724340027
+      ],
+      "pooled_oof": {
+        "macro": 0.9261444733854495,
+        "per_class": {
+          "GAN-synthesis": 0.9726064576963654,
+          "diffusion-synthesis": 0.8590839193958454,
+          "reenactment": 0.9467430430641375
+        }
+      }
+    },
+    "FS2-K3": {
+      "mean_fold_macro_ovr": 0.9448553776343912,
+      "per_fold_macro_ovr": [
+        0.9466852194682444,
+        0.9080469493257023,
+        0.9798339641092267
+      ],
+      "pooled_oof": {
+        "macro": 0.9405160458165969,
+        "per_class": {
+          "GAN-synthesis": 0.978825094966123,
+          "diffusion-synthesis": 0.8794931046418,
+          "reenactment": 0.9632299378418675
+        }
+      }
+    },
+    "FSB-K3-18": {
+      "mean_fold_macro_ovr": 0.8975070899854884,
+      "per_fold_macro_ovr": [
+        0.9029801739528426,
+        0.8888778286341431,
+        0.9006632673694798
+      ],
+      "pooled_oof": {
+        "macro": 0.8877529786712993,
+        "per_class": {
+          "GAN-synthesis": 0.9624800503895778,
+          "diffusion-synthesis": 0.7958838177169993,
+          "reenactment": 0.9048950679073207
+        }
+      }
+    },
+    "PS+-K3": {
+      "mean_fold_macro_ovr": 0.9409217227762331,
+      "per_fold_macro_ovr": [
+        0.9637265339502891,
+        0.925509174093533,
+        0.9335294602848775
+      ],
+      "pooled_oof": {
+        "macro": 0.9413400666529506,
+        "per_class": {
+          "GAN-synthesis": 0.9630363979521389,
+          "diffusion-synthesis": 0.8902808079967395,
+          "reenactment": 0.9707029940099731
+        }
+      }
+    }
+  },
+  "contrasts": {
+    "FS1_minus_select_chosen_core_PS": {
+      "mean": -0.02108017729876403,
+      "per_fold": [
+        -0.03127505600478597,
+        -0.04960333024996022,
+        0.017637854358454108
+      ],
+      "positive_folds": 1,
+      "n_folds": 3
+    },
+    "FS2_minus_select_chosen_core_PS": {
+      "mean": -0.009469935787050762,
+      "per_fold": [
+        -0.02314164617769876,
+        -0.029522736250864323,
+        0.0242545750674108
+      ],
+      "positive_folds": 1,
+      "n_folds": 3
+    },
+    "FS1_minus_PS_plus": {
+      "mean": -0.007676586653555306,
+      "per_fold": [
+        -0.025174724309131924,
+        -0.037542818766926556,
+        0.03968778311539256
+      ],
+      "positive_folds": 1,
+      "n_folds": 3
+    },
+    "FS2_minus_PS_plus": {
+      "mean": 0.0039336548581579605,
+      "per_fold": [
+        -0.01704131448204471,
+        -0.01746222476783066,
+        0.04630450382434925
+      ],
+      "positive_folds": 1,
+      "n_folds": 3
+    }
+  }
+}

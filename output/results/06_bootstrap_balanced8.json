@@ -1,0 +1,76 @@
+{
+  "pool": "balanced8",
+  "train_tag": "FIT",
+  "comparison": "raw_feat_logreg_vs_PS_4_xgboost",
+  "best_ps_name": "PS_4_xgboost",
+  "n_test_samples": 17925,
+  "macro_avg_raw_feat": 0.9644751209897493,
+  "macro_avg_best_ps": 0.9532616016406266,
+  "macro_delta": 0.011213519349122736,
+  "sample_level_bootstrap": {
+    "n_boot": 10000,
+    "seed": 42,
+    "ci_95": [
+      0.010938945782438281,
+      0.01394834008324004
+    ],
+    "delta_mean": 0.012405437022294623,
+    "p_raw_feat_gt_ps": 1.0
+  },
+  "generator_level_bootstrap": {
+    "ci_95": [
+      0.0029365171642485896,
+      0.02325245161681875
+    ]
+  },
+  "xgboost_continuity": {
+    "macro_avg_xgboost": 0.9532616016406266,
+    "macro_delta": 0.011213519349122736,
+    "sample_level_ci_95": [
+      0.010938945782438281,
+      0.01394834008324004
+    ]
+  },
+  "per_generator": {
+    "whichisreal": {
+      "raw_feat": 0.9594905094905095,
+      "best_ps": 0.9103696303696303,
+      "n": 2001
+    },
+    "CollabDiff": {
+      "raw_feat": 1.0,
+      "best_ps": 0.9994879999999999,
+      "n": 2000
+    },
+    "MidJourney": {
+      "raw_feat": 1.0,
+      "best_ps": 0.9901269025454257,
+      "n": 1882
+    },
+    "heygen": {
+      "raw_feat": 0.7725490196078432,
+      "best_ps": 0.7545098039215685,
+      "n": 101
+    },
+    "starganv2": {
+      "raw_feat": 1.0,
+      "best_ps": 0.9985879985879986,
+      "n": 4000
+    },
+    "deepfacelab": {
+      "raw_feat": 0.9844897959183674,
+      "best_ps": 0.9818367346938776,
+      "n": 149
+    },
+    "stargan": {
+      "raw_feat": 0.9992716429012747,
+      "best_ps": 0.9916461226099115,
+      "n": 3968
+    },
+    "styleclip": {
+      "raw_feat": 1.0,
+      "best_ps": 0.9995276203966006,
+      "n": 3824
+    }
+  }
+}

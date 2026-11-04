@@ -1,0 +1,30 @@
+{
+  "pool": "clip4",
+  "method": "fs_1_standardized_vs_raw",
+  "avg_auc_8_raw": 0.9654246787497999,
+  "avg_auc_8_std": 0.9658690744835465,
+  "delta_std_minus_raw": 0.00044439573374666086,
+  "per_generator_raw": {
+    "whichisreal": 0.9602687312687314,
+    "CollabDiff": 1.0,
+    "MidJourney": 1.0,
+    "heygen": 0.7772549019607843,
+    "starganv2": 1.0,
+    "deepfacelab": 0.986530612244898,
+    "stargan": 0.9993435386316337,
+    "styleclip": 0.9999996458923512
+  },
+  "per_generator_std": {
+    "whichisreal": 0.941110889110889,
+    "CollabDiff": 1.0,
+    "MidJourney": 0.9999988654220346,
+    "heygen": 0.8239215686274509,
+    "starganv2": 0.9999999999999999,
+    "deepfacelab": 0.9648979591836735,
+    "stargan": 0.9970233135243237,
+    "styleclip": 1.0
+  },
+  "seed": 1024,
+  "fit_samples": 26591,
+  "feature_dim": 4096
+}

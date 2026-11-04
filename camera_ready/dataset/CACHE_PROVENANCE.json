@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "documentation_version": "1.0.8",
+  "data_revision": "18fb1b212f7251799fca8cb4d549be6d239ce13a",
+  "data_manifest": {
+    "path": "CHECKSUMS.txt",
+    "sha256": "2394f9d311fa01e3c3c5d1f1d5eeef5138f08f015863bbf8c3fca35b71ebd50e",
+    "size_bytes": 44952,
+    "entries": 460
+  },
+  "current_notice": {
+    "path": "LICENSE_NOTICE.txt",
+    "sha256": "85084ac7e77f695167f7993c1d971f37a4ce4a68fb98ce3e70abecd486d73e39",
+    "size_bytes": 2255
+  },
+  "reviewed_source": {
+    "checksum_manifest": {
+      "contentUrl": "https://huggingface.co/datasets/anon-frozen-experts/df40-frozen-experts-anon/resolve/18fb1b212f7251799fca8cb4d549be6d239ce13a/CHECKSUMS.txt",
+      "sha256": "1ee7bdd30767c5c2e7101a8195a9730080d2b60f75e20582b37b04146dec060c",
+      "size_bytes": 45037
+    },
+    "notice": {
+      "contentUrl": "https://huggingface.co/datasets/anon-frozen-experts/df40-frozen-experts-anon/resolve/18fb1b212f7251799fca8cb4d549be6d239ce13a/LICENSE_NOTICE.txt",
+      "sha256": "20104e8bcf54742d43b43707290a95f78a64e0b6f39ee718687b8644cc248f1d",
+      "size_bytes": 4216
+    }
+  },
+  "note": "For binary logits, column 0 is real and column 1 is fake. The current package includes the current notice. The pinned review revision retains its original notice and checksum manifest as provenance references. Data digests and applicable upstream rights are unchanged; this packaging update does not revoke prior grants."
+}

@@ -1,0 +1,160 @@
+{
+  "pool": "clip4",
+  "combiner_type": "mlp",
+  "proj_dim": 64,
+  "train_tag": "FIT",
+  "select_tag": "SELECT",
+  "fit_samples": 26591,
+  "seeds": [
+    7,
+    10,
+    24,
+    42,
+    1024,
+    1973,
+    3392,
+    9721
+  ],
+  "mean_avg8": 0.9808588317484568,
+  "std_avg8": 0.003800933685507537,
+  "n_trainable_params": 526338,
+  "feature_dims": [
+    1024,
+    1024,
+    1024,
+    1024
+  ],
+  "per_seed": [
+    {
+      "seed": 7,
+      "val_auc": 0.9998590391395292,
+      "per_generator": {
+        "whichisreal": 0.9462177822177822,
+        "CollabDiff": 1.0,
+        "MidJourney": 1.0,
+        "heygen": 0.8776470588235293,
+        "starganv2": 1.0,
+        "deepfacelab": 0.9783673469387756,
+        "stargan": 0.9987203576190166,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.975119068199888
+    },
+    {
+      "seed": 10,
+      "val_auc": 0.9999329287909705,
+      "per_generator": {
+        "whichisreal": 0.9522307692307692,
+        "CollabDiff": 1.0,
+        "MidJourney": 1.0,
+        "heygen": 0.8501960784313725,
+        "starganv2": 1.0,
+        "deepfacelab": 0.9871428571428572,
+        "stargan": 0.9988433171013267,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.9735516277382907
+    },
+    {
+      "seed": 24,
+      "val_auc": 0.9999091338184725,
+      "per_generator": {
+        "whichisreal": 0.953914085914086,
+        "CollabDiff": 1.0,
+        "MidJourney": 1.0,
+        "heygen": 0.8721568627450981,
+        "starganv2": 1.0,
+        "deepfacelab": 0.9893877551020409,
+        "stargan": 0.9979892059866026,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.9766809887184784
+    },
+    {
+      "seed": 42,
+      "val_auc": 0.9999099687297881,
+      "per_generator": {
+        "whichisreal": 0.9455794205794206,
+        "CollabDiff": 1.0,
+        "MidJourney": 1.0,
+        "heygen": 0.9196078431372549,
+        "starganv2": 1.0,
+        "deepfacelab": 0.9804081632653061,
+        "stargan": 0.9982295358838449,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.9804781203582282
+    },
+    {
+      "seed": 1024,
+      "val_auc": 0.9998590391395292,
+      "per_generator": {
+        "whichisreal": 0.9435844155844156,
+        "CollabDiff": 1.0,
+        "MidJourney": 1.0,
+        "heygen": 0.8505882352941176,
+        "starganv2": 1.0,
+        "deepfacelab": 0.9828571428571429,
+        "stargan": 0.9987988586108221,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.9719785815433123
+    },
+    {
+      "seed": 1973,
+      "val_auc": 0.9998775463403611,
+      "per_generator": {
+        "whichisreal": 0.93611988011988,
+        "CollabDiff": 1.0,
+        "MidJourney": 1.0,
+        "heygen": 0.8345098039215686,
+        "starganv2": 1.0,
+        "deepfacelab": 0.9826530612244898,
+        "stargan": 0.9980740581913372,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.9689196004321595
+    },
+    {
+      "seed": 3392,
+      "val_auc": 0.9999081597552708,
+      "per_generator": {
+        "whichisreal": 0.9552897102897102,
+        "CollabDiff": 1.0,
+        "MidJourney": 1.0,
+        "heygen": 0.8717647058823529,
+        "starganv2": 1.0,
+        "deepfacelab": 0.983265306122449,
+        "stargan": 0.9988560195271852,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.9761469677277121
+    },
+    {
+      "seed": 9721,
+      "val_auc": 0.9998787987073346,
+      "per_generator": {
+        "whichisreal": 0.9379410589410588,
+        "CollabDiff": 1.0,
+        "MidJourney": 0.9999988654220346,
+        "heygen": 0.9313725490196079,
+        "starganv2": 1.0,
+        "deepfacelab": 0.9795918367346939,
+        "stargan": 0.9984320125520291,
+        "styleclip": 1.0
+      },
+      "avg_auc_8": 0.980917040333678
+    }
+  ],
+  "per_generator_seed_averaged": {
+    "whichisreal": 0.9514655344655345,
+    "CollabDiff": 1.0,
+    "MidJourney": 1.0,
+    "heygen": 0.9133333333333333,
+    "starganv2": 1.0,
+    "deepfacelab": 0.983265306122449,
+    "stargan": 0.9988064800663372,
+    "styleclip": 1.0
+  },
+  "aggregation_protocol": "auc_on_seed_averaged_predictions (std_avg8 is std across per-seed macro AUCs)"
+}

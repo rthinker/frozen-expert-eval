@@ -1,0 +1,105 @@
+{
+  "run": "verify_strict_arm_claims",
+  "stargan_overlapped_rows_removed_by_strict": 0,
+  "claim_a_supported": true,
+  "arms": {
+    "full (published)": {
+      "fs1_macro": 0.965388554153414,
+      "fs1_stargan": 0.9780597349359392,
+      "best_ps_macro": 0.8425909912831497,
+      "delta": 0.12279756287026422
+    },
+    "strict": {
+      "fs1_macro": 0.5359488483500117,
+      "fs1_stargan": 0.5075604838709677,
+      "best_ps_macro": 0.7642676011239193,
+      "delta": -0.22831875277390767
+    },
+    "matched_s7": {
+      "fs1_macro": 0.9247285106466991,
+      "fs1_stargan": 0.9630085035119668,
+      "best_ps_macro": 0.782601358633234,
+      "delta": 0.14212715201346515
+    },
+    "matched_s42": {
+      "fs1_macro": 0.9420858494956448,
+      "fs1_stargan": 0.9742107728765609,
+      "best_ps_macro": 0.787114189476358,
+      "delta": 0.15497166001928675
+    },
+    "matched_s1024": {
+      "fs1_macro": 0.9364347698100248,
+      "fs1_stargan": 0.9643981489008845,
+      "best_ps_macro": 0.787113586970047,
+      "delta": 0.14932118283997786
+    }
+  },
+  "per_generator_fs1_by_arm": {
+    "full (published)": {
+      "whichisreal": 0.8667732267732268,
+      "CollabDiff": 0.999989,
+      "MidJourney": 0.9997764881408238,
+      "heygen": 0.9023529411764706,
+      "starganv2": 0.9999969999970001,
+      "deepfacelab": 0.9762244897959184,
+      "stargan": 0.9780597349359392,
+      "styleclip": 0.999935552407932
+    },
+    "strict": {
+      "whichisreal": 0.5304825174825175,
+      "CollabDiff": 0.526023,
+      "MidJourney": 0.4238261372725881,
+      "heygen": 0.6984313725490197,
+      "starganv2": 0.5117497617497617,
+      "deepfacelab": 0.5612244897959184,
+      "stargan": 0.5075604838709677,
+      "styleclip": 0.5282930240793202
+    },
+    "matched_s7": {
+      "whichisreal": 0.841922077922078,
+      "CollabDiff": 0.9985345,
+      "MidJourney": 0.9957101607129688,
+      "heygen": 0.8023529411764705,
+      "starganv2": 0.9672227172227172,
+      "deepfacelab": 0.8309183673469387,
+      "stargan": 0.9630085035119668,
+      "styleclip": 0.9981588172804532
+    },
+    "matched_s42": {
+      "whichisreal": 0.8629365634365633,
+      "CollabDiff": 0.9987385,
+      "MidJourney": 0.9948371029686233,
+      "heygen": 0.8817647058823529,
+      "starganv2": 0.9644537144537144,
+      "deepfacelab": 0.8616326530612244,
+      "stargan": 0.9742107728765609,
+      "styleclip": 0.998112783286119
+    },
+    "matched_s1024": {
+      "whichisreal": 0.8315444555444556,
+      "CollabDiff": 0.998483,
+      "MidJourney": 0.9937876183506641,
+      "heygen": 0.8729411764705881,
+      "starganv2": 0.9694234694234694,
+      "deepfacelab": 0.8624489795918369,
+      "stargan": 0.9643981489008845,
+      "styleclip": 0.9984513101983002
+    }
+  },
+  "parity": {
+    "canonical_ps4": 0.8425909912831497,
+    "canonical_fs1": 0.9657375624159219,
+    "run_b_ps4": 0.8425909912831497,
+    "run_b_ps4_absdiff": 0.0,
+    "run_d_ps4": 0.8425909912831497,
+    "run_d_ps4_absdiff": 0.0,
+    "run_b_fs1": 0.965388554153414,
+    "run_b_fs1_absdiff": 0.0003490082625079438,
+    "run_d_fs1": 0.9657375624159219,
+    "run_d_fs1_absdiff": 0.0
+  },
+  "parity_note": "PS_4 agrees across the supplied outputs. The strict-refit runner casts FS_1 scores to float32 before AUROC, while the canonical and cost paths score without that cast. Rounding can introduce ties and accounts for the stored strict-refit gap of about 3.5e-4.",
+  "claim_a_note": "stargan has zero overlapped rows, so the strict refit removes no leakage for it; any collapse there is caused by the training data that remains.",
+  "_written_utc": "2026-07-26T00:54:41.258680+00:00",
+  "_protocol_note": "macro AUROC over held-out generators; paired generator-level bootstrap (10k, percentile); exact two-sided sign-flip permutation; BCa on mean per-generator delta"
+}
